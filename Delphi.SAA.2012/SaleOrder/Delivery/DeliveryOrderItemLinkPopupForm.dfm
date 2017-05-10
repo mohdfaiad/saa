@@ -1,0 +1,81 @@
+object frmDeliveryItemLinkPopup: TfrmDeliveryItemLinkPopup
+  Left = 553
+  Top = 168
+  BorderStyle = bsSingle
+  Caption = 'Line insert window'
+  ClientHeight = 103
+  ClientWidth = 548
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poOwnerFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label5: TLabel
+    Left = 0
+    Top = 0
+    Width = 548
+    Height = 13
+    Align = alTop
+    Caption = '1.Select Order Manage  2.Current Stock'
+    Color = clSkyBlue
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHighlightText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 16
+    Top = 37
+    Width = 47
+    Height = 13
+    Caption = 'Bundle no'
+  end
+  object Label2: TLabel
+    Left = 240
+    Top = 39
+    Width = 34
+    Height = 13
+    Caption = 'Weight'
+  end
+  object btCancel: TButton
+    Left = 456
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object btSave: TButton
+    Left = 456
+    Top = 32
+    Width = 75
+    Height = 25
+    Caption = 'Save/Close'
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object cxWeightText: TcxMaskEdit
+    Left = 296
+    Top = 33
+    Properties.MaxLength = 0
+    TabOrder = 1
+    Width = 121
+  end
+  object cxBundleEdit: TcxMaskEdit
+    Left = 80
+    Top = 33
+    Properties.MaxLength = 0
+    TabOrder = 0
+    Width = 121
+  end
+end

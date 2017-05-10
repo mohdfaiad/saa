@@ -1,0 +1,88 @@
+unit PurchaseOrderCloseCancelBrowse;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, AbstractDataBrowse, DB, StdCtrls, Buttons, ExtCtrls, Grids,
+  Wwdbigrd, Wwdbgrid, fcStatusBar,dialogutils, Menus;
+
+type
+  TfrmPurchaseOrderCloseCancelBrowse = class(TAbstractDataBrowseForm)
+    wwDBGrid1: TwwDBGrid;
+    dsDetail: TDataSource;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure doPostAction(Sender:TObject);   override ;
+    procedure doEditAction(Sender:TObject);   override ;
+  end;
+
+var
+  frmPurchaseOrderCloseCancelBrowse: TfrmPurchaseOrderCloseCancelBrowse;
+
+implementation
+uses PurchaseOrderDataModule;
+
+{$R *.dfm}
+
+procedure TfrmPurchaseOrderCloseCancelBrowse.doPostAction(sender:TObject);
+
+begin
+try
+ fsuccess:=      purchaseOrderDM.updatePurchaseOrderStatus(datasource.DataSet.FieldByName('order_no').AsString,
+ datasource.dataset.fieldbyname('supp_code').AsString,  PURCHASE_CLOSED_STATE  ,
+ datasource.dataset.fieldbyname('order_date').AsDateTime);
+
+ begin
+  errorex('Cound not approve purchase order'+datasource.DataSet.fieldbyname('order_no').AsString);
+ end
+ finally
+   doRefreshAction(SENDER);;
+ end;
+end;
+
+procedure TfrmPurchaseOrderCloseCancelBrowse.doEditAction(sender:TObject);
+begin
+  if confirm('Do you want to cancel this purchae order')=mrYes   then
+  begin
+    try
+      if not (purchaseOrderDM.updatePurchaseOrderStatus(datasource.DataSet.FieldByName('order_no').AsString,
+      datasource.dataset.fieldbyname('supp_code').AsString,  PURCHASE_CANCEL_STATE  ,
+      datasource.dataset.fieldbyname('order_date').AsDateTime)) then
+       begin
+        errorex('Cound not Cancel purchase order'+datasource.DataSet.fieldbyname('order_no').AsString);
+       end
+     finally
+      doRefreshAction(SENDER);
+
+     end;
+ end;
+end;
+
+procedure TfrmPurchaseOrderCloseCancelBrowse.FormCreate(Sender: TObject);
+begin
+  inherited;
+   NEWBUTTON.Visible :=FALSE;
+  editButton.Caption :='Cancel PO';
+  postButton.Caption :='Close PO';
+  datasource.DataSet :=  PurchaseOrderDM.qryApprovedPurchaseOrderHeader;
+  dsDetail.DataSet:=PurchaseOrderDM.tbApprovedPurchaserOrderDetail;
+  dsDetail.dataset.open;
+
+end;
+
+procedure TfrmPurchaseOrderCloseCancelBrowse.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+    datasource.DataSet.close;
+    dsDetail.dataset.close;
+  inherited;
+
+end;
+
+end.

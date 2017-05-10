@@ -1,0 +1,19 @@
+inherited ReceiptBrowseForm: TReceiptBrowseForm
+  Left = 0
+  Top = 329
+  Caption = 'ReceiptBrowseForm'
+  FormStyle = fsMDIChild
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Grid: TwwDBGrid
+    Selected.Strings = (
+      'DOC_NO'#9'17'#9'Receipt No'
+      'DOC_DATE'#9'18'#9'Receipt Date'
+      'DESCS'#9'45'#9'Description'
+      'UPDATE_USER'#9'10'#9'Update User')
+  end
+  inherited datasource: TDataSource
+    DataSet = AccountReceiveDM.qryUnpostReceipt
+  end
+end

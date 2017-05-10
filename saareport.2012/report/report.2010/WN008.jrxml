@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="WN008"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Heading 1"
+		isDefault="true"
+		fontSize="22"
+		isBold="true"
+		pdfFontName="Helvetica-Bold"
+	/>
+
+	<parameter name="pGRNNO" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["GRNFPO0117/07"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pCopy" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["ต้นฉับบ(บัญชี)"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pUID" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="pSysDate" isForPrompting="false" class="java.sql.Timestamp"/>
+	<queryString><![CDATA[SELECT PO_GRN_HD.GRN_NO,
+PO_GRN_HD.GRN_DATE,
+PO_GRN_HD.SUPP_CODE,
+PO_GRN_HD.REF_NO,
+PO_GRN_HD.REF_DATE,
+PO_GRN_HD.GRN_AMT,
+PO_GRN_HD.DESCS,
+PO_GRN_HD.remarks,
+PO_GRN_HD.NO_OF_PRINT,
+PO_GRN_DT.ORDER_LINE,
+PO_GRN_DT.ITEM_CODE,
+PO_GRN_DT.SUPP_CODE,
+PO_GRN_DT.GRN_DATE,
+PO_GRN_DT.GRN_NO,
+PO_GRN_DT.UOM,
+PO_GRN_DT.ITEM_DESCS,
+PO_GRN_DT.UNIT_COST,
+PO_GRN_DT.TOTAL_AMT, 
+PO_GRN_DT.ORDER_DATE,
+PO_GRN_DT.ORDER_NO,
+PO_GRN_DT.ORDER_QTY,
+PO_GRN_DT.GRN_QTY, 
+PO_SUPPLIER.SUPPLIER_CD,
+PO_SUPPLIER.NAME,
+PO_SUPPLIER.ADDRESS1,
+PO_SUPPLIER.ADDRESS2, 
+PO_SUPPLIER.ADDRESS3,
+AP_CREDITOR.th_addr1,
+AP_CREDITOR.TH_ADDR2,
+AP_CREDITOR.TH_ADDR3,
+AP_CREDITOR.th_name,
+PO_SUPPLIER.TELEPHONE,
+PO_SUPPLIER.PROVINCE,
+PO_SUPPLIER.POSTCODE
+FROM PO_GRN_DT ,PO_GRN_HD,PO_SUPPLIER,AP_CREDITOR
+WHERE
+(PO_GRN_DT.SUPP_CODE = PO_GRN_HD.SUPP_CODE) AND
+(PO_GRN_DT.GRN_NO = PO_GRN_HD.GRN_NO) AND
+(PO_GRN_DT.GRN_DATE = PO_GRN_HD.GRN_DATE) AND
+(PO_GRN_HD.SUPP_CODE = PO_SUPPLIER.SUPPLIER_CD)AND
+(PO_SUPPLIER.creditor_acct = AP_CREDITOR.creditor_acct)AND
+(PO_GRN_HD.STATUS <>'X') AND
+(PO_GRN_HD.GRN_NO = UPPER($P{pGRNNO}))]]></queryString>
+
+	<field name="GRN_NO" class="java.lang.String"/>
+	<field name="GRN_DATE" class="java.sql.Timestamp"/>
+	<field name="SUPP_CODE" class="java.lang.String"/>
+	<field name="REF_NO" class="java.lang.String"/>
+	<field name="REF_DATE" class="java.sql.Timestamp"/>
+	<field name="GRN_AMT" class="java.lang.Double"/>
+	<field name="DESCS" class="java.lang.String"/>
+	<field name="REMARKS" class="java.lang.String"/>
+	<field name="NO_OF_PRINT" class="java.lang.Integer"/>
+	<field name="ORDER_LINE" class="java.lang.Integer"/>
+	<field name="ITEM_CODE" class="java.lang.String"/>
+	<field name="UOM" class="java.lang.String"/>
+	<field name="ITEM_DESCS" class="java.lang.String"/>
+	<field name="UNIT_COST" class="java.lang.Double"/>
+	<field name="TOTAL_AMT" class="java.lang.Double"/>
+	<field name="ORDER_DATE" class="java.sql.Timestamp"/>
+	<field name="ORDER_NO" class="java.lang.String"/>
+	<field name="ORDER_QTY" class="java.lang.Double"/>
+	<field name="GRN_QTY" class="java.lang.Double"/>
+	<field name="SUPPLIER_CD" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="ADDRESS1" class="java.lang.String"/>
+	<field name="ADDRESS2" class="java.lang.String"/>
+	<field name="ADDRESS3" class="java.lang.String"/>
+	<field name="TH_ADDR1" class="java.lang.String"/>
+	<field name="TH_ADDR2" class="java.lang.String"/>
+	<field name="TH_ADDR3" class="java.lang.String"/>
+	<field name="TH_NAME" class="java.lang.String"/>
+	<field name="TELEPHONE" class="java.lang.String"/>
+	<field name="PROVINCE" class="java.lang.String"/>
+	<field name="POSTCODE" class="java.lang.String"/>
+
+	<variable name="v_row" class="java.lang.Integer" resetType="Report" calculation="Count">
+		<variableExpression><![CDATA[$F{ITEM_CODE}]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="177"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						style="Heading 1"
+						x="1"
+						y="2"
+						width="534"
+						height="175"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="113"
+						y="18"
+						width="318"
+						height="44"
+						key="staticText-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="24" isBold="true"/>
+					</textElement>
+				<text><![CDATA[บริษัท สยามแองโกลอัลลอย จำกัด]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="126"
+						y="63"
+						width="263"
+						height="26"
+						key="staticText-3"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Microsoft Sans Serif" pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Siam Anglo Alloy Co.,Ltd.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="8"
+						y="91"
+						width="505"
+						height="17"
+						key="staticText-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[สำนักงาน:306/1 ถนนสุขุมวิท 55 (ซอยทองหล่อ) แขวงคลองตันเหนือ เขตวัฒนา กรุงเทพ 10110]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="8"
+						y="114"
+						width="505"
+						height="17"
+						key="staticText-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[โทร.66(0)2 3812638-9,66(0)2 3917168-9 โทรสาร 66(0)2 381-1924]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="8"
+						y="134"
+						width="505"
+						height="17"
+						key="staticText-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[โรงงาน:1/1 หมู่ 10 ถนนชลบุรี-บ้านบึง(ทางหลวง 334),ซอยวัดช่องมะเฟือง ตำบลหนองรี อำเภอเมือง จังหวัดชลบุรี 20000]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="8"
+						y="155"
+						width="505"
+						height="17"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[โทร.66(0)38 379-044,66(0)38 476-113 โทรสาร 66(0)38 476-112]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="419"
+						y="5"
+						width="34"
+						height="18"
+						key="staticText-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="8"/>
+					</textElement>
+				<text><![CDATA[เลขที่]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="454"
+						y="5"
+						width="76"
+						height="18"
+						key="textField-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{GRN_NO}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="5"
+						width="101"
+						height="18"
+						key="textField-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="14"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{pCopy}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="23"
+						width="58"
+						height="18"
+						key="staticText-53"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="8"/>
+					</textElement>
+				<text><![CDATA[RID:WN008]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="126"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						style="Heading 1"
+						x="1"
+						y="0"
+						width="534"
+						height="124"
+						key="rectangle-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="143"
+						y="8"
+						width="217"
+						height="27"
+						key="staticText-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Microsoft Sans Serif" pdfFontName="Helvetica-Bold" size="14" isBold="true" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[Goods Received Note]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="399"
+						y="2"
+						width="65"
+						height="18"
+						key="staticText-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" size="8"/>
+					</textElement>
+				<text><![CDATA[CODE:FM-WH-03]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="399"
+						y="23"
+						width="65"
+						height="18"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" size="8"/>
+					</textElement>
+				<text><![CDATA[REV :00,01.04.07]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="9"
+						y="40"
+						width="48"
+						height="18"
+						key="staticText-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" size="12"/>
+					</textElement>
+				<text><![CDATA[ชื่อผู้ส่งสินค้า]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="10"
+						y="63"
+						width="29"
+						height="18"
+						key="staticText-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" size="12"/>
+					</textElement>
+				<text><![CDATA[ที่อยู่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="399"
+						y="40"
+						width="38"
+						height="18"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" size="12"/>
+					</textElement>
+				<text><![CDATA[วันที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="399"
+						y="65"
+						width="48"
+						height="18"
+						key="staticText-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" size="12"/>
+					</textElement>
+				<text><![CDATA[หมายเลข PC]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="57"
+						y="40"
+						width="332"
+						height="18"
+						key="textField-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new String($F{SUPPLIER_CD}) +" "+ new String($F{NAME})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="57"
+						y="64"
+						width="332"
+						height="14"
+						key="textField-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new String($F{ADDRESS1}) +" "+ new String($F{ADDRESS2})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="57"
+						y="82"
+						width="332"
+						height="14"
+						key="textField-3"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new String($F{ADDRESS3})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="57"
+						y="103"
+						width="332"
+						height="14"
+						key="textField-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new String($F{PROVINCE}) +" "+new String($F{POSTCODE})+" Tel. "+new String ($F{TELEPHONE})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="453"
+						y="40"
+						width="76"
+						height="18"
+						key="textField-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{GRN_DATE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="453"
+						y="64"
+						width="76"
+						height="18"
+						key="textField-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORDER_NO}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="35"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						style="Heading 1"
+						x="1"
+						y="0"
+						width="535"
+						height="35"
+						key="rectangle-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="6"
+						y="5"
+						width="51"
+						height="16"
+						key="staticText-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ลำดับที่]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="74"
+						y="5"
+						width="150"
+						height="16"
+						key="staticText-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[รายการ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="246"
+						y="5"
+						width="34"
+						height="16"
+						key="staticText-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[หน่วย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="297"
+						y="5"
+						width="78"
+						height="16"
+						key="staticText-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ปริมาณ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="384"
+						y="5"
+						width="78"
+						height="16"
+						key="staticText-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ราคาต่อหน่วย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="470"
+						y="5"
+						width="54"
+						height="16"
+						key="staticText-20"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[รวม]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="65"
+						y="0"
+						width="0"
+						height="35"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="234"
+						y="0"
+						width="0"
+						height="35"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="292"
+						y="0"
+						width="0"
+						height="35"
+						key="line-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="377"
+						y="0"
+						width="0"
+						height="35"
+						key="line-8"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="463"
+						y="0"
+						width="0"
+						height="35"
+						key="line-10"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="35"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						style="Heading 1"
+						x="1"
+						y="0"
+						width="535"
+						height="35"
+						key="rectangle-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="74"
+						y="3"
+						width="150"
+						height="19"
+						key="textField-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ITEM_CODE}+" "+$F{ITEM_DESCS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="246"
+						y="2"
+						width="34"
+						height="19"
+						key="textField-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{UOM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="297"
+						y="0"
+						width="78"
+						height="19"
+						key="textField-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{GRN_QTY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.000" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="384"
+						y="4"
+						width="78"
+						height="19"
+						key="textField-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{UNIT_COST}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="470"
+						y="3"
+						width="54"
+						height="19"
+						key="textField-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[new java.lang.Double(  ($F{GRN_QTY}.doubleValue()) *($F{GRN_QTY}.doubleValue()) )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="6"
+						y="3"
+						width="51"
+						height="19"
+						key="textField-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{ORDER_LINE}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="65"
+						y="0"
+						width="0"
+						height="35"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="234"
+						y="0"
+						width="0"
+						height="35"
+						key="line-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="292"
+						y="0"
+						width="0"
+						height="35"
+						key="line-7"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="377"
+						y="0"
+						width="0"
+						height="35"
+						key="line-9"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="463"
+						y="0"
+						width="0"
+						height="35"
+						key="line-11"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="63"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						style="Heading 1"
+						x="1"
+						y="7"
+						width="534"
+						height="54"
+						key="rectangle-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="3"
+						y="11"
+						width="95"
+						height="19"
+						key="staticText-21"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[รับโดย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="112"
+						y="11"
+						width="164"
+						height="19"
+						key="staticText-22"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ตรวจโดย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="274"
+						y="11"
+						width="93"
+						height="19"
+						key="staticText-24"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[อนุมุติโดย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="365"
+						y="11"
+						width="164"
+						height="19"
+						key="staticText-25"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ลายมือชื่อผู้ส่งสินค้า]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="1"
+						y="33"
+						width="535"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="112"
+						y="7"
+						width="0"
+						height="54"
+						key="line-12"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="248"
+						y="7"
+						width="0"
+						height="54"
+						key="line-13"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Heading 1"
+						x="384"
+						y="7"
+						width="0"
+						height="54"
+						key="line-14"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="244"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="6"
+						width="145"
+						height="23"
+						key="staticText-30"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[รายละเอียดการตรวจเช็ค(วัตถุดิบ):-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="32"
+						width="145"
+						height="23"
+						key="staticText-31"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[เศษ กาก ปุ๋ย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="58"
+						width="145"
+						height="23"
+						key="staticText-32"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[จารบี น้ำมัน ของเหลวอื่นๆ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="84"
+						width="145"
+						height="23"
+						key="staticText-33"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[ภาชนะที่ปิดตายไม่มีรูระบายอากาศ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="137"
+						width="145"
+						height="23"
+						key="staticText-35"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[วัตถุระเบิด]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="436"
+						y="6"
+						width="34"
+						height="23"
+						key="staticText-36"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[ผ่าน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="486"
+						y="6"
+						width="34"
+						height="23"
+						key="staticText-37"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[ไม่ผ่าน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="447"
+						y="32"
+						width="18"
+						height="15"
+						key="staticText-38"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="497"
+						y="32"
+						width="18"
+						height="15"
+						key="staticText-39"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="447"
+						y="58"
+						width="18"
+						height="15"
+						key="staticText-40"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="497"
+						y="58"
+						width="18"
+						height="15"
+						key="staticText-41"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="447"
+						y="84"
+						width="18"
+						height="15"
+						key="staticText-42"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="497"
+						y="84"
+						width="18"
+						height="15"
+						key="staticText-43"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="447"
+						y="136"
+						width="18"
+						height="15"
+						key="staticText-46"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="497"
+						y="136"
+						width="18"
+						height="15"
+						key="staticText-47"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="110"
+						width="145"
+						height="23"
+						key="staticText-49"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" pdfFontName="Helvetica" size="12" isBold="false" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[กัมมันตรังสี]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="447"
+						y="110"
+						width="18"
+						height="15"
+						key="staticText-50"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="497"
+						y="110"
+						width="18"
+						height="15"
+						key="staticText-51"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="1Point" leftBorderColor="#000000" rightBorder="1Point" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font size="8" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="194"
+						width="145"
+						height="23"
+						key="staticText-52"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="BrowalliaUPC" size="12" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[หมายเหตุ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy HH.mm.ss" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="7"
+						y="217"
+						width="76"
+						height="18"
+						key="textField-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$P{pSysDate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="453"
+						y="217"
+						width="76"
+						height="18"
+						key="textField-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="AngsanaUPC" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{pUID}]]></textFieldExpression>
+				</textField>
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

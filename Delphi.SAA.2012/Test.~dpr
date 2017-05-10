@@ -1,0 +1,47 @@
+program Test;
+
+uses
+  Forms,
+  Unit1 in 'testProject\Unit1.pas' {Form1},
+  Unit2 in 'testProject\Unit2.pas' {Form2},
+  AbstractDialog in 'AbstractDialog.pas' {BaseDialog},
+  BaseForm in 'BaseForm.pas' {BaseUIForm},
+  BaseMasterDetail in 'BaseMasterDetail.pas' {BaseUIMasterDetailForm},
+  DialogUtils in 'DialogUtils.pas',
+  LoginDialog in 'LoginDialog.pas' {LoginDlg},
+  MainForm in 'MainForm.pas' {formMain},
+  MaterialRequest in 'MaterialRequest.pas' {MaterialRequestForm},
+  MaterialRequestBrowse in 'MaterialRequestBrowse.pas' {MaterialRequestBrowseForm},
+  Progress in 'Progress.pas' {ProgressDialog},
+  StockReserved in 'StockReserved.pas' {StockReservedForm},
+  WarehouseDM in 'WarehouseDM.pas' {WarehouseDataManager: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TBaseDialog, BaseDialog);
+  Application.CreateForm(TBaseUIForm, BaseUIForm);
+  Application.CreateForm(TBaseUIMasterDetailForm, BaseUIMasterDetailForm);
+  Application.CreateForm(TLoginDlg, LoginDlg);
+  Application.CreateForm(TformMain, formMain);
+  Application.CreateForm(TMaterialRequestForm, MaterialRequestForm);
+  Application.CreateForm(TMaterialRequestBrowseForm, MaterialRequestBrowseForm);
+  Application.CreateForm(TProgressDialog, ProgressDialog);
+  Application.CreateForm(TStockReservedForm, StockReservedForm);
+  Application.CreateForm(TWarehouseDataManager, WarehouseDataManager);
+  //try
+    Form2.ShowModal;
+    IF (Form2.good)  then
+    begin
+      Application.CreateForm(TForm1, Form1);
+      Application.Run;
+    end;
+
+  //finally
+   //Form2.Free;
+  //end;
+  //Application.Run;
+end.

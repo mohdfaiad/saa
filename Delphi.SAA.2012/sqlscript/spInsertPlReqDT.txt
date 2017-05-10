@@ -1,0 +1,82 @@
+CREATE PROCEDURE X_INS_PL_REQ_DT 
+(ADOC_NO varchar(15),
+ADOC_DATE TIMESTAMP,
+APLAN_DOC VARCHAR(15),
+AMELT_NO VARCHAR(10))
+AS
+begin
+
+ INSERT INTO PL_REQ_DT (
+    DOC_NO,     DOC_DATE,
+    TRX_TYPE,    ITEM_CODE,
+    ITEM_DESCS,    LOT_NO,
+    PURCHASE_DATE,    QTY,
+    UNIT_COST,       UOM,
+    TOTAL_COST,      GROUP_ID,
+    USAGED_QTY,      ITEM_TYPE,
+    ONHAND_QTY,      REF_NO,
+    REF_DATE,
+    ACCT_CD)
+    select  HD.doc_no,HD.doc_date,
+    HD.trx_type,PL.stock_code,
+    ST.EN_descs,PL.lot_no,drop procedure X_INS_PL_REQ_DT ;
+CREATE PROCEDURE X_INS_PL_REQ_DT 
+(ADOC_NO varchar(15),
+ADOC_DATE TIMESTAMP,
+APLAN_DOC VARCHAR(15),
+AMELT_NO VARCHAR(10))
+AS
+begin
+
+ INSERT INTO PL_REQ_DT (
+    DOC_NO,     DOC_DATE,
+    TRX_TYPE,    ITEM_CODE,
+    ITEM_DESCS,    LOT_NO,
+    PURCHASE_DATE,    QTY,
+    UNIT_COST,       UOM,
+    TOTAL_COST,      GROUP_ID,
+    USAGED_QTY,      ITEM_TYPE,
+    ONHAND_QTY,      REF_NO,
+    REF_DATE,
+    ACCT_CD)
+    select  HD.doc_no,HD.doc_date,
+    HD.trx_type,PL.stock_code,
+    ST.EN_descs,PL.lot_no,
+    PL.purchase_date,0,
+    PL.unit_cost,PL.uom,
+    0,PL.group_id,
+    0,'N',
+    PL.onhand_qty,'GRNNO',
+    current_date,
+    PL.supplier_cd
+    from pl_req_hd hd,pl_rawmat_sheet_dt pl,ic_mat_stk_hd ST
+    where hd.melt_no =:amelt_no
+    AND HD.melt_no = PL.melt_no
+    AND HD.plan_doc = PL.plan_doc
+    AND PL.stock_code = ST.stock_cd
+    AND HD.DOC_NO =:adoc_no
+    AND HD.doc_date =:adoc_date
+    AND HD.plan_doc =:aplan_doc
+    and status ='N';
+
+  suspend;
+end
+
+    PL.unit_cost,PL.uom,
+    0,PL.group_id,
+    0,'N',
+    PL.onhand_qty,'GRNNO',
+    current_date,
+    PL.supplier_cd
+    from pl_req_hd hd,pl_rawmat_sheet_dt pl,ic_mat_stk_hd ST
+    where hd.melt_no =:amelt_no
+    AND HD.melt_no = PL.melt_no
+    AND HD.plan_doc = PL.plan_doc
+    AND PL.stock_code = ST.stock_cd
+    AND HD.DOC_NO =:adoc_no
+    AND HD.doc_date =:adoc_date
+    AND HD.plan_doc =:aplan_doc
+    and status ='N';
+
+  suspend;
+end

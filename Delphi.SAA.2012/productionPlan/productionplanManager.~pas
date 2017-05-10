@@ -1,0 +1,192 @@
+unit productionplanManager;
+{*
+
+-2 March,2012 add melt summary popup windows
+
+
+
+
+
+*}
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, AbstractcxDataBrowse, cxStyles, cxCustomData, cxGraphics,
+  cxFilter, cxData, cxDataStorage, cxEdit, DB, cxDBData, dxBar, Menus,
+  cxGridLevel, cxClasses, cxControls, cxGridCustomView,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGrid,
+  StdCtrls, Buttons, ExtCtrls, Grids, Wwdbigrd, Wwdbgrid, fcStatusBar,
+  ActnList, XPStyleActnCtrls, ActnMan,dialogutils;
+
+type
+  Tfrmproductionplanmanager = class(TcxAbstractDataBrowse)
+    cxGridDBTableViewPLAN_DATE: TcxGridDBColumn;
+    cxGridDBTableViewPLAN_DOC: TcxGridDBColumn;
+    cxGridDBTableViewSTART_MELT_NO: TcxGridDBColumn;
+    cxGridDBTableViewEND_MELT_NO: TcxGridDBColumn;
+    cxGridDBTableViewMELT_PREFIX: TcxGridDBColumn;
+    cxGridDBTableViewREMARKS: TcxGridDBColumn;
+    cxGridDBTableViewORDER_REMARKS: TcxGridDBColumn;
+    cxStyleRepository1: TcxStyleRepository;
+    cxStyle1: TcxStyle;
+    dxBarCombo1: TdxBarCombo;
+    dxBarButton1: TdxBarButton;
+    btMergePlan: TButton;
+    ActionManager1: TActionManager;
+    ActionMergePlan: TAction;
+    btGetMeltSummary: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure ActionMergePlanExecute(Sender: TObject);
+    procedure btGetMeltSummaryClick(Sender: TObject);
+
+  private
+    { Private declarations }
+    //meltsummary report param
+    fromMelt,toMelt:String;
+    function ConfirmMeltSummaryReportGenerate:TModalResult;
+  protected
+    procedure CMDialogKey(var Message: TCMDialogKey); message CM_DIALOGKEY;
+
+  public
+    { Public declarations }
+    procedure doNewAction(Sender:TObject);override;
+    procedure doPostAction(Sender:TObject);override;
+    procedure doEditAction(Sender:TObject);override;
+
+
+    
+
+
+  end;
+
+var
+  frmproductionplanmanager: Tfrmproductionplanmanager;
+
+implementation
+
+USES productionplanDatamodule,productionplanForm,productonplanMergePlanPOPUPForm,
+ProductionPlanMeltSummaryReportGeneratePopupForm;
+
+{$R *.dfm}
+
+procedure Tfrmproductionplanmanager.FormCreate(Sender: TObject);
+begin
+   datasource.dataset := ProductionDM.qryunPostProductionPlan;
+  inherited;
+
+end;
+
+
+procedure Tfrmproductionplanmanager.doNewAction(Sender:TObject);
+begin
+ frmProductionPlan := TfrmProductionPlan.create(SELF,'','PLAN_DOC',0);
+ frmProductionPlan.FormStyle :=fsMDIChild;
+ frmProductionPlan.Top :=0;
+ frmProductionPlan.Left:=0;
+ frmProductionPlan.Show;
+end;
+procedure Tfrmproductionplanmanager.doPostAction(Sender:TObject);
+begin
+//
+end;
+procedure Tfrmproductionplanmanager.doEditAction(Sender:TObject);
+begin
+ frmProductionPlan := TfrmProductionPlan.create(SELF,fSelectedObject,'PLAN_DOC',1);
+ frmProductionPlan.FormStyle :=fsMDIChild;
+ frmProductionPlan.Top :=0;
+ frmProductionPlan.Left:=0;
+ frmProductionPlan.Show;
+end;
+
+
+
+procedure Tfrmproductionplanmanager.ActionMergePlanExecute(
+  Sender: TObject);
+  var source,target:string;
+  success:boolean;
+begin
+  success:=false;
+  if confirm(format('Are you sure do want to merge [%s] to [%s]?',[source,target])) =mrYes then
+  begin
+      frmProductionPlanMergePlanPopup :=  TfrmProductionPlanMergePlanPopup.Create(SELF);
+      frmProductionPlanMergePlanPopup.ShowModal;
+      if (frmProductionPlanMergePlanPopup.ModalResult) = mrOK then
+      begin
+          source :=  frmProductionPlanMergePlanPopup.getSourceText;
+          target :=  frmProductionPlanMergePlanPopup.getTargetText;
+          if (ProductionDM.isPlanDocExist(SOURCE) AND
+          ProductionDM.isPlanDocExist(TARGET)) THEN
+          BEGIN
+              IF Confirm('Please reconfirm to merge plan?')=mrYes then
+              begin
+                success := ProductionDM.mergePlan(source,target);
+                if (success) then info(Format('Plan =[%s] has already merge to [%s] please reopen [%s] to see new changes',[target,source,source]));
+              end
+              else info('Cancle merge plan') ;
+          END ELSE
+          BEGIN
+             warning('Invalidate source or target document please recheck')
+          END;
+      end;
+      frmProductionPlanMergePlanPopup.Free;
+  end else info('Cancel plan merge');
+end;
+
+procedure Tfrmproductionplanmanager.CMDialogKey(var Message: TCMDialogKey);
+begin
+ INHERITED;
+
+end;
+
+
+function Tfrmproductionplanmanager.ConfirmMeltSummaryReportGenerate:TModalResult;
+begin
+
+   result:=mrYes;
+end;
+//  Application.CreateForm(TfrmProPlanMeltSummayReportGenerate, frmProPlanMeltSummayReportGenerate);
+procedure Tfrmproductionplanmanager.btGetMeltSummaryClick(Sender: TObject);
+var startAt,endedAt:String;
+begin
+  frmProPlanMeltSummayReportGenerate:=  TfrmProPlanMeltSummayReportGenerate.create(frmproductionplanmanager,fSelectedObject);
+  if (confirm('Do you want to generate melt summary report from this document'+fSelectedObject) =mrYes )     then
+  begin
+        frmProPlanMeltSummayReportGenerate.ShowModal   ;
+       if (frmProPlanMeltSummayReportGenerate.mODALRESULT =mrYes )     then
+       begin
+      try
+        Screen.Cursor :=crSqlWait;
+      try
+        startAt :=DateTimeToStr(now);
+       fromMelt:= frmProPlanMeltSummayReportGenerate.cxFromMelt.Text;
+       toMelt:=frmProPlanMeltSummayReportGenerate.cxToMelt.Text;
+       ProductionDM.spGenMeltSummaryReport2012.Close;
+       ProductionDM.spGenMeltSummaryReport2012.Prepare;
+       if (frmProPlanMeltSummayReportGenerate.cbMeltSuffix.Checked) then
+            ProductionDM.spGenMeltSummaryReport2012.ParamByName('adoc_no').Value   :=frmProPlanMeltSummayReportGenerate.getPlanDOc;
+       else
+           ProductionDM.spGenMeltSummaryReport2012.ParamByName('adoc_no').Value:=fSelectedObject;
+       ProductionDM.spGenMeltSummaryReport2012.ParamByName('from_melt').Value  := fromMelt;
+       ProductionDM.spGenMeltSummaryReport2012.ParamByName('to_melt').Value  :=toMelt;
+       ProductionDM.spGenMeltSummaryReport2012. ExecProc;
+       except on e:exception  do
+         warning('Failure occure while generating summary report for'+fSelectedObject+#13+e.Message);
+       end;
+       finally
+         endedAt :=DateTimeToStr(now);
+            Screen.Cursor  :=crDefault;
+          info('Success generated report for '+fromMelt+'-'+toMelt+'. Please login to saareport to view report'+#13+
+          'start run at:['+startAt+
+          '] - ended run at:['+endedAt+']');
+       end;
+     end;
+
+      // end else  info('Process aboad'+fSelectedObject);
+  end;
+
+
+end;
+
+end.

@@ -1,0 +1,154 @@
+inherited StockReservedForm: TStockReservedForm
+  Left = 478
+  Top = 170
+  VertScrollBar.Range = 0
+  BorderStyle = bsDialog
+  Caption = 'Stock Reserved Window'
+  ClientHeight = 216
+  ClientWidth = 698
+  OldCreateOrder = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl [0]
+    Left = 0
+    Top = 33
+    Width = 698
+    Height = 163
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Reserved Detail'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      object reservedGrid: TwwDBGrid
+        Left = 0
+        Top = 0
+        Width = 690
+        Height = 135
+        DisableThemes = False
+        Selected.Strings = (
+          'DOC_NO'#9'16'#9'Document No'
+          'DOC_DATE'#9'15'#9'Document Date'
+          'LOT_CD'#9'9'#9'LOT CD'
+          'PURCHASE_DATE'#9'18'#9'PURCHASE_DATE'
+          'REF_NO'#9'11'#9'GRN NO'
+          'REF_DATE'#9'12'#9'GRN DATE'
+          'QTY'#9'7'#9'QTY'
+          'UPDATE_USER'#9'14'#9'Reserved By')
+        IniAttributes.Delimiter = ';;'
+        TitleColor = clBtnFace
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsReserved
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        KeyOptions = [dgEnterToTab, dgAllowDelete, dgAllowInsert]
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter]
+        ParentFont = False
+        TabOrder = 0
+        TitleAlignment = taCenter
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = [fsBold]
+        TitleLines = 1
+        TitleButtons = False
+        OnDblClick = reservedGridDblClick
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Onhand Detail'
+      ImageIndex = 1
+      object wwDBGrid1: TwwDBGrid
+        Left = 0
+        Top = 0
+        Width = 690
+        Height = 135
+        DisableThemes = False
+        Selected.Strings = (
+          'REF_NO'#9'15'#9'GRN No'#9#9
+          'REF_DATE'#9'18'#9'GRN Date'#9#9
+          'UNIT_COST'#9'10'#9'Unit Cost'#9#9
+          'ONHAND_QTY'#9'10'#9'Onhand Qty'#9#9)
+        IniAttributes.Delimiter = ';;'
+        TitleColor = clBtnFace
+        FixedCols = 0
+        ShowHorzScrollBar = True
+        Align = alClient
+        DataSource = dsOnhand
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgShowFooter]
+        TabOrder = 0
+        TitleAlignment = taLeftJustify
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        TitleLines = 1
+        TitleButtons = False
+        OnUpdateFooter = wwDBGrid1UpdateFooter
+      end
+    end
+  end
+  object Panel1: TPanel [1]
+    Left = 0
+    Top = 0
+    Width = 698
+    Height = 33
+    Align = alTop
+    TabOrder = 1
+    object lbHeaderInfo: TLabel
+      Left = 8
+      Top = 8
+      Width = 99
+      Height = 23
+      Caption = 'Lot Info:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHotLight
+      Font.Height = -20
+      Font.Name = 'Consolas'
+      Font.Style = []
+      ParentFont = False
+    end
+    object BitBtn1: TBitBtn
+      Left = 616
+      Top = 4
+      Width = 75
+      Height = 25
+      Caption = 'Refresh'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = reservedGridDblClick
+    end
+  end
+  inherited StatusBar1: TfcStatusBar
+    Top = 196
+    Width = 698
+    SizeGrip = False
+  end
+  object dsReserved: TDataSource
+    DataSet = WarehouseDataManager.qryStockReserved
+    Left = 76
+    Top = 64
+  end
+  object dsOnhand: TDataSource
+    DataSet = WarehouseDataManager.qryStockOnhandLinkEnq
+    Left = 172
+    Top = 64
+  end
+end

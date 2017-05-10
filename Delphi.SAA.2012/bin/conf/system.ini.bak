@@ -1,0 +1,6 @@
+[database]
+databaseName=c:\brd\database\saa.GDB
+databaseHost=192.168.2.100
+[default]
+transactionType=RT
+description=บันทึกเบิกจ่ายวัตถุดิบ

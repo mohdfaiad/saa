@@ -1,0 +1,301 @@
+unit SystemUserMenuManager;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseDBSingleEntryForm, wwrcdvw, wwDialog, wwidlg,
+  dxLayoutLookAndFeels, DB, ImgList, ExtCtrls, ComCtrls, ToolWin,
+  fcStatusBar, dxExEdtr, cxStyles, cxCustomData, cxGraphics, cxFilter,
+  cxData, cxDataStorage, cxEdit, cxDBData, Menus, cxGridLevel,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxClasses,
+  cxControls, cxGridCustomView, cxGrid, cxSplitter, dxCntner, dxTL,
+  dxDBCtrl, dxDBTL, cxPC, dxDBTLCl, Grids, Wwdbigrd, Wwdbgrid, StdCtrls,DialogUtils;
+
+type
+  TfrmSysUserMenuManager = class(TfrmDBSingleEntry)
+    cxPageControl1: TcxPageControl;
+    cxTabSheet1: TcxTabSheet;
+    cxTabSheet2: TcxTabSheet;
+    cxSplitter1: TcxSplitter;
+    cxGrid: TcxGrid;
+    cxGridDBTableView: TcxGridDBTableView;
+    cxGridDBTableView1: TcxGridDBTableView;
+    cxGridDBTableView1ITEM_CODE: TcxGridDBColumn;
+    cxGridDBTableView1ITEM_DESCS: TcxGridDBColumn;
+    cxGridDBTableView1UNIT_COST: TcxGridDBColumn;
+    cxGridDBTableView1QTY: TcxGridDBColumn;
+    cxGridDBTableView1TOTAL_AMT: TcxGridDBColumn;
+    cxGridDBTableView1TAX_AMT: TcxGridDBColumn;
+    cxGridDBTableView1REMARKS: TcxGridDBColumn;
+    cxGridLevel: TcxGridLevel;
+    cxGridDBTableViewMENU_INDEX: TcxGridDBColumn;
+    cxGridDBTableViewMENU_ITEM_INDEX: TcxGridDBColumn;
+    cxGridDBTableViewEDIT_FLAG: TcxGridDBColumn;
+    cxGridDBTableViewDELETE_FLAG: TcxGridDBColumn;
+    cxGridDBTableViewINSERT_FLAG: TcxGridDBColumn;
+    cxGridDBTableViewEXECUTE_FLAG: TcxGridDBColumn;
+    cxGridDBTableViewPOST_FLAG: TcxGridDBColumn;
+    cxGridDBTableViewFORM_CAPTION: TcxGridDBColumn;
+    cxGridDBTableViewModuleName: TcxGridDBColumn;
+    PopupMenu1: TPopupMenu;
+    wwDBGrid1: TwwDBGrid;
+    lbUser: TLabel;
+    cxGrid1: TcxGrid;
+    cxGridDBTableView2: TcxGridDBTableView;
+    cxGridDBTableView3: TcxGridDBTableView;
+    cxGridDBColumn10: TcxGridDBColumn;
+    cxGridDBColumn11: TcxGridDBColumn;
+    cxGridDBColumn12: TcxGridDBColumn;
+    cxGridDBColumn13: TcxGridDBColumn;
+    cxGridDBColumn14: TcxGridDBColumn;
+    cxGridDBColumn15: TcxGridDBColumn;
+    cxGridDBColumn16: TcxGridDBColumn;
+    cxGridLevel1: TcxGridLevel;
+    dsSysMenu: TDataSource;
+    cxGridDBTableView2MODULE_ID: TcxGridDBColumn;
+    cxGridDBTableView2MENU_ITEM_INDEX: TcxGridDBColumn;
+    cxGridDBTableView2FORM_CAPTION: TcxGridDBColumn;
+    cxGridDBTableView2ENABLED: TcxGridDBColumn;
+    DeleteAllfromModule1: TMenuItem;
+    N1: TMenuItem;
+    DeleteAll1: TMenuItem;
+    N2: TMenuItem;
+    PopupMenu2: TPopupMenu;
+    Importmenutocurrentuser1: TMenuItem;
+    Splitter1: TSplitter;
+    cxGrid2: TcxGrid;
+    cxGridDBTableView4: TcxGridDBTableView;
+    cxGridDBColumn1: TcxGridDBColumn;
+    cxGridDBColumn2: TcxGridDBColumn;
+    cxGridDBColumn3: TcxGridDBColumn;
+    cxGridDBColumn4: TcxGridDBColumn;
+    cxGridDBColumn5: TcxGridDBColumn;
+    cxGridDBColumn6: TcxGridDBColumn;
+    cxGridDBColumn7: TcxGridDBColumn;
+    cxGridDBColumn8: TcxGridDBColumn;
+    cxGridDBColumn9: TcxGridDBColumn;
+    cxGridDBTableView5: TcxGridDBTableView;
+    cxGridDBColumn17: TcxGridDBColumn;
+    cxGridDBColumn18: TcxGridDBColumn;
+    cxGridDBColumn19: TcxGridDBColumn;
+    cxGridDBColumn20: TcxGridDBColumn;
+    cxGridDBColumn21: TcxGridDBColumn;
+    cxGridDBColumn22: TcxGridDBColumn;
+    cxGridDBColumn23: TcxGridDBColumn;
+    cxGridLevel2: TcxGridLevel;
+    dsUser: TDataSource;
+    Image1: TImage;
+    procedure cableViewDragOver(Sender, Source: TObject; X,
+      Y: Integer; State: TDragState; var Accept: Boolean);
+    procedure cxGridDBTableView4DragDrop(Sender, Source: TObject; X,
+      Y: Integer);
+    procedure Importmenutocurrentuser1Click(Sender: TObject);
+    procedure DeleteAllfromModule1Click(Sender: TObject);
+    procedure DeleteAll1Click(Sender: TObject);
+    procedure Image1DragOver(Sender, Source: TObject; X, Y: Integer;
+      State: TDragState; var Accept: Boolean);
+    procedure Image1DragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure exitButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+
+    procedure doSetupDataSet;override;
+    procedure RowChanged(DataSet:TDataset);
+    procedure SysUserMenuNewRecord(DataSet:TDataSet);
+    procedure   SysUserMenubeforeSave(dataset:TDataSet);
+    procedure refreshMenu;
+  end;
+
+var
+  frmSysUserMenuManager: TfrmSysUserMenuManager;
+
+implementation
+uses CommomShareDataModule,SystemMenu, BaseForm;
+
+{$R *.dfm}
+
+procedure  TfrmSysUserMenuManager.doSetupDataSet;
+begin
+  datasource.DataSet :=      SystemMenuDM.tbSysUserMenu;
+  dsUser.dataset :=  SystemMenuDM.tbSysUser;
+  dsSysMenu.DataSet :=  SystemMenuDM.tbSysMenu;
+  datasource.DataSet.AfterScroll :=  RowChanged;
+   datasource.DataSet.OnNewRecord :=   SysUserMenuNewRecord;
+    datasource.DataSet.BeforePost :=  SysUserMenubeforeSave;
+   dsSysMenu.DataSet.Open;
+  datasource.DataSet.Open;
+  dsUser.DataSet.Open;
+end;
+
+
+procedure TfrmSysUserMenuManager.RowChanged(DataSet: TDataset);
+begin
+   if (dsuser.dataset <> nil)  and (dsuser.dataset.active)then
+   lbUser.Caption := dsuser.dataset.Fieldbyname('User_ID').AsString +'/'+dsuser.dataset.Fieldbyname('User_NAME').AsString
+end;
+
+procedure TfrmSysUserMenuManager.cableViewDragOver(Sender,
+  Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
+begin
+ 
+
+  accept := Source is TcxDragControlObject;
+
+
+end;
+
+procedure TfrmSysUserMenuManager.cxGridDBTableView4DragDrop(Sender,
+  Source: TObject; X, Y: Integer);
+begin
+  if (source is TcxDragControlObject)   then
+  begin
+   // if Confirm('Are you want to import this menus')
+   datasource.dataset.Insert;
+   datasource.dataset.Post;
+  end;
+      // StatusBar1.Panels[2].Text := 'Commit Menu'+dsSysMenu.DataSet.FieldByName('FORM_CAPTION').AsString;
+
+end;
+
+
+
+procedure TfrmSysUserMenuManager.SysUserMenuNewRecord(DataSet: TDataSet);
+begin
+
+{
+
+ MODULE_ID        VARCHAR(4) NOT NULL,
+    MENU_INDEX       SMALLINT NOT NULL,
+    MENU_ITEM_INDEX  SMALLINT NOT NULL,
+    FORM_NAME        VARCHAR(25) NOT NULL,
+    GROUP_ID         VARCHAR(4) NOT NULL,
+    USER_ID          VARCHAR(10) NOT NULL,
+    EDIT_FLAG        VARCHAR(1) DEFAULT 'Y',
+    DELETE_FLAG      VARCHAR(1) DEFAULT 'Y',
+    INSERT_FLAG      VARCHAR(1) DEFAULT 'Y',
+    EXECUTE_FLAG     VARCHAR(1) DEFAULT 'Y',
+    POST_FLAG        VARCHAR(1) DEFAULT 'Y',
+    FORM_CAPTION     VARCHAR(60),
+    MAIN_MENU_NAME   VARCHAR(30) NOT NULL
+}
+   with dataset do
+   begin
+      Fieldbyname('EDIT_FLAG').AsString := 'Y';
+      Fieldbyname('DELETE_FLAG').AsString := 'Y';
+      Fieldbyname('INSERT_FLAG').AsString := 'Y';
+      Fieldbyname('EXECUTE_FLAG').AsString := 'Y';
+      Fieldbyname('POST_FLAG').AsString := 'Y';
+      Fieldbyname('USER_ID').AsString := datasource.DataSet.Fieldbyname('user_id').AsString;
+      Fieldbyname('GROUP_ID').AsString :=  datasource.DataSet.Fieldbyname('group_id').AsString;
+   end;
+end;
+
+
+procedure TfrmSysUserMenuManager.SysUserMenubeforeSave(dataset: TDataSet);
+begin
+   with dataset do
+   begin
+      Fieldbyname('FORM_NAME').AsString := dsSysMenu.DataSet.Fieldbyname('FORM_NAME').AsString;
+      Fieldbyname('MODULE_ID').AsString := dsSysMenu.DataSet.Fieldbyname('MODULE_ID').AsString;
+      Fieldbyname('MENU_INDEX').AsInteger := dsSysMenu.DataSet.Fieldbyname('MENU_INDEX').AsInteger;
+      Fieldbyname('MENU_ITEM_INDEX').AsInteger := dsSysMenu.DataSet.Fieldbyname('MENU_ITEM_INDEX').AsInteger;
+      Fieldbyname('FORM_CAPTION').AsString := dsSysMenu.DataSet.Fieldbyname('FORM_CAPTION').AsString;
+      Fieldbyname('MAIN_MENU_NAME').AsString := dsSysMenu.DataSet.Fieldbyname('MAIN_MENU_NAME').AsString;
+   end;
+end;
+
+procedure TfrmSysUserMenuManager.Importmenutocurrentuser1Click(
+  Sender: TObject);
+  var aModuleID,AmESSAGE,auid:String ;
+begin
+   AMODULEID := dsSysMenu.dataset.Fieldbyname('MODULE_ID').AsString ;
+  AmESSAGE := 'System will imported all menus from ['+  dsSysMenu.dataset.Fieldbyname('module_id').AsString+'] to ['+
+              dsUser.DataSet.Fieldbyname('USER_NAME').AsString+']?';
+  auid :=   dsUser.DataSet.Fieldbyname('USER_ID').AsString;
+  if Confirm(AmESSAGE) =mrYes  then
+  begin
+    if  SystemMenuDM.InsertSysUserMenuFromModuleID(auid,AMODULEID) then
+    begin
+       info('Menus have been imported');
+       refreshMenu;
+    end;
+  end;
+
+
+end;
+
+procedure TfrmSysUserMenuManager.DeleteAllfromModule1Click(
+  Sender: TObject);
+  var aModuleID,AmESSAGE,auid:String ;
+begin
+   AMODULEID := datasource.DataSet.Fieldbyname('MODULE_ID').AsString ;
+  AmESSAGE := 'System will delete all menus from ['+  datasource.DataSet.Fieldbyname('modulename').AsString+'] from user  ['+
+              dsUser.DataSet.Fieldbyname('USER_NAME').AsString+']?';
+  auid :=   dsUser.DataSet.Fieldbyname('USER_ID').AsString;
+  if Confirm(AmESSAGE) =mrYes  then
+  begin
+    if  SystemMenuDM.DeleteSysUserMenuByModuleID(auid,AMODULEID) then
+    begin
+       info('Menus have been deleted');
+       refreshMenu;
+    end;
+  end;
+
+end;
+
+procedure TfrmSysUserMenuManager.DeleteAll1Click(Sender: TObject);
+
+  var aModuleID,AmESSAGE,auid:String  ;
+begin
+   AMODULEID := datasource.DataSet.Fieldbyname('MODULE_ID').AsString ;
+  AmESSAGE := 'System will delete menus from  ['+          dsUser.DataSet.Fieldbyname('USER_NAME').AsString+']?';
+  auid :=   dsuser.DataSet.Fieldbyname('USER_ID').AsString;
+  if Confirm(AmESSAGE) = mrYes then
+  begin
+    if (SystemMenuDM.DeleteSysUserMenubyUserID(auid) ) then
+    begin
+        info('Menus have been deleted');
+        refreshMenu;
+    end;
+  end;
+
+
+end;
+
+
+
+
+
+procedure TfrmSysUserMenuManager.refreshMenu;
+begin
+   datasource.DataSet.close;
+   datasource.DataSet.open;
+end;
+
+procedure TfrmSysUserMenuManager.Image1DragOver(Sender, Source: TObject; X,
+  Y: Integer; State: TDragState; var Accept: Boolean);
+begin
+ accept := Source is TcxDragControlObject;
+
+end;
+
+procedure TfrmSysUserMenuManager.Image1DragDrop(Sender, Source: TObject; X,
+  Y: Integer);
+begin
+ if  Source is TcxDragControlObject then
+ begin
+      datasource.DataSet.Delete;
+ end;
+
+end;
+
+procedure TfrmSysUserMenuManager.exitButtonClick(Sender: TObject);
+begin
+  inherited;
+ close;
+end;
+
+end.

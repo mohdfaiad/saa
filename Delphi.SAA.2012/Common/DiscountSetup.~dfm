@@ -1,0 +1,14 @@
+inherited frmDiscount: TfrmDiscount
+  Caption = 'Discount Setup'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited mainPanel: TPanel
+    inherited cxPageControl1: TcxPageControl
+      inherited cxTabSheet1: TcxTabSheet
+        inherited dxDBGrid1: TdxDBGrid
+          Filter.Criteria = {00000000}
+        end
+      end
+    end
+  end
+end

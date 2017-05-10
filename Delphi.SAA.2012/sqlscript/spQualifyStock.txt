@@ -1,0 +1,26 @@
+CREATE PROCEDURE X_QUALIFY_STOCK (
+    ASTOCK_CODE VARCHAR(15),
+    ALOT_CD VARCHAR(15),
+    AREF_NO VARCHAR(15),
+    AREF_DATE TIMESTAMP)
+RETURNS (
+    ONHAND_QTY FLOAT,
+    RESERVED_QTY FLOAT)
+AS
+begin
+  SELECT SUM(ONHAND_QTY)
+  FROM IC_MAT_STK_DT_LINK
+  WHERE STOCK_CD =:astock_code
+  AND LOT_CD =:alot_cd
+  AND REF_NO =:aref_no
+  AND REF_DATE =:aref_date
+  INTO:onhand_qty;
+
+  SELECT SUM(QTY) FROM IC_STOCK_RESERVED
+  WHERE STOCK_CD =:astock_code
+  AND LOT_CD =:alot_cd
+  AND REF_NO =:aref_no
+  AND REF_DATE =:aref_date
+  INTO :reserved_qty;
+ -- suspend;
+end

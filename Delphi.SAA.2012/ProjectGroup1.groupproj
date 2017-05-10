@@ -1,0 +1,54 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{4ad78e0d-ed4b-4446-b7d5-7a882c8bb120}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="C:\Program Files\Borland\Delphi7\Demos\Db\IBMastApp\mastapp.dproj" />
+    <Projects Include="C:\Program Files\Woll2Woll\ipstudio2007\demos\windows\gridmast\pgridmaster.dproj" />
+    <Projects Include="SAAMRP2.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="SAAMRP2">
+    <MSBuild Projects="SAAMRP2.dproj" Targets="" />
+  </Target>
+  <Target Name="SAAMRP2:Clean">
+    <MSBuild Projects="SAAMRP2.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SAAMRP2:Make">
+    <MSBuild Projects="SAAMRP2.dproj" Targets="Make" />
+  </Target>
+  <Target Name="pgridmaster">
+    <MSBuild Projects="C:\Program Files\Woll2Woll\ipstudio2007\demos\windows\gridmast\pgridmaster.dproj" Targets="" />
+  </Target>
+  <Target Name="pgridmaster:Clean">
+    <MSBuild Projects="C:\Program Files\Woll2Woll\ipstudio2007\demos\windows\gridmast\pgridmaster.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="pgridmaster:Make">
+    <MSBuild Projects="C:\Program Files\Woll2Woll\ipstudio2007\demos\windows\gridmast\pgridmaster.dproj" Targets="Make" />
+  </Target>
+  <Target Name="mastapp">
+    <MSBuild Projects="C:\Program Files\Borland\Delphi7\Demos\Db\IBMastApp\mastapp.dproj" Targets="" />
+  </Target>
+  <Target Name="mastapp:Clean">
+    <MSBuild Projects="C:\Program Files\Borland\Delphi7\Demos\Db\IBMastApp\mastapp.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="mastapp:Make">
+    <MSBuild Projects="C:\Program Files\Borland\Delphi7\Demos\Db\IBMastApp\mastapp.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="SAAMRP2;pgridmaster;mastapp" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="SAAMRP2:Clean;pgridmaster:Clean;mastapp:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="SAAMRP2:Make;pgridmaster:Make;mastapp:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>

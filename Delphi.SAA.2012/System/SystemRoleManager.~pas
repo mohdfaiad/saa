@@ -1,0 +1,29 @@
+unit SystemRoleManager;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseDBGridEditForm, cxStyles, cxCustomData, cxGraphics,
+  cxFilter, cxData, cxDataStorage, cxEdit, DB, cxDBData, wwrcdvw, wwDialog,
+  wwidlg, dxLayoutLookAndFeels, ImgList, cxGridLevel, cxClasses,
+  cxControls, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxGrid, cxPC, StdCtrls, ExtCtrls, ComCtrls, ToolWin,
+  fcStatusBar;
+
+type
+  TfrmCXSysRole = class(TfrmDBGridEntry)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCXSysRole: TfrmCXSysRole;
+
+implementation
+
+{$R *.dfm}
+
+end.

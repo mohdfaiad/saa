@@ -1,0 +1,27 @@
+unit productionplanLineMovePOPUPForm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, cxControls, cxContainer, cxEdit, cxTextEdit;
+
+type
+  TfrmProductionPlanLineMovePopup = class(TForm)
+    cxTextEdit1: TcxTextEdit;
+    Button1: TButton;
+    Button2: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmProductionPlanLineMovePopup: TfrmProductionPlanLineMovePopup;
+
+implementation
+
+{$R *.dfm}
+
+end.

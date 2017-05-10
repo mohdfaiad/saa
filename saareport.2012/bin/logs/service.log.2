@@ -1,0 +1,82 @@
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger <init>
+INFO: Created log C:\Project\saa\src\saareport\bin/logs/service.log
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger log
+INFO: #################################################
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger log
+INFO: READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger log
+INFO: READ JDBC_URL:	jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saa.gdb?sql_dialect=3
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger log
+INFO: #################################################
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger log
+INFO: Loding db config
+May 12, 2007 9:39:27 AM com.saa.logger.AppLogger log
+INFO: Creating dbmgr.....
+May 12, 2007 9:39:28 AM com.saa.logger.AppLogger log
+INFO: Created Connection to jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saa.gdb?sql_dialect=3
+May 12, 2007 9:39:28 AM com.saa.logger.AppLogger log
+INFO: Created DBManager
+May 12, 2007 9:39:28 AM com.saa.logger.AppLogger log
+INFO: dbping:send commandselect * from rdb$database
+May 12, 2007 9:40:16 AM com.saa.logger.AppLogger log
+INFO: dbPing:Connection alive
+May 12, 2007 9:40:16 AM com.saa.logger.AppLogger log
+INFO: Sending db command
+May 12, 2007 9:40:16 AM com.saa.logger.AppLogger log
+INFO: created login windows
+May 12, 2007 9:40:16 AM com.saa.logger.AppLogger log
+INFO: setting... runtime controller
+May 12, 2007 9:41:26 AM com.saa.logger.AppLogger log
+INFO: exec sql :select count(*) as rows from sys_users
+where user_id='icuser'
+and current_password='icsaa'
+May 12, 2007 9:41:26 AM com.saa.logger.AppLogger log
+INFO: exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+order by MAIN_MENU_NAME,MENU_INDEX,MENU_ITEM_INDEX
+May 12, 2007 9:41:26 AM com.saa.logger.AppLogger log
+INFO: Create main window
+May 12, 2007 9:42:14 AM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:รายงานใบส่งของ delivery order	Level:3	System:Product Plan System	SubLevel:1	subname:รายงานใบส่งของ delivery order
+May 12, 2007 9:42:14 AM com.saa.logger.AppLogger log
+INFO: creating BaseView
+May 12, 2007 9:42:14 AM com.saa.logger.AppLogger log
+INFO: created DB Manager
+May 12, 2007 9:42:14 AM com.saa.logger.AppLogger log
+INFO: exec sql :SELECT DISTINCT delivery_no
+FROM so_det_hd
+WHERE STATUS <>'X'
+
+May 12, 2007 9:42:19 AM com.saa.logger.AppLogger log
+INFO: Loading report..PN001.JRXML
+May 12, 2007 9:42:19 AM com.saa.logger.AppLogger log
+INFO: Report Adapter get Default Dir :C:\Project\saa\src\saareport\bin\report\templates
+May 12, 2007 9:42:19 AM com.saa.logger.AppLogger log
+INFO: Setting params..PN001.JRXML
+May 12, 2007 9:45:30 AM com.saa.logger.AppLogger log
+INFO: Loading report..PN001.JRXML
+May 12, 2007 9:45:30 AM com.saa.logger.AppLogger log
+INFO: Report Adapter get Default Dir :C:\Project\saa\src\saareport\bin\report\templates
+May 12, 2007 9:45:30 AM com.saa.logger.AppLogger log
+INFO: Setting params..PN001.JRXML
+May 12, 2007 9:47:39 AM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:รายงาน Melt Summary Sheet	Level:3	System:Product Plan System	SubLevel:2	subname:รายงาน Melt Summary Sheet
+May 12, 2007 9:47:39 AM com.saa.logger.AppLogger log
+INFO: creating BaseView
+May 12, 2007 9:47:39 AM com.saa.logger.AppLogger log
+INFO: created DB Manager
+May 12, 2007 9:49:42 AM com.saa.logger.AppLogger log
+INFO: Loading report..PN002.JRXML
+May 12, 2007 9:49:42 AM com.saa.logger.AppLogger log
+INFO: Report Adapter get Default Dir :C:\Project\saa\src\saareport\bin\report\templates
+May 12, 2007 9:49:42 AM com.saa.logger.AppLogger log
+INFO: ExecSQL update:execute procedure	 X_GET_MELT_SUMMARY '01m04','04m04'
+May 12, 2007 9:49:42 AM com.saa.logger.AppLogger log
+INFO: Setting params..PN002.JRXML
+May 12, 2007 9:49:59 AM com.saa.logger.AppLogger log
+INFO: Destroy abstract db manager

@@ -1,0 +1,728 @@
+
+C:\project\saa\src\saareport\bin\Create JRX>cd C:\Project\saa\src\saareport\classes 
+
+C:\project\saa\src\saareport\classes>jar -cvfm "C:\Project\saa\src\saareport\bin\Create JRX\saareport.jar"  "C:\Project\saa\src\saareport\bin\Create JRX\MANIFEST.MF" ./com 
+added manifest
+adding: com/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/control/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/control/AbstractTreeViewActionsController.class(in = 659) (out= 332)(deflated 49%)
+adding: com/saa/control/ControllerInterface.class(in = 192) (out= 150)(deflated 21%)
+adding: com/saa/control/DBController.class(in = 2170) (out= 1039)(deflated 52%)
+adding: com/saa/control/report/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/control/report/JasPerAdapter.class(in = 9775) (out= 4497)(deflated 53%)
+adding: com/saa/control/report/JasperReportInterface.class(in = 222) (out= 169)(deflated 23%)
+adding: com/saa/control/report/ReportsController.class(in = 605) (out= 354)(deflated 41%)
+adding: com/saa/control/TreeAction.class(in = 617) (out= 361)(deflated 41%)
+adding: com/saa/control/TreeActionListener.class(in = 183) (out= 142)(deflated 22%)
+adding: com/saa/control/TreeMenuController.class(in = 3622) (out= 1798)(deflated 50%)
+adding: com/saa/control/TreeViewActionsController$JXAbstractAction.class(in = 1533) (out= 704)(deflated 54%)
+adding: com/saa/control/TreeViewActionsController.class(in = 2756) (out= 1241)(deflated 54%)
+adding: com/saa/data/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/data/AbstractDBData.class(in = 2501) (out= 1193)(deflated 52%)
+adding: com/saa/data/Actions.class(in = 518) (out= 344)(deflated 33%)
+adding: com/saa/data/InterfaceData.class(in = 165) (out= 138)(deflated 16%)
+adding: com/saa/data/ProcessStatus.class(in = 467) (out= 313)(deflated 32%)
+adding: com/saa/data/ReportOptions$ExportExtension.class(in = 656) (out= 400)(deflated 39%)
+adding: com/saa/data/ReportOptions$ExportOptions.class(in = 828) (out= 504)(deflated 39%)
+adding: com/saa/data/ReportOptions.class(in = 461) (out= 275)(deflated 40%)
+adding: com/saa/data/SQLBuilder.class(in = 6173) (out= 2838)(deflated 54%)
+adding: com/saa/data/SubTreeObject.class(in = 1652) (out= 677)(deflated 59%)
+adding: com/saa/data/TreeDBData.class(in = 4540) (out= 2340)(deflated 48%)
+adding: com/saa/data/TreeObject.class(in = 1130) (out= 547)(deflated 51%)
+adding: com/saa/data/ui/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/data/ui/UICollections.class(in = 765) (out= 507)(deflated 33%)
+adding: com/saa/event/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/event/DataChangeEvent.class(in = 366) (out= 240)(deflated 34%)
+adding: com/saa/event/DataChangeListener.class(in = 242) (out= 173)(deflated 28%)
+adding: com/saa/jdbc/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/jdbc/AbstractDataManager.class(in = 10926) (out= 5393)(deflated 50%)
+adding: com/saa/jdbc/AbstractDataObject.class(in = 627) (out= 363)(deflated 42%)
+adding: com/saa/jdbc/AbstractDBManager.class(in = 4517) (out= 2245)(deflated 50%)
+adding: com/saa/jdbc/BaseDataManager.class(in = 376) (out= 223)(deflated 40%)
+adding: com/saa/jdbc/DataObject.class(in = 417) (out= 266)(deflated 36%)
+adding: com/saa/jdbc/Persistent.class(in = 142) (out= 121)(deflated 14%)
+adding: com/saa/jdbc/PersistentObject.class(in = 2075) (out= 826)(deflated 60%)
+adding: com/saa/jdbc/SampleDataObject.class(in = 663) (out= 344)(deflated 48%)
+adding: com/saa/logger/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/logger/AppLogger.class(in = 2072) (out= 895)(deflated 56%)
+adding: com/saa/logger/Log4jTestApp.class(in = 1340) (out= 742)(deflated 44%)
+adding: com/saa/logger/LoggerIF.class(in = 150) (out= 128)(deflated 14%)
+adding: com/saa/main/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/main/ApacheLoggerApp.class(in = 1659) (out= 928)(deflated 44%)
+adding: com/saa/main/AppMain$1.class(in = 1567) (out= 874)(deflated 44%)
+adding: com/saa/main/AppMain$BasicWindowMonitor.class(in = 1423) (out= 767)(deflated 46%)
+adding: com/saa/main/AppMain$FrameDecorator.class(in = 730) (out= 469)(deflated 35%)
+adding: com/saa/main/AppMain.class(in = 9893) (out= 4650)(deflated 52%)
+adding: com/saa/main/RunTimeController.class(in = 1572) (out= 744)(deflated 52%)
+adding: com/saa/main/UIActions$DBUpdateManagerAction.class(in = 1140) (out= 589)(deflated 48%)
+adding: com/saa/main/UIActions$ExitAction.class(in = 972) (out= 516)(deflated 46%)
+adding: com/saa/main/UIActions$LoginAction.class(in = 1120) (out= 582)(deflated 48%)
+adding: com/saa/main/UIActions$LookAndFeelAction.class(in = 2436) (out= 1186)(deflated 51%)
+adding: com/saa/main/UIActions$VersionDisplayAction.class(in = 1196) (out= 621)(deflated 48%)
+adding: com/saa/main/UIActions.class(in = 2886) (out= 1030)(deflated 64%)
+adding: com/saa/model/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/model/AbstractModel.class(in = 320) (out= 228)(deflated 28%)
+adding: com/saa/model/auto/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/model/auto/_IC_GROUP.class(in = 446) (out= 307)(deflated 31%)
+adding: com/saa/model/auto/_PL_REQ_DT.class(in = 697) (out= 436)(deflated 37%)
+adding: com/saa/model/auto/_PL_REQ_HD.class(in = 649) (out= 399)(deflated 38%)
+adding: com/saa/model/DataManagerTest.class(in = 726) (out= 464)(deflated 36%)
+adding: com/saa/model/FinishedGoodsStockAdjustItem.class(in = 3056) (out= 985)(deflated 67%)
+adding: com/saa/model/IcGroupDataManager.class(in = 1599) (out= 795)(deflated 50%)
+adding: com/saa/model/IcGroupItem.class(in = 1701) (out= 728)(deflated 57%)
+adding: com/saa/model/IcGroupItemSet.class(in = 1534) (out= 763)(deflated 50%)
+adding: com/saa/report/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/report/quries/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/report/quries/QueryManagerIF.class(in = 131) (out= 113)(deflated 13%)
+adding: com/saa/report/quries/ReportQueryManager.class(in = 1190) (out= 642)(deflated 46%)
+adding: com/saa/test/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/test/.LCKSecretLabel.java~(in = 59) (out= 55)(deflated 6%)
+adding: com/saa/test/CurrentDir.class(in = 616) (out= 361)(deflated 41%)
+adding: com/saa/test/CursorController.class(in = 891) (out= 493)(deflated 44%)
+adding: com/saa/test/CursorTest.class(in = 876) (out= 487)(deflated 44%)
+adding: com/saa/test/DateField$Listener.class(in = 830) (out= 446)(deflated 46%)
+adding: com/saa/test/DateField.class(in = 1482) (out= 663)(deflated 55%)
+adding: com/saa/test/DateFieldSample.class(in = 631) (out= 373)(deflated 40%)
+adding: com/saa/test/DatePicker.class(in = 2781) (out= 1067)(deflated 61%)
+adding: com/saa/test/DatePickerSample.class(in = 590) (out= 341)(deflated 42%)
+adding: com/saa/test/gimp.jpg(in = 116094) (out= 116088)(deflated 0%)
+adding: com/saa/test/image/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/test/image/1.jpg(in = 2492) (out= 2457)(deflated 1%)
+adding: com/saa/test/image/2.jpg(in = 2624) (out= 2584)(deflated 1%)
+adding: com/saa/test/image/gimp-splash-1.5.bmp(in = 261054) (out= 182678)(deflated 30%)
+adding: com/saa/test/image/gimp.jpg(in = 116094) (out= 116088)(deflated 0%)
+adding: com/saa/test/io/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/test/io/textfile/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/test/io/textfile/TextFileManager.class(in = 870) (out= 461)(deflated 47%)
+adding: com/saa/test/jasper/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/test/jasper/JasperReportSortField.class(in = 1969) (out= 762)(deflated 61%)
+adding: com/saa/test/JDialogWindowAdapter.class(in = 761) (out= 424)(deflated 44%)
+adding: com/saa/test/MyFrame.class(in = 518) (out= 343)(deflated 33%)
+adding: com/saa/test/SecretLabel.class(in = 967) (out= 454)(deflated 53%)
+adding: com/saa/test/SecretLabelTest.class(in = 633) (out= 373)(deflated 41%)
+adding: com/saa/test/Splash$WindowListener.class(in = 817) (out= 442)(deflated 45%)
+adding: com/saa/test/Splash.class(in = 1220) (out= 637)(deflated 47%)
+adding: com/saa/test/TestImageIcon.class(in = 625) (out= 363)(deflated 41%)
+adding: com/saa/test/TestJDialog.class(in = 705) (out= 408)(deflated 42%)
+adding: com/saa/test/TestSplash.class(in = 744) (out= 408)(deflated 45%)
+adding: com/saa/test/TestTomcatJNDI.class(in = 627) (out= 365)(deflated 41%)
+adding: com/saa/ui/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/account/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/account/AR001Frame.class(in = 2410) (out= 1277)(deflated 47%)
+adding: com/saa/ui/account/AR002Frame.class(in = 2410) (out= 1277)(deflated 47%)
+adding: com/saa/ui/account/AR003Frame.class(in = 3019) (out= 1550)(deflated 48%)
+adding: com/saa/ui/account/AR004Frame.class(in = 1841) (out= 972)(deflated 47%)
+adding: com/saa/ui/account/AR005Frame.class(in = 1841) (out= 973)(deflated 47%)
+adding: com/saa/ui/account/AR006Frame.class(in = 1841) (out= 972)(deflated 47%)
+adding: com/saa/ui/binding/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/binding/BindingState.class(in = 525) (out= 332)(deflated 36%)
+adding: com/saa/ui/binding/ColorData.class(in = 1215) (out= 645)(deflated 46%)
+adding: com/saa/ui/binding/ColoredTableCellRenderer.class(in = 1087) (out= 604)(deflated 44%)
+adding: com/saa/ui/binding/Fraction.class(in = 1107) (out= 675)(deflated 39%)
+adding: com/saa/ui/binding/FrameEditModel.class(in = 168) (out= 140)(deflated 16%)
+adding: com/saa/ui/binding/IconData.class(in = 611) (out= 377)(deflated 38%)
+adding: com/saa/ui/binding/JXAbstractColumnData.class(in = 551) (out= 350)(deflated 36%)
+adding: com/saa/ui/binding/JXAbstractRowData.class(in = 652) (out= 392)(deflated 39%)
+adding: com/saa/ui/binding/JXAbstractTableFrame$1.class(in = 754) (out= 399)(deflated 47%)
+adding: com/saa/ui/binding/JXAbstractTableFrame.class(in = 5161) (out= 2607)(deflated 49%)
+adding: com/saa/ui/binding/JXAbstractTableModel$ColumnListener.class(in = 3178) (out= 1574)(deflated 50%)
+adding: com/saa/ui/binding/JXAbstractTableModel.class(in = 2867) (out= 1388)(deflated 51%)
+adding: com/saa/ui/binding/JXComponentBuilder.class(in = 317) (out= 221)(deflated 30%)
+adding: com/saa/ui/binding/JXDBChangedController.class(in = 208) (out= 154)(deflated 25%)
+adding: com/saa/ui/binding/JXDBChangeNotify.class(in = 1248) (out= 611)(deflated 51%)
+adding: com/saa/ui/binding/JXDBDataGridModel.class(in = 756) (out= 430)(deflated 43%)
+adding: com/saa/ui/binding/JXDBEditFrame.class(in = 5546) (out= 2468)(deflated 55%)
+adding: com/saa/ui/binding/JXDBEventModel.class(in = 265) (out= 191)(deflated 27%)
+adding: com/saa/ui/binding/SmartLong.class(in = 835) (out= 508)(deflated 39%)
+adding: com/saa/ui/binding/test/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/binding/test/FormatFieldSample1.class(in = 3716) (out= 1817)(deflated 51%)
+adding: com/saa/ui/binding/test/JXTableTest$RowData.class(in = 906) (out= 490)(deflated 45%)
+adding: com/saa/ui/binding/test/JXTableTest$SampleTableModel.class(in = 1603) (out= 672)(deflated 58%)
+adding: com/saa/ui/binding/test/JXTableTest.class(in = 978) (out= 530)(deflated 45%)
+adding: com/saa/ui/binding/test/SharedDataSample$1.class(in = 959) (out= 546)(deflated 43%)
+adding: com/saa/ui/binding/test/SharedDataSample.class(in = 2356) (out= 1268)(deflated 46%)
+adding: com/saa/ui/binding/test/TableHeaderDemo$1.class(in = 1702) (out= 802)(deflated 52%)
+adding: com/saa/ui/binding/test/TableHeaderDemo$2.class(in = 538) (out= 322)(deflated 40%)
+adding: com/saa/ui/binding/test/TableHeaderDemo$MyRenderer.class(in = 1685) (out= 855)(deflated 49%)
+adding: com/saa/ui/binding/test/TableHeaderDemo.class(in = 2313) (out= 1167)(deflated 49%)
+adding: com/saa/ui/binding/test/TestingCombo$1.class(in = 1113) (out= 589)(deflated 47%)
+adding: com/saa/ui/binding/test/TestingCombo.class(in = 1681) (out= 986)(deflated 41%)
+adding: com/saa/ui/date/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/date/DateField$1.class(in = 754) (out= 411)(deflated 45%)
+adding: com/saa/ui/date/DateField$Listener.class(in = 1239) (out= 638)(deflated 48%)
+adding: com/saa/ui/date/DateField.class(in = 4192) (out= 2045)(deflated 51%)
+adding: com/saa/ui/date/DatePicker$1.class(in = 761) (out= 408)(deflated 46%)
+adding: com/saa/ui/date/DatePicker$2.class(in = 761) (out= 408)(deflated 46%)
+adding: com/saa/ui/date/DatePicker$3.class(in = 729) (out= 388)(deflated 46%)
+adding: com/saa/ui/date/DatePicker$4.class(in = 761) (out= 409)(deflated 46%)
+adding: com/saa/ui/date/DatePicker$5.class(in = 761) (out= 411)(deflated 45%)
+adding: com/saa/ui/date/DatePicker.class(in = 11134) (out= 5103)(deflated 54%)
+adding: com/saa/ui/Dialogs/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/Dialogs/AbstractLookupDialog$1.class(in = 546) (out= 321)(deflated 41%)
+adding: com/saa/ui/Dialogs/AbstractLookupDialog.class(in = 1545) (out= 802)(deflated 48%)
+adding: com/saa/ui/Dialogs/AbstractLookupDialog.form(in = 1421) (out= 459)(deflated 67%)
+adding: com/saa/ui/Dialogs/BaseDialog.class(in = 2547) (out= 1326)(deflated 47%)
+adding: com/saa/ui/Dialogs/LoginDialog.class(in = 3266) (out= 1723)(deflated 47%)
+adding: com/saa/ui/Dialogs/ModalResult.class(in = 470) (out= 320)(deflated 31%)
+adding: com/saa/ui/Dialogs/ProgressDialog.class(in = 1195) (out= 683)(deflated 42%)
+adding: com/saa/ui/pc/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/pc/PC001Frame.class(in = 1362) (out= 727)(deflated 46%)
+adding: com/saa/ui/pc/PC002Frame.class(in = 2964) (out= 1533)(deflated 48%)
+adding: com/saa/ui/pc/PC003Frame.class(in = 408) (out= 264)(deflated 35%)
+adding: com/saa/ui/planing/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/pn/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/pn/PN001Frame.class(in = 2244) (out= 1199)(deflated 46%)
+adding: com/saa/ui/pn/PN002Frame.class(in = 2729) (out= 1426)(deflated 47%)
+adding: com/saa/ui/pn/PN006Frame.class(in = 487) (out= 326)(deflated 33%)
+adding: com/saa/ui/pn/PN010Frame.class(in = 2345) (out= 1243)(deflated 46%)
+adding: com/saa/ui/pn/PN012Frame.class(in = 2305) (out= 1209)(deflated 47%)
+adding: com/saa/ui/pn/PN014Frame.class(in = 1715) (out= 888)(deflated 48%)
+adding: com/saa/ui/sa/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/sa/SA001Frame.class(in = 1356) (out= 724)(deflated 46%)
+adding: com/saa/ui/sa/SA002Frame.class(in = 2902) (out= 1554)(deflated 46%)
+adding: com/saa/ui/sa/SA003Frame.class(in = 2873) (out= 1537)(deflated 46%)
+adding: com/saa/ui/sa/SA004Frame.class(in = 1972) (out= 1054)(deflated 46%)
+adding: com/saa/ui/Splash$WindowListener.class(in = 700) (out= 416)(deflated 40%)
+adding: com/saa/ui/Splash.class(in = 2542) (out= 1386)(deflated 45%)
+adding: com/saa/ui/utils/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/utils/DBUpateManager.class(in = 2916) (out= 1566)(deflated 46%)
+adding: com/saa/ui/utils/DebugSQLConnection.class(in = 1375) (out= 773)(deflated 43%)
+adding: com/saa/ui/utils/UIUtils.class(in = 1165) (out= 618)(deflated 46%)
+adding: com/saa/ui/View/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/View/BaseReportFrame$1.class(in = 2035) (out= 1078)(deflated 47%)
+adding: com/saa/ui/View/BaseReportFrame.class(in = 3245) (out= 1686)(deflated 48%)
+adding: com/saa/ui/View/BaseView$1.class(in = 667) (out= 380)(deflated 43%)
+adding: com/saa/ui/View/BaseView.class(in = 7516) (out= 3724)(deflated 50%)
+adding: com/saa/ui/View/BaseViewDecorator.class(in = 3002) (out= 1175)(deflated 60%)
+adding: com/saa/ui/View/DBTableModel.class(in = 3447) (out= 1814)(deflated 47%)
+adding: com/saa/ui/View/GenericTableModel.class(in = 700) (out= 403)(deflated 42%)
+adding: com/saa/ui/View/MenuModel.class(in = 4787) (out= 2502)(deflated 47%)
+adding: com/saa/ui/View/panels/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/View/panels/AbstractComboPanel.class(in = 1748) (out= 844)(deflated 51%)
+adding: com/saa/ui/View/panels/AbstractSingleTextFieldPanel.class(in = 1562) (out= 815)(deflated 47%)
+adding: com/saa/ui/View/panels/BasePanel.class(in = 304) (out= 219)(deflated 27%)
+adding: com/saa/ui/View/panels/ButtonsPanel.class(in = 871) (out= 522)(deflated 40%)
+adding: com/saa/ui/View/panels/DateFromToPanel.class(in = 837) (out= 480)(deflated 42%)
+adding: com/saa/ui/View/panels/DatePanel.class(in = 940) (out= 531)(deflated 43%)
+adding: com/saa/ui/View/panels/ExportOptionsPanel.class(in = 935) (out= 550)(deflated 41%)
+adding: com/saa/ui/View/panels/LoginPanel.class(in = 1561) (out= 835)(deflated 46%)
+adding: com/saa/ui/View/panels/MeltFromToPanel.class(in = 1243) (out= 720)(deflated 42%)
+adding: com/saa/ui/View/panels/TextAreaPanel.class(in = 1233) (out= 696)(deflated 43%)
+adding: com/saa/ui/View/panels/YearMonthPanel.class(in = 1643) (out= 915)(deflated 44%)
+adding: com/saa/ui/View/TableView.class(in = 1522) (out= 846)(deflated 44%)
+adding: com/saa/ui/View/TreeView.class(in = 2497) (out= 1220)(deflated 51%)
+adding: com/saa/ui/View/TreeViewModel.class(in = 3779) (out= 1705)(deflated 54%)
+adding: com/saa/ui/View/ViewsManager$1.class(in = 1004) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$10.class(in = 1001) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$11.class(in = 1001) (out= 536)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$12.class(in = 1001) (out= 537)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$13.class(in = 1001) (out= 537)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$14.class(in = 1001) (out= 537)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$15.class(in = 1001) (out= 536)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$16.class(in = 1001) (out= 534)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$17.class(in = 1001) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$18.class(in = 1001) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$19.class(in = 1001) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$2.class(in = 999) (out= 532)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$20.class(in = 1001) (out= 534)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$21.class(in = 1001) (out= 533)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$22.class(in = 1001) (out= 533)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$23.class(in = 1001) (out= 532)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$24.class(in = 1001) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$25.class(in = 1006) (out= 537)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$26.class(in = 1006) (out= 537)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$27.class(in = 1006) (out= 542)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$28.class(in = 1006) (out= 543)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$29.class(in = 1006) (out= 542)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$3.class(in = 999) (out= 533)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$30.class(in = 1006) (out= 542)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$4.class(in = 999) (out= 536)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$5.class(in = 999) (out= 537)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$6.class(in = 999) (out= 538)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$7.class(in = 999) (out= 538)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$8.class(in = 999) (out= 538)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager$9.class(in = 999) (out= 535)(deflated 46%)
+adding: com/saa/ui/View/ViewsManager.class(in = 3962) (out= 1705)(deflated 56%)
+adding: com/saa/ui/warehouse/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/stockissue/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/stockissue/gui/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/stockissue/gui/DateTableCellEditor.class(in = 2218) (out= 982)(deflated 55%)
+adding: com/saa/ui/warehouse/stockissue/gui/NewJFrame$1.class(in = 553) (out= 327)(deflated 40%)
+adding: com/saa/ui/warehouse/stockissue/gui/NewJFrame.class(in = 3621) (out= 1641)(deflated 54%)
+adding: com/saa/ui/warehouse/stockissue/gui/NewJFrame.form(in = 3304) (out= 871)(deflated 73%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductionMaterialRequestDetailTableModel.class(in = 2134) (out= 839)(deflated 60%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductionMaterialRequestFrameEdit$1.class(in = 737) (out= 362)(deflated 50%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductionMaterialRequestFrameEdit.class(in = 11530) (out= 5129)(deflated 55%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductionMaterialRequestFrameEdit.form(in = 21388) (out= 2102)(deflated 90%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductMaterialRequestBrowse$ButtonActionListener.class(in = 1287) (out= 577)(deflated 55%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductMaterialRequestBrowse.class(in = 2668) (out= 1037)(deflated 61%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductMaterialRequestBrowse.form(in = 8893) (out= 1288)(deflated 85%)
+adding: com/saa/ui/warehouse/stockissue/gui/ProductMaterialRequestHeaderTableModel.class(in = 2251) (out= 777)(deflated 65%)
+adding: com/saa/ui/warehouse/stockissue/manager/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/stockissue/manager/.LCKProductMaterialRequestBrowseManager.java~(in = 118) (out= 97)(deflated 17%)
+adding: com/saa/ui/warehouse/stockissue/manager/ProductionMaterialRequestBrowseManager.class(in = 2223) (out= 796)(deflated 64%)
+adding: com/saa/ui/warehouse/stockissue/model/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/stockissue/model/.LCKProductMaterialRequestViewItem.java~(in = 111) (out= 95)(deflated 14%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestDetailItem.class(in = 4380) (out= 1391)(deflated 68%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestDetailItemSet.class(in = 1342) (out= 588)(deflated 56%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestHeaderItem.class(in = 4077) (out= 1354)(deflated 66%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestHeaderItemSet.class(in = 1272) (out= 576)(deflated 54%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestViewData.class(in = 566) (out= 350)(deflated 38%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestViewItem.class(in = 2119) (out= 793)(deflated 62%)
+adding: com/saa/ui/warehouse/stockissue/model/ProductionMaterialRequestViewItemSet.class(in = 1369) (out= 613)(deflated 55%)
+adding: com/saa/ui/warehouse/stockissue/service/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/stockissue/service/ProductionMaterialRequestDataManager.class(in = 3689) (out= 1226)(deflated 66%)
+adding: com/saa/ui/warehouse/test/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/warehouse/test/Find.class(in = 969) (out= 497)(deflated 48%)
+adding: com/saa/ui/warehouse/test/GridBagLayoutDemo$1.class(in = 533) (out= 310)(deflated 41%)
+adding: com/saa/ui/warehouse/test/GridBagLayoutDemo.class(in = 2426) (out= 1369)(deflated 43%)
+adding: com/saa/ui/warehouse/test/SpringForm$1.class(in = 505) (out= 302)(deflated 40%)
+adding: com/saa/ui/warehouse/test/SpringForm.class(in = 1798) (out= 1049)(deflated 41%)
+adding: com/saa/ui/warehouse/test/TestGroupLayout.class(in = 1292) (out= 532)(deflated 58%)
+adding: com/saa/ui/wh/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/ui/wh/MonthCloseFrame.class(in = 3116) (out= 1667)(deflated 46%)
+adding: com/saa/ui/wh/WH001Frame.class(in = 408) (out= 266)(deflated 34%)
+adding: com/saa/ui/wh/WH002Frame.class(in = 1378) (out= 761)(deflated 44%)
+adding: com/saa/ui/wh/WH003Frame.class(in = 1377) (out= 763)(deflated 44%)
+adding: com/saa/ui/wh/WH004Frame.class(in = 2817) (out= 1486)(deflated 47%)
+adding: com/saa/ui/wh/WH005Frame.class(in = 1441) (out= 797)(deflated 44%)
+adding: com/saa/ui/wh/WH006Frame.class(in = 590) (out= 369)(deflated 37%)
+adding: com/saa/ui/wh/WH007Frame.class(in = 2375) (out= 1275)(deflated 46%)
+adding: com/saa/ui/wh/WH008Frame.class(in = 3136) (out= 1739)(deflated 44%)
+adding: com/saa/ui/wh/WH009Frame.class(in = 1502) (out= 828)(deflated 44%)
+adding: com/saa/ui/wh/WH010Frame.class(in = 1353) (out= 752)(deflated 44%)
+adding: com/saa/ui/wh/YearMonthFrame.class(in = 1113) (out= 612)(deflated 45%)
+adding: com/saa/util/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/util/AutoInitialize.class(in = 6162) (out= 2864)(deflated 53%)
+adding: com/saa/util/MessageDlg.class(in = 1533) (out= 704)(deflated 54%)
+adding: com/saa/util/SystemConfig.class(in = 4640) (out= 2232)(deflated 51%)
+adding: com/saa/util/xml/(in = 0) (out= 0)(stored 0%)
+adding: com/saa/util/xml/DataObjectsParser.class(in = 4484) (out= 2197)(deflated 51%)
+adding: com/saa/util/xml/DBOXMLSchema.class(in = 565) (out= 377)(deflated 33%)
+adding: com/saa/util/xml/DomParserExample.class(in = 4935) (out= 2448)(deflated 50%)
+adding: com/saa/util/xml/Employee.class(in = 549) (out= 356)(deflated 35%)
+adding: com/saa/util/xml/exployee.xml(in = 432) (out= 177)(deflated 59%)
+
+C:\project\saa\src\saareport\classes>copy "C:\Project\saa\src\saareport\bin\Create JRX\saareport.jar"   "C:\Project\saa\src\saareport\bin" /y  
+        1 file(s) copied.
+
+C:\project\saa\src\saareport\classes>xcopy "C:\Project\saa\src\saareport\version" "C:\Project\saa\src\saareport\bin\version" /y /s /i 
+C:\Project\saa\src\saareport\version\version.properties
+C:\Project\saa\src\saareport\version\CVS\Entries
+C:\Project\saa\src\saareport\version\CVS\Repository
+C:\Project\saa\src\saareport\version\CVS\Root
+4 File(s) copied
+
+C:\project\saa\src\saareport\classes>xcopy "C:\Project\saa\src\saareport\report\templates" "C:\Project\saa\src\saareport\bin\report\templates" /s /i /y 
+C:\Project\saa\src\saareport\report\templates\AR001.bak
+C:\Project\saa\src\saareport\report\templates\AR001.jasper
+C:\Project\saa\src\saareport\report\templates\AR001.jrxml
+C:\Project\saa\src\saareport\report\templates\AR001_1217410564234_683216.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410621656_639860.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410674187_585087.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410800296_564845.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410867000_859496.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410901109_460429.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410928375_237602.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217410961796_755884.java
+C:\Project\saa\src\saareport\report\templates\AR001_1217411006953_514638.java
+C:\Project\saa\src\saareport\report\templates\AR001_1218859937937_422215.java
+C:\Project\saa\src\saareport\report\templates\AR001_1218859992171_195157.java
+C:\Project\saa\src\saareport\report\templates\AR001_1218860026765_985594.java
+C:\Project\saa\src\saareport\report\templates\AR001_1218860037421_218024.java
+C:\Project\saa\src\saareport\report\templates\AR001_1218860165281_588216.java
+C:\Project\saa\src\saareport\report\templates\AR002.bak
+C:\Project\saa\src\saareport\report\templates\AR002.jasper
+C:\Project\saa\src\saareport\report\templates\AR002.jrxml
+C:\Project\saa\src\saareport\report\templates\AR002_1217498026265_678487.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217498075421_401885.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217498113406_809388.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217498117125_376238.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217498767078_865917.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217499594609_822071.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217499614796_314053.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217499637468_113146.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217499680953_913173.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217499717750_876539.java
+C:\Project\saa\src\saareport\report\templates\AR002_1217499756187_133873.java
+C:\Project\saa\src\saareport\report\templates\AR003.bak
+C:\Project\saa\src\saareport\report\templates\AR003.jasper
+C:\Project\saa\src\saareport\report\templates\AR003.jrxml
+C:\Project\saa\src\saareport\report\templates\AR004.bak
+C:\Project\saa\src\saareport\report\templates\AR004.jrxml
+C:\Project\saa\src\saareport\report\templates\AR005.bak
+C:\Project\saa\src\saareport\report\templates\AR005.jasper
+C:\Project\saa\src\saareport\report\templates\AR005.jrxml
+C:\Project\saa\src\saareport\report\templates\AR006.bak
+C:\Project\saa\src\saareport\report\templates\AR006.jrxml
+C:\Project\saa\src\saareport\report\templates\Dross History.bak
+C:\Project\saa\src\saareport\report\templates\Dross History.jasper
+C:\Project\saa\src\saareport\report\templates\Dross History.jrxml
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215069831765_702589.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215069864953_829018.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215069898656_480742.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215069909656_593933.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215069942234_124399.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070104140_439078.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070164343_599150.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070420234_237282.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070433453_86578.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070654453_55438.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070673515_336927.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070724046_951507.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070772859_190982.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215070859187_771110.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071065750_990329.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071100796_556885.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071174062_521285.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071237859_328583.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071288203_857616.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071316812_492256.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071351078_725057.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071417921_865246.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071443984_490168.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071498968_509724.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215071520500_996216.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215072014968_912480.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215072222500_198731.java
+C:\Project\saa\src\saareport\report\templates\Dross32History_1215072242578_998552.java
+C:\Project\saa\src\saareport\report\templates\HorizontalReport.jasper
+C:\Project\saa\src\saareport\report\templates\MachineHistory.jasper
+C:\Project\saa\src\saareport\report\templates\MachineHistoryNew.jasper
+C:\Project\saa\src\saareport\report\templates\MachineHistoryNew_subreport.jasper
+C:\Project\saa\src\saareport\report\templates\PC001.bak
+C:\Project\saa\src\saareport\report\templates\PC001.jasper
+C:\Project\saa\src\saareport\report\templates\PC001.jrxml
+C:\Project\saa\src\saareport\report\templates\PC002.bak
+C:\Project\saa\src\saareport\report\templates\PC002.jasper
+C:\Project\saa\src\saareport\report\templates\PC002.jrxml
+C:\Project\saa\src\saareport\report\templates\PC002_1201599816765_679698.java
+C:\Project\saa\src\saareport\report\templates\PC003.bak
+C:\Project\saa\src\saareport\report\templates\PC003.jasper
+C:\Project\saa\src\saareport\report\templates\PC003.jrxml
+C:\Project\saa\src\saareport\report\templates\PC003_1201599634218_232662.java
+C:\Project\saa\src\saareport\report\templates\PC003_1201599753781_976900.java
+C:\Project\saa\src\saareport\report\templates\PC003_1201599801593_427027.java
+C:\Project\saa\src\saareport\report\templates\PN001.bak
+C:\Project\saa\src\saareport\report\templates\PN001.jasper
+C:\Project\saa\src\saareport\report\templates\PN001.jrxml
+C:\Project\saa\src\saareport\report\templates\PN001.rtf
+C:\Project\saa\src\saareport\report\templates\PN001_1211002532375_983667.java
+C:\Project\saa\src\saareport\report\templates\PN001_1211002560734_499115.java
+C:\Project\saa\src\saareport\report\templates\PN002-20070602.jrxml
+C:\Project\saa\src\saareport\report\templates\PN002.bak
+C:\Project\saa\src\saareport\report\templates\PN002.jasper
+C:\Project\saa\src\saareport\report\templates\PN002.jrxml
+C:\Project\saa\src\saareport\report\templates\PN002_1202536866312_89835.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202810302906_704935.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202810463828_304135.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202810864234_363187.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202868307046_957256.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202868951671_314385.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202869232859_547756.java
+C:\Project\saa\src\saareport\report\templates\PN002_1202869483953_805265.java
+C:\Project\saa\src\saareport\report\templates\PN002_1218422275908_802363.java
+C:\Project\saa\src\saareport\report\templates\PN002_1218422344720_26489.java
+C:\Project\saa\src\saareport\report\templates\PN002_1218445465890_488673.java
+C:\Project\saa\src\saareport\report\templates\PN002_1218445565406_4826.java
+C:\Project\saa\src\saareport\report\templates\PN002_1218445739140_861561.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219228216578_501016.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219228276703_271220.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219228318234_122590.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219228391218_38158.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219285693281_70572.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219287136781_310541.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219287403156_877147.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219638773067_551941.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219652766207_877334.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219652853145_698859.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219652886661_857671.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219653826098_920847.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219653831723_860461.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219653879161_304214.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219654044114_634372.java
+C:\Project\saa\src\saareport\report\templates\PN002_1219654106223_149500.java
+C:\Project\saa\src\saareport\report\templates\PN004.jasper
+C:\Project\saa\src\saareport\report\templates\PN004.jrxml
+C:\Project\saa\src\saareport\report\templates\PN004_1202869508843_346702.java
+C:\Project\saa\src\saareport\report\templates\PN006.bak
+C:\Project\saa\src\saareport\report\templates\PN006.jasper
+C:\Project\saa\src\saareport\report\templates\PN006.jrxml
+C:\Project\saa\src\saareport\report\templates\PN010-bean.jrxml
+C:\Project\saa\src\saareport\report\templates\PN010.bak
+C:\Project\saa\src\saareport\report\templates\PN010.jrxml
+C:\Project\saa\src\saareport\report\templates\PN012.bak
+C:\Project\saa\src\saareport\report\templates\PN012.jasper
+C:\Project\saa\src\saareport\report\templates\PN012.JRXML
+C:\Project\saa\src\saareport\report\templates\PN014.bak
+C:\Project\saa\src\saareport\report\templates\PN014.jasper
+C:\Project\saa\src\saareport\report\templates\PN014.jrxml
+C:\Project\saa\src\saareport\report\templates\PN014_1215144422734_306463.java
+C:\Project\saa\src\saareport\report\templates\PN014_1215144453453_337827.java
+C:\Project\saa\src\saareport\report\templates\PN014_1215144639218_622014.java
+C:\Project\saa\src\saareport\report\templates\PN014_1215144672203_872626.java
+C:\Project\saa\src\saareport\report\templates\PN014_1215145097953_450059.java
+C:\Project\saa\src\saareport\report\templates\PN014_1216176967781_674840.java
+C:\Project\saa\src\saareport\report\templates\PN014_1216180926968_213825.java
+C:\Project\saa\src\saareport\report\templates\PN014_1216182357203_430259.java
+C:\Project\saa\src\saareport\report\templates\PN014_1216182453546_544795.java
+C:\Project\saa\src\saareport\report\templates\PN014_1216182895468_99918.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039676875_257731.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039712328_299912.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039759593_756348.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039785515_817785.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039811921_771274.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039837812_960120.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039852437_290909.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217039893890_268889.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217040443937_43933.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217040534765_564968.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217040702421_682523.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217040754281_244252.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217040952953_697831.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217040999671_544621.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217041022890_789802.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217041114078_457545.java
+C:\Project\saa\src\saareport\report\templates\PN014_1217041144796_196578.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218618051359_128548.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218618138734_511544.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218618520968_144154.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218622160890_571508.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218622234359_113023.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218622255578_934446.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218622307453_599420.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218622326718_195804.java
+C:\Project\saa\src\saareport\report\templates\PN014_1218622383890_702140.java
+C:\Project\saa\src\saareport\report\templates\pnsub002.bak
+C:\Project\saa\src\saareport\report\templates\pnsub002.jasper
+C:\Project\saa\src\saareport\report\templates\pnsub002.jrxml
+C:\Project\saa\src\saareport\report\templates\PNSUB002_1219227617906_772296.java
+C:\Project\saa\src\saareport\report\templates\PNSUB002_1219287385703_159600.java
+C:\Project\saa\src\saareport\report\templates\PNSUB002_1219292636781_20485.java
+C:\Project\saa\src\saareport\report\templates\PNSUB004.jasper
+C:\Project\saa\src\saareport\report\templates\PNSUB004.jrxml
+C:\Project\saa\src\saareport\report\templates\PNSUB006.jasper
+C:\Project\saa\src\saareport\report\templates\PNSUB006.jrxml
+C:\Project\saa\src\saareport\report\templates\REPORT.jasper
+C:\Project\saa\src\saareport\report\templates\SA001-1.jasper
+C:\Project\saa\src\saareport\report\templates\SA001.bak
+C:\Project\saa\src\saareport\report\templates\SA001.jasper
+C:\Project\saa\src\saareport\report\templates\SA001.jrxml
+C:\Project\saa\src\saareport\report\templates\SA001_1199507802593_476048.java
+C:\Project\saa\src\saareport\report\templates\SA001_1199507920218_852194.java
+C:\Project\saa\src\saareport\report\templates\SA002.bak
+C:\Project\saa\src\saareport\report\templates\SA002.jasper
+C:\Project\saa\src\saareport\report\templates\SA002.jrxml
+C:\Project\saa\src\saareport\report\templates\SA003.bak
+C:\Project\saa\src\saareport\report\templates\SA003.jasper
+C:\Project\saa\src\saareport\report\templates\SA003.jrxml
+C:\Project\saa\src\saareport\report\templates\SA004.bak
+C:\Project\saa\src\saareport\report\templates\SA004.jasper
+C:\Project\saa\src\saareport\report\templates\SA004.jrxml
+C:\Project\saa\src\saareport\report\templates\TableReport.jasper
+C:\Project\saa\src\saareport\report\templates\TextFilter_Expression.bak
+C:\Project\saa\src\saareport\report\templates\TextFilter_Expression.jrxml
+C:\Project\saa\src\saareport\report\templates\WH001.bak
+C:\Project\saa\src\saareport\report\templates\WH001.jasper
+C:\Project\saa\src\saareport\report\templates\WH001.jrxml
+C:\Project\saa\src\saareport\report\templates\WH001_1198725947468_548065.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198812353671_952834.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198812503906_258991.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198831964687_159079.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198832289906_946103.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198832476562_752509.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198832595671_25423.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198832621765_346156.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198832645359_793227.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1198832676734_896482.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199258831156_480771.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199258882781_544551.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199258960609_559458.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199258983281_238212.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199259287656_941603.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199259426437_694991.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199259463640_373041.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199259489781_84638.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199504290890_213341.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199504661359_588769.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199504714359_809531.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199504898187_216226.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199504999656_350117.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199506199890_430932.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199517090734_627817.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199517707953_791401.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199517985140_175288.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199517987796_405654.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199518241312_275857.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199518254687_366995.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199519072015_611951.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199519086687_432697.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199519541328_194452.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199959218187_492768.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199959855734_669833.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1199959869265_876041.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1200018388390_316385.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1200018436140_703814.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1200018491406_81735.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1200018547312_584826.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1200305203562_238923.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201317949781_44606.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201318038781_583918.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201318143796_806556.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201319047187_900040.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201497337328_695643.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201497518781_343484.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201497602203_897312.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201497641593_177793.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201498485843_361008.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201498626296_374763.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201502359203_344294.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201502410093_773791.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201503307437_143681.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201503327359_80876.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201503540031_387756.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201503557046_523890.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201505001281_591230.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201508616000_139285.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201508637093_935833.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201508695531_402537.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201508847531_938271.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201508896218_481926.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201509054703_623919.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201509136312_735906.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201509199234_69163.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1201509319031_442908.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202528893968_531117.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202529015859_85082.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202529091796_575719.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202529604281_768267.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202530758578_457723.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202530824593_632160.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202530871421_613169.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202530911093_446896.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202531241656_769368.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202531697843_950757.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202531774265_455766.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202532291906_691525.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202532338921_84791.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202532408671_351380.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202533328531_379995.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202533546421_460209.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202533791203_897423.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1202533877890_10382.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1204346050357_191486.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1204346374756_773088.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1205092558717_559838.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1205092583170_286268.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1205093010655_782543.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1205198340968_186935.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1205958336734_752020.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1205958435546_322172.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1207145397484_279305.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1209009592062_912901.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1211859884359_666973.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1211859889609_434146.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1213327625750_207159.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1213328646593_354100.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216798353046_825910.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216798733734_631205.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216798809140_404519.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216799388484_734677.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216799584921_661924.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216799673875_569935.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216799693578_122.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216799819515_260968.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216866183453_884985.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216866201531_953674.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216866233062_149771.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216866401421_821596.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1216866506484_239022.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1219641249161_421572.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1219652236973_833607.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1219652738426_289955.groovy
+C:\Project\saa\src\saareport\report\templates\WH001_1219653211207_938711.groovy
+C:\Project\saa\src\saareport\report\templates\WH002.bak
+C:\Project\saa\src\saareport\report\templates\WH002.jasper
+C:\Project\saa\src\saareport\report\templates\WH002.jrxml
+C:\Project\saa\src\saareport\report\templates\WH002_1206907942299_526247.java
+C:\Project\saa\src\saareport\report\templates\WH003.bak
+C:\Project\saa\src\saareport\report\templates\WH003.jasper
+C:\Project\saa\src\saareport\report\templates\WH003.jrxml
+C:\Project\saa\src\saareport\report\templates\WH003_1199259549578_273946.java
+C:\Project\saa\src\saareport\report\templates\WH003_1206907900268_422652.java
+C:\Project\saa\src\saareport\report\templates\WH004.bak
+C:\Project\saa\src\saareport\report\templates\WH004.jasper
+C:\Project\saa\src\saareport\report\templates\WH004.jrxml
+C:\Project\saa\src\saareport\report\templates\WH005.bak
+C:\Project\saa\src\saareport\report\templates\WH005.jasper
+C:\Project\saa\src\saareport\report\templates\WH005.jrxml
+C:\Project\saa\src\saareport\report\templates\WH006.jrxml
+C:\Project\saa\src\saareport\report\templates\WH007.bak
+C:\Project\saa\src\saareport\report\templates\WH007.jasper
+C:\Project\saa\src\saareport\report\templates\WH007.jrxml
+C:\Project\saa\src\saareport\report\templates\WH007_1198805807312_456022.java
+C:\Project\saa\src\saareport\report\templates\WH007_1198805818828_963186.java
+C:\Project\saa\src\saareport\report\templates\WH007_1198805840750_156990.java
+C:\Project\saa\src\saareport\report\templates\WH007_1198806324734_581604.java
+C:\Project\saa\src\saareport\report\templates\WH007_1198806499156_859992.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874490953_122777.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874545203_429662.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874563859_568306.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874608000_512373.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874624093_706072.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874718250_613838.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874772125_97974.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874868921_366319.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202874913750_30561.java
+C:\Project\saa\src\saareport\report\templates\WH007_1202876018859_721235.java
+C:\Project\saa\src\saareport\report\templates\WH008.bak
+C:\Project\saa\src\saareport\report\templates\WH008.jasper
+C:\Project\saa\src\saareport\report\templates\WH008.jrxml
+C:\Project\saa\src\saareport\report\templates\WH008_1207648133069_741705.java
+C:\Project\saa\src\saareport\report\templates\WH008_1207648172897_917852.java
+C:\Project\saa\src\saareport\report\templates\WH009.bak
+C:\Project\saa\src\saareport\report\templates\WH009.jasper
+C:\Project\saa\src\saareport\report\templates\WH009.jrxml
+C:\Project\saa\src\saareport\report\templates\WH010.bak
+C:\Project\saa\src\saareport\report\templates\WH010.jasper
+C:\Project\saa\src\saareport\report\templates\WH010.jrxml
+C:\Project\saa\src\saareport\report\templates\WH010_1199959643187_536936.java
+C:\Project\saa\src\saareport\report\templates\WH010_1199959733828_545466.java
+C:\Project\saa\src\saareport\report\templates\WH010_1199959821046_348430.java
+C:\Project\saa\src\saareport\report\templates\WN008.bak
+C:\Project\saa\src\saareport\report\templates\WN008.jasper
+C:\Project\saa\src\saareport\report\templates\WN008.jrxml
+C:\Project\saa\src\saareport\report\templates\WN009.jrxml
+C:\Project\saa\src\saareport\report\templates\CVS\Entries
+C:\Project\saa\src\saareport\report\templates\CVS\Repository
+C:\Project\saa\src\saareport\report\templates\CVS\Root
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PC002.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PC002.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PC003.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PC003.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PN001.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PN001.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PN002.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PN002.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PN004.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\PN004.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\SA001.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\SA001.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH001.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH001.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH002.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH002.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH003.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH003.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH005.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH005.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH007.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH007.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH008.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH008.jrxml#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH010.jasper#1.1
+C:\Project\saa\src\saareport\report\templates\CVS\RevisionCache\WH010.jrxml#1.1
+408 File(s) copied
+
+C:\project\saa\src\saareport\classes>cd "C:\Project\saa\src\saareport\bin\Create JRX" 

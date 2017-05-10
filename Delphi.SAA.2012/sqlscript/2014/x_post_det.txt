@@ -1,0 +1,225 @@
+create procedure X_POST_DET (
+    VDOC_NO varchar(15),
+    VDOC_DATE date,
+    VCUST_CODE varchar(10))
+as
+declare variable DOC_NO varchar(15);
+declare variable DOC_DATE timestamp;
+declare variable REF_NO varchar(15);
+declare variable REF_DATE timestamp;
+declare variable DESCS varchar(60);
+declare variable UPDATE_USER varchar(10);
+declare variable UPDATE_DATE timestamp;
+declare variable CUST_CODE varchar(10);
+declare variable ITEM_CODE varchar(15);
+declare variable QTY float;
+declare variable UNIT_COST float;
+declare variable TOTAL_AMT float;
+declare variable TAX_AMT float;
+declare variable TAX_CD varchar(2);
+declare variable LINE_NO integer;
+declare variable DESCS1 varchar(60);
+declare variable UOM_CD varchar(4);
+declare variable MODE varchar(1);
+declare variable MELT_NO varchar(10);
+declare variable ORDER_NO varchar(15);
+declare variable ORDER_DATE timestamp;
+declare variable ORDER_QTY float;
+declare variable ONHAND_QTY float;
+declare variable BUNDLE_QTY integer;
+declare variable ROWCOUNT integer;
+declare variable DET_QTY float;
+declare variable MARKUP_RATE smallint;
+declare variable MARKUP_QTY float;
+declare variable ORDER_ROW smallint;
+
+/***17-march -2014 remelt doc informaionto avoid 2 row update
+ -fixed when 1 do have multiple doc no
+*/
+declare variable rref_no varchar(15); --refer to remelt doc no
+declare variable rref_date timestamp; --refer to remelt doc date
+begin
+  select count(*)
+  FROM SO_DET_DT D, SO_DET_HD H
+  WHERE D.DELIVERY_NO = H.DELIVERY_NO
+     AND D.DELIVERY_DATE = H.DELIVERY_DATE
+     AND D.CUST_CODE = H.CUST_CODE
+     AND H.STATUS <> 'X'
+     AND D.DELIVERY_NO = :VDOC_NO
+     AND D.DELIVERY_DATE = :VDOC_DATE
+     AND D.CUST_CODE = :VCUST_CODE
+  into :rowcount;
+  if(rowcount >= 1) then
+  begin
+
+      BEGIN
+      MODE ='O';
+      SELECT DELIVERY_NO,DELIVERY_DATE,CUST_CODE,UPDATE_USER,
+                 UPDATE_DATE,REF_NO,REF_DATE,DESCS
+          FROM SO_DET_HD
+          WHERE  DELIVERY_NO = :VDOC_NO
+             AND DELIVERY_DATE = :VDOC_DATE
+             AND CUST_CODE = :VCUST_CODE
+    
+          INTO   :DOC_NO,:DOC_DATE,:CUST_CODE,:UPDATE_USER,:UPDATE_DATE,
+                 :REF_NO,:REF_DATE,:DESCS1;
+    
+          INSERT INTO SO_INVOICE_HD (DOC_NO,DOC_DATE,DESCS,TAX_INV_NO,CUST_CODE,DOC_AMT,REF_NO,REF_DATE,STATUS,UPDATE_USER,UPDATE_DATE,TAX_INV_DATE)
+          VALUES (:DOC_NO,:DOC_DATE,:DESCS1,'',:CUST_CODE,0.00,:REF_NO,:REF_DATE,'N',:UPDATE_USER,:UPDATE_DATE,:DOC_DATE);
+      END
+      /*FETCH FROM SO DET HD TO SO INVOICE HD*/
+    
+    
+      LINE_NO = 0;
+      FOR    SELECT D.DELIVERY_NO,D.ORDER_NO,D.ORDER_DATE,D.ITEM_CODE,MAX(D.DESCS),D.DELIVERY_DATE,D.CUST_CODE,
+      SUM(D.DET_QTY),MAX(D.UNIT_COST),SUM(D.TOTAL_AMT),SUM(D.TAX_AMT),MAX(D.TAX_CD),MAX(D.UOM),D.MELT_NO,d.ref_no,d.ref_date ,count(D.BUNDLE_NO),max(mark_up)
+          FROM SO_DET_DT D, SO_DET_HD H
+          WHERE D.DELIVERY_NO = H.DELIVERY_NO
+            AND D.DELIVERY_DATE = H.DELIVERY_DATE
+            AND D.CUST_CODE = H.CUST_CODE
+            AND H.STATUS <> 'X'
+            AND D.DELIVERY_NO = :VDOC_NO
+            AND D.DELIVERY_DATE = :VDOC_DATE
+            AND D.CUST_CODE = :VCUST_CODE
+      GROUP BY  D.DELIVERY_NO, D.ORDER_NO,D.ORDER_DATE,
+      D.ITEM_CODE,D.DELIVERY_DATE,
+      D.CUST_CODE,D.MELT_NO,
+      d.ref_no , d.ref_date
+    
+    
+          INTO :DOC_NO, :ORDER_NO,:ORDER_DATE,:ITEM_CODE,:DESCS,:DOC_DATE, :CUST_CODE,
+          :QTY, :UNIT_COST, :TOTAL_AMT,:TAX_AMT,:TAX_CD,:UOM_CD,:MELT_NO,:rref_no,:rref_date, :BUNDLE_QTY,:markup_rate
+      DO
+      BEGIN
+          LINE_NO = LINE_NO+1;
+          if (markup_rate is null ) then markup_rate =5;
+          det_qty =qty;
+          SELECT SUM(ONHAND_QTY)   /*SELECT SUM TO AVOID MULTIPLE ROW SELECT IN SINGLETON*/
+          FROM SO_SALES_ITEM_STOCK
+          WHERE ITEM_CODE =:ITEM_CODE
+          AND   MELT_NO =:MELT_NO
+          AND   UOM_CD =:UOM_CD
+          and   doc_no =:rref_no
+          and   doc_date =:rref_date
+
+          INTO :ONHAND_QTY;
+         /* if (ONHAND_QTY > QTY) then
+          BEGIN  */
+    
+              BEGIN
+                INSERT INTO SO_INVOICE_DT (DOC_NO,DOC_DATE,ORDER_NO,ORDER_DATE,ITEM_CODE,CUST_CODE,LINE_NO,ITEM_DESCS,QTY,UNIT_COST,TOTAL_AMT,BASE_AMT,TAX_AMT,DISCS_AMT,TAX_CD,DISCS_CD,MELT_NO)
+                VALUES (:DOC_NO,:DOC_DATE,:ORDER_NO,:ORDER_DATE,:ITEM_CODE,:CUST_CODE,:LINE_NO,:DESCS,:QTY,:UNIT_COST,:TOTAL_AMT,:QTY*:UNIT_COST,:TAX_AMT,0.00,:TAX_CD,'',:MELT_NO);
+        
+        
+                INSERT INTO SO_LEDGER (DOC_NO,DOC_DATE,ORDER_NO,ORDER_DATE,REF_NO,REF_DATE,ITEM_CODE,CUST_CODE,LINE_NO,DESCS,QTY,UNIT_COST,TOTAL_AMT,BASE_AMT,TAX_AMT,DISCS_AMT,TAX_CD,DISCS_CD,UOM_CD,MODE,MELT_NO,ONHAND_QTY,BUNDLE_QTY)
+                VALUES (:DOC_NO,:DOC_DATE,:ORDER_NO,:ORDER_DATE,:REF_NO,:REF_DATE,:ITEM_CODE,:CUST_CODE,:LINE_NO,:DESCS1,:QTY*(-1),:UNIT_COST,:TOTAL_AMT,:QTY*:UNIT_COST,:TAX_AMT,0.00,:TAX_CD,'',:UOM_CD,:MODE,:MELT_NO,:ONHAND_QTY,-:BUNDLE_QTY);
+              END
+    
+    
+
+              BEGIN
+                UPDATE SO_SALES_ITEM_STOCK
+                SET ONHAND_QTY = ONHAND_QTY -:QTY ,
+                    RESERVED_QTY =RESERVED_QTY -:QTY,
+                    BUNDLE_QTY = BUNDLE_QTY -:BUNDLE_QTY
+                WHERE ITEM_CODE =:ITEM_CODE
+                 AND   MELT_NO =:MELT_NO
+                 and   doc_no =:rref_no
+                 and   doc_date =:rref_date
+                 AND   UOM_CD =:UOM_CD;
+              END
+              BEGIN
+                 SELECT sum(QTY) FROM SO_ORDER_DT
+                 WHERE ORDER_NO =:ORDER_NO
+                 AND ORDER_DATE =:ORDER_DATE
+                 AND CUST_CODE =:CUST_CODE
+                 AND ITEM_CODE =:ITEM_CODE
+                 AND STATUS ='A'
+                 INTO :ORDER_QTY;
+                 markup_qty = (order_qty*markup_rate)/100;
+            
+                 UPDATE SO_ORDER_DT
+                 SET DET_QTY =DET_QTY + :QTY
+                 WHERE ORDER_NO =:ORDER_NO
+                 AND ORDER_DATE =:ORDER_DATE
+                 AND CUST_CODE =:CUST_CODE
+                 AND ITEM_CODE =:ITEM_CODE
+                 AND STATUS ='A' ;
+
+
+                 select sum(det_qty)
+                 FROM SO_ORDER_DT
+                 WHERE ORDER_NO =:ORDER_NO
+                 AND ORDER_DATE =:ORDER_DATE
+                 AND CUST_CODE =:CUST_CODE
+                 AND ITEM_CODE =:ITEM_CODE
+                 AND STATUS ='A'
+                 into:det_qty;
+
+                 if ((det_QTY >= order_qty - markup_qty) and (det_qty <=order_qty + markup_qty)) then
+                 BEGIN
+                     /**Close Sale Order When order qty = det_qty*/
+                     UPDATE SO_ORDER_DT
+                     SET STATUS ='O' /*Change status from c to o prevoiusly c is wrong*/
+                     WHERE ORDER_NO =:ORDER_NO
+                     AND ORDER_DATE =:ORDER_DATE
+                     AND CUST_CODE =:CUST_CODE
+                     AND ITEM_CODE =:ITEM_CODE
+                     AND STATUS ='A' ;
+
+                     SELECT COUNT(*)
+                     FROM SO_ORDER_DT
+                     WHERE ORDER_NO =:ORDER_NO
+                     AND ORDER_DATE =:ORDER_DATE
+                     AND CUST_CODE =:CUST_CODE
+                 /*    AND ITEM_CODE =:ITEM_CODE*/ /*STATUS OF SO_ORDER_HD WILL BE WRONG IF CHECK FOR ITEM 200041126*/
+                     AND STATUS ='A'
+                     INTO:ORDER_ROW;
+                     /*UPDATE HEADER STATUS if (THERE ARE NO DETAIL ROW ACTIVE AS 'A') then*/
+                     if (ORDER_ROW =0) then
+                     BEGIN
+                       UPDATE SO_ORDER_HD
+                       SET STATUS ='O'/*Change status from c to o prevoiusly c is wrong*/
+                        WHERE ORDER_NO =:ORDER_NO
+                       AND ORDER_DATE =:ORDER_DATE
+                       AND CUST_CODE =:CUST_CODE;
+                     END
+                     /**27 Dec,2010 also delete from order rev**/
+                     DELETE FROM so_order_revision_dt
+                     WHERE ORDER_NO =:ORDER_NO
+                     AND ORDER_DATE =:ORDER_DATE
+                     AND CUST_CODE =:CUST_CODE
+                     AND ITEM_CODE =:ITEM_CODE    ;
+                END
+
+              END
+              BEGIN
+                  UPDATE SO_DET_HD
+                  SET STATUS = 'X'
+                  WHERE DELIVERY_NO = :VDOC_NO
+                  AND   DELIVERY_DATE = :VDOC_DATE
+                  AND   CUST_CODE = :VCUST_CODE;
+              END
+              BEGIN
+                DELETE FROM so_det_dt_link
+                 WHERE DELIVERY_NO = :VDOC_NO
+                  AND   DELIVERY_DATE = :VDOC_DATE  ;
+
+              END
+
+
+    /*      END
+          if (ONHAND_QTY < QTY) then
+          BEGIN
+              EXCEPTION ex_sales_stock;
+          END */
+      END
+      /*UPDATE STATUS ON SO DELIVERY HD*/
+  end
+  else
+  begin
+     exception e_no_row;
+     exit;
+  end
+  suspend;
+end

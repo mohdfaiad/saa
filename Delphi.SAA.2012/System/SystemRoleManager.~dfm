@@ -1,0 +1,27 @@
+inherited frmCXSysRole: TfrmCXSysRole
+  Left = 376
+  Top = 195
+  Width = 607
+  Caption = 'System Roles Setup'
+  PixelsPerInch = 96
+  TextHeight = 14
+  inherited StatusBar1: TfcStatusBar
+    Width = 591
+  end
+  inherited ToolBar: TToolBar
+    Width = 591
+  end
+  inherited mainPanel: TPanel
+    Width = 591
+    inherited lbHelpText: TLabel
+      Width = 589
+    end
+    inherited cxPageControl1: TcxPageControl
+      Width = 589
+      ClientRectRight = 589
+    end
+  end
+  inherited cxGrid1: TcxGrid
+    Width = 591
+  end
+end

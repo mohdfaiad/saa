@@ -1,0 +1,113 @@
+14 ม.ค. 2551 9:32:54 com.saa.logger.AppLogger <init>
+INFO: Created log C:\project\saa\src\saareport/logs/service.log
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Getting.. version information
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: #################################################
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: READ JDBC_URL:	jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saa.gdb?sql_dialect=3
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: #################################################
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Loding db config
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Creating dbmgr.....
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Initilize connection..
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Created Connection to jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saa.gdb?sql_dialect=3
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Created DBManager
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: dbping:send commandselect * from rdb$database
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: dbPing:Connection alive
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: Sending db command
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: created login windows
+14 ม.ค. 2551 9:32:55 com.saa.logger.AppLogger log
+INFO: setting... runtime controller
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: exec sql :select count(*) as rows from sys_users
+where user_id='admin'
+and current_password='1234'
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Warehouse System
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Monthly closing
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>บันทึกรายการเบิกวัตถุดิบ
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานใบควบคุมบัญชีวัตถุดิบ
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Monthly Stock Report
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานวัตถุดิบคงเหลือ
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานควบคุมการเบิกจ่ายวัตถุดิบ
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานจัดเตรียมและเบิกจ่ายวัตถุดิบ
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Material Stock Adjustment Edit Listing
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Goods Received Note
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Good received note history
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานวัตถุดิบคงเหลือ (Pre)
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Product Plan System
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานใบส่งของ delivery order
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Melt Summary Sheet
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Melt Sheet Report
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>ใบสรุปสต็อกสินค้าสำเร็จรูปประจำเดือน Finished Goods Monthly
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Purchase System
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Purchase Order status report
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Purchase Order
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Purchase Contract
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Account Receivable System
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Invoice Transaction
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Receipt Transaction
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>Debtor Ledger
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Sale System
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Sale order Status report
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Form AOR
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Form Quotation
+14 ม.ค. 2551 9:32:59 com.saa.logger.AppLogger log
+INFO: Create main window
+14 ม.ค. 2551 9:33:02 com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:บันทึกรายการเบิกวัตถุดิบ	Level:1	System:Warehouse System	SubLevel:90	subname:บันทึกรายการเบิกวัตถุดิบ
+14 ม.ค. 2551 9:33:02 com.saa.logger.AppLogger log
+INFO: exec sql :select * from  v_material_request
+where status='N'
+14 ม.ค. 2551 9:33:16 com.saa.logger.AppLogger log
+INFO: Destroy abstract db manager

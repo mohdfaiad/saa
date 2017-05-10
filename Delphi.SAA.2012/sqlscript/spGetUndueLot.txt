@@ -1,0 +1,52 @@
+ALTER PROCEDURE X_GET_UNDUE_ONHAND_LOT (
+    ADATE TIMESTAMP)
+RETURNS (
+    PURCHASEYEAR SMALLINT,
+    STOCK_CD VARCHAR(15),
+    LOT_NO VARCHAR(15),
+    PURCHASE_DATE TIMESTAMP,
+    REF_NO VARCHAR(15),
+    REF_DATE TIMESTAMP,
+    ONHAND_QTY FLOAT,
+    CARDQTY FLOAT,
+    UPDATEQTY FLOAT,
+    UNDUE VARCHAR(1))
+AS
+DECLARE VARIABLE STOCKCARDONHANDQTY FLOAT;
+begin
+ for select  lot_cd , purchase_date,min(ref_no),min(ref_date),
+ stock_cd,sum(onhand_qty) ,max(extract(year from purchase_date))
+ from ic_mat_stk_dt_link
+ WHERE GROUP_ID NOT IN('SG008','SG009')
+ AND PURCHASE_DATE >=:adate
+ group by purchase_date, stock_cd,lot_cd
+ order by purchase_date, stock_cd,lot_cd
+
+ into :lot_no,:purchase_date,:ref_no,:ref_date,:stock_cd  ,:onhand_qty   ,:purchaseyear
+ do
+ begin
+  undue = 'N' ;
+  cardQty = 0;
+  select sum(qty)
+  from ic_stockcard
+  where stock_cd  = :stock_cd
+  and
+  lot_cd = :lot_no
+  and
+  purchase_date = :purchase_date
+
+
+  into :StockCardOnhandQty;
+  cardQty =   StockCardOnhandQty;
+  if (StockCardOnhandQty <> onhand_qty) then
+  begin
+
+    undue ='Y' ;
+    updateQty =   StockCardOnhandQty - onhand_qty ;
+  end
+
+  suspend;
+ end
+
+  --suspend;
+end

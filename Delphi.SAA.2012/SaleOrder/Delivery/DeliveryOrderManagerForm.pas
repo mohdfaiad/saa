@@ -1,0 +1,115 @@
+unit DeliveryOrderManagerForm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, AbstractcxDataBrowse, cxStyles, cxCustomData, cxGraphics,
+  cxFilter, cxData, cxDataStorage, cxEdit, DB, cxDBData, dxBar, Menus,
+  cxGridLevel, cxClasses, cxControls, cxGridCustomView,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGrid,
+  StdCtrls, Buttons, ExtCtrls, Grids, Wwdbigrd, Wwdbgrid, fcStatusBar,DialogUtils;
+
+type
+  TfrmDeliveryOrderManager = class(TcxAbstractDataBrowse)
+    cxGridDBTableViewDELIVERY_NO: TcxGridDBColumn;
+    cxGridDBTableViewDELIVERY_DATE: TcxGridDBColumn;
+    cxGridDBTableViewREF_NO: TcxGridDBColumn;
+    cxGridDBTableViewREF_DATE: TcxGridDBColumn;
+    cxGridDBTableViewNAME: TcxGridDBColumn;
+    procedure FormCreate(Sender: TObject);
+    procedure newButtonClick(Sender: TObject);
+    procedure editButtonClick(Sender: TObject);
+    procedure postButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure doPostAction(Sender: TObject);override;
+    procedure doNewAction(Sender: TObject);override;
+    procedure doEditAction(Sender: TObject);override;
+    procedure doDeleteAction(sender:TObject);override;
+    procedure setupdatasets;override;
+  end;
+
+var
+  frmDeliveryOrderManager: TfrmDeliveryOrderManager;
+
+implementation
+ //:datasource.dataset = qryUnapproveDeliveryOrder;
+uses saleorderdatamodule, AbstractDataBrowse,DeliveryOrderForm;
+
+{$R *.dfm}
+
+procedure TfrmDeliveryOrderManager.doNewAction(sender:TObject);
+begin
+  frmDeliveryOrder:= TfrmDeliveryOrder.create(self,fSelectedObject,'DELIVERY_NO',0);
+  frmDeliveryOrder.FormStyle :=fsMdiChild;
+  frmDeliveryOrder.Top :=0;
+  frmDeliveryOrder.Left :=0;
+  frmDeliveryOrder.Show;
+end;
+
+procedure TfrmDeliveryOrderManager.doEditAction(sender:TObject);
+begin
+  frmDeliveryOrder:= TfrmDeliveryOrder.create(self,fSelectedObject,'DELIVERY_NO',1);
+  frmDeliveryOrder.FormStyle :=fsMdiChild;
+  frmDeliveryOrder.Top :=0;
+  frmDeliveryOrder.Left :=0;
+  frmDeliveryOrder.Show;
+end;
+
+procedure TfrmDeliveryOrderManager.doDeleteAction(SENDER:TObject);
+begin
+ //
+end;
+
+procedure TfrmDeliveryOrderManager.doPostAction(Sender:TObject);
+begin
+   if (confirm ('Are you want to post '+fSelectedObject))=mryes then
+   if (SaleOrderDataManager.canPostDeliveryOrder(fSelectedObject,datasource.DataSet.Fieldbyname('cust_code').AsString))  then
+   begin
+     fsuccess:= SaleOrderDataManager.postDeliveryOrder(datasource.DataSet.Fieldbyname('delivery_no').AsString,
+      datasource.dataset.Fieldbyname('delivery_date').AsDateTime,
+      datasource.dataset.Fieldbyname('cust_code').AsString);
+
+   end else
+   begin
+     fsuccess :=false;
+     warning('Could not post delivery order! No detail data found or detail data not match');
+   end;
+   if (fsuccess) then info(fSelectedObject+'Transaction has been posted');
+end;
+
+procedure TfrmDeliveryOrderManager.setupdatasets;
+begin
+   datasource.dataset :=SaleOrderDataManager.qryUnapproveDelivery;
+
+end;
+
+procedure TfrmDeliveryOrderManager.FormCreate(Sender: TObject);
+begin
+
+
+  //
+end;
+
+procedure TfrmDeliveryOrderManager.newButtonClick(Sender: TObject);
+begin
+  inherited;
+   doNewAction(sender);
+end;
+
+procedure TfrmDeliveryOrderManager.editButtonClick(Sender: TObject);
+begin
+  inherited;
+   doEditAction(sender);
+end;
+
+procedure TfrmDeliveryOrderManager.postButtonClick(Sender: TObject);
+begin
+  inherited;
+  doPostAction(sender);
+end;
+
+end.

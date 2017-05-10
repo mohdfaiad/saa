@@ -1,0 +1,234 @@
+unit SYSMenuRegister;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs,SystemMenu, cxLookAndFeelPainters, cxGraphics, cxStyles,
+  cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, DB, cxDBData,
+  Menus, StdCtrls, cxButtons, cxTextEdit, cxGridLevel, cxClasses,
+  cxControls, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxGrid, cxMaskEdit, cxDropDownEdit, cxContainer,
+  cxGroupBox, ExtCtrls,dialogutils, cxButtonEdit, cxTL, cxCalendar,
+  cxInplaceContainer, cxDBTL, cxTLData, cxCheckBox;
+
+type
+  TfrmSysMenuRegister = class(TForm)
+    cxGroupBox1: TcxGroupBox;
+    cxGroupBox2: TcxGroupBox;
+    Label1: TLabel;
+    cxGroupBox3: TcxGroupBox;
+    cxComboBox1: TcxComboBox;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    cxComboBox2: TcxComboBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    cxRegistName: TcxTextEdit;
+    dsAvaliableMenu: TDataSource;
+    cxGrid1DBTableView1MENU_INDEX: TcxGridDBColumn;
+    cxGrid1DBTableView1MODULE_ID: TcxGridDBColumn;
+    cxGrid1DBTableView1MENU_ITEM_INDEX: TcxGridDBColumn;
+    cxGrid1DBTableView1FORM_CAPTION: TcxGridDBColumn;
+    cxGrid1DBTableView1ENABLED: TcxGridDBColumn;
+    cxGrid1DBTableView1UPDATE_DATE: TcxGridDBColumn;
+    cxGrid1DBTableView1UPDATE_USER: TcxGridDBColumn;
+    Label5: TLabel;
+    ControlBar1: TControlBar;
+    btSearch: TcxButton;
+    btRegist: TcxButton;
+    btCancel: TcxButton;
+    cxGrid1DBTableView1Column1: TcxGridDBColumn;
+    btDelete: TcxButton;
+    Label6: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure btSearchClick(Sender: TObject);
+    procedure btRegistClick(Sender: TObject);
+    procedure btCancelClick(Sender: TObject);
+    procedure cxGrid1DBTableView1Column1PropertiesButtonClick(
+      Sender: TObject; AButtonIndex: Integer);
+    procedure btDeleteClick(Sender: TObject);
+    procedure cxComboBox2PropertiesChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+    selectedModuleID,MenuName:String;
+    selectedMenuLevel:integer;
+      procedure initComponents;
+  public
+    function getSelectedModule:STRING;
+    function getSelectedMenuLevel:Integer;
+    function getRegistMenuName:string;
+    procedure retreiveAvaliableMenu(ModuleID:String);
+    function registerMenu(ModuleID:String;menuLevel:integer):boolean;
+    procedure clearText;
+
+    { Public declarations }
+  end;
+
+var
+  frmSysMenuRegister: TfrmSysMenuRegister;
+
+implementation
+
+uses StrUtils,MenuLOGIC;
+
+{$R *.dfm}
+
+
+procedure TfrmSysMenuRegister.retreiveAvaliableMenu(ModuleID:String);
+
+begin
+  try
+     SystemMenuDM.qrySysMenuByModuleID.Close;
+     SystemMenuDM.qrySysMenuByModuleID.ParamByName('Pmodule_id').Value:=moduleID;
+     SystemMenuDM.qrySysMenuByModuleID.Open;
+  except on e:Exception do
+      //
+  end;
+  //
+end;
+
+procedure TfrmSysMenuRegister.clearText;
+begin
+  cxRegistName.Clear;
+end;
+
+function TfrmSysMenuRegister.registerMenu(ModuleID:String;menuLevel:integer):boolean;
+var itemIndex :integer;
+begin
+  result:=false;
+   itemIndex := LogicDM.getNextMenuItemID(ModuleID,MENUlEVEL);
+   menuName :=    getRegistMenuName;
+   if confirm('Are you confirm to regist['+menuName+']'+#13+'into '+selectedModuleID) =mrYes then
+   begin
+   if (itemIndex >-1) AND (menuName <> '' )THEN
+   begin
+      result :=LogicDM.registerMenu(ModuleID,menuLevel,itemIndex,menuName);
+      if result then
+      begin
+         info('Menu =['+menuName+']'+#13+' has completely registred');
+      end;
+      retreiveAvaliableMenu(ModuleID); //refresh
+
+   end
+   else
+   begin
+     warning('Could not get regist new menu. Menu name could not be blank');
+   end;
+   end;
+
+end;
+procedure TfrmSysMenuRegister.initComponents;
+begin
+     dsAvaliableMenu.DataSet := SystemMenuDM.qrySysMenuByModuleID;
+     dsAvaliableMenu.DataSet.Close;
+
+  //
+end;
+
+
+procedure TfrmSysMenuRegister.FormCreate(Sender: TObject);
+begin
+  inherited;
+  initComponents;
+end;
+
+function TfrmSysMenuRegister.getRegistMenuName:string;
+begin
+   result:=cxRegistName.Text;
+end;
+
+function TfrmSysMenuRegister.getSelectedModule:STRING;
+var selectedText:String;
+begin
+    selectedText :=cxComboBox1.Text;
+    selectedModuleID :=LeftStr(selectedText,2);
+    result := selectedModuleID;
+
+end;
+function TfrmSysMenuRegister.getSelectedMenuLevel:Integer;
+begin
+    result:=-1;
+   if (cxComboBox2.ItemIndex >-1) then
+   begin
+     selectedMenuLevel:=cxCombobox2.ItemIndex;
+     result:=  selectedMenuLevel;
+   end;
+end;
+
+procedure TfrmSysMenuRegister.btSearchClick(Sender: TObject);
+begin
+  retreiveAvaliableMenu(getSelectedModule);
+end;
+
+procedure TfrmSysMenuRegister.btRegistClick(Sender: TObject);
+begin
+  if (dsAvaliableMenu.DataSet.Active) then
+  begin
+    registerMenu(selectedModuleID,SelectedMenuLevel);
+    clearText;
+  end
+  else
+  begin
+     warning('No current view has been activate');
+  end;
+end;
+
+procedure TfrmSysMenuRegister.btCancelClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmSysMenuRegister.cxGrid1DBTableView1Column1PropertiesButtonClick(
+  Sender: TObject; AButtonIndex: Integer);
+begin
+  //info(dsAva)
+end;
+
+procedure TfrmSysMenuRegister.btDeleteClick(Sender: TObject);
+var deleteItem:TMatchedMenuItem;
+begin
+   deleteItem := TMatchedMenuItem.create(
+   dsAvaliableMenu.DataSet.FieldByName('MODULE_ID').AsString,
+   dsAvaliableMenu.DataSet.FieldByName('FORM_CAPTION').AsString,
+   dsAvaliableMenu.DataSet.FieldByName('MENU_INDEX').AsInteger,
+   dsAvaliableMenu.DataSet.FieldByName('MENU_ITEM_INDEX').AsInteger);
+   if confirm('Are you sure you want to delete ['+deleteItem.MenuName+']?')=mrYes then
+   begin
+      if (logicDM.deleteMenu(deleteItem.ModuleID,
+      deleteItem.menuIndex,
+      deleteItem.menuItemIndex)=true) then
+      begin
+         info(deleteItem.MenuName+' has been deleted');
+         retreiveAvaliableMenu(deleteItem.ModuleID); //refresh new list
+
+      end
+      else
+      begin
+        warning('Could note detete menu item. Please contract system administrator');
+      end
+   end
+   else
+   begin
+      info('Ignore action');
+   end;
+   deleteItem.Free;
+
+end;
+
+procedure TfrmSysMenuRegister.cxComboBox2PropertiesChange(Sender: TObject);
+begin
+    label6.Caption:=IntToStr(cxComboBox2.ItemIndex);
+     selectedMenuLevel:=cxComboBox2.ItemIndex;
+end;
+
+procedure TfrmSysMenuRegister.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  ACTION:=CAFREE;
+end;
+
+end.

@@ -1,0 +1,49 @@
+inherited frmCreditDebitNoteShareBrowse: TfrmCreditDebitNoteShareBrowse
+  Left = 193
+  Top = 296
+  Width = 768
+  Height = 479
+  Caption = 'AR Credit Note'
+  FormStyle = fsMDIChild
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited StatusBar1: TfcStatusBar
+    Top = 421
+    Width = 752
+  end
+  inherited Grid: TwwDBGrid
+    Width = 752
+    Height = 380
+    Selected.Strings = (
+      'DOC_NO'#9'15'#9'Document No'#9'F'#9
+      'DOC_DATE'#9'18'#9'Document Date'#9'F'#9
+      'DESCS'#9'60'#9'Trx Description'#9'F'#9
+      'DEBT_NAME'#9'60'#9'Debtor'#9'F'#9
+      'REMARK'#9'255'#9'REMARK'#9#9
+      'UPDATE_USER'#9'10'#9'Update User'#9'F'#9
+      'UPDATE_DATE'#9'18'#9'Late Update'#9'F'#9)
+  end
+  inherited Panel1: TPanel
+    Top = 380
+    Width = 752
+    inherited postButton: TBitBtn
+      Left = 539
+    end
+    inherited cancelButton: TBitBtn
+      Left = 627
+    end
+    object btnDelete: TBitBtn
+      Left = 438
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Delete'
+      TabOrder = 4
+      OnClick = btnDeleteClick
+    end
+  end
+  inherited datasource: TDataSource
+    DataSet = AccountReceiveDM.qryUnpostCreditNoteDebitNote
+  end
+end

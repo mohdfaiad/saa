@@ -1,0 +1,66 @@
+unit FinishedGoodsReceiveForm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseCXMasterDetail, ImgList, DB, Grids, Wwdbigrd, Wwdbgrid,
+  fcStatusBar, ComCtrls, ToolWin, ExtCtrls, StdCtrls,
+  cxLookAndFeelPainters, cxDBEdit, cxGroupBox, cxCheckBox, wwdblook,
+  Wwdbdlg, cxMaskEdit, cxDropDownEdit, cxCalendar, cxControls, cxContainer,
+  cxEdit, cxTextEdit;
+
+type
+  TfrmFNGReceiveForm = class(TBaseCXUIMasterDetailForm)
+    Bevel1: TBevel;
+    cxDBTextEdit1: TcxDBTextEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    cxDBDateEdit1: TcxDBDateEdit;
+    dlgLookupMelt: TwwDBLookupComboDlg;
+    cxGroupBox1: TcxGroupBox;
+    cxDBMaskEdit2: TcxDBMaskEdit;
+    cxDBMaskEdit3: TcxDBMaskEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label5: TLabel;
+    cxDBMaskEdit1: TcxDBMaskEdit;
+    Label8: TLabel;
+    dlgLookupItem: TwwDBLookupComboDlg;
+    Label9: TLabel;
+    cxDBCheckBox1: TcxDBCheckBox;
+    Label4: TLabel;
+    cxDBTextEdit2: TcxDBTextEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+      procedure setupDataSets;override;
+  end;
+
+var
+  frmFNGReceiveForm: TfrmFNGReceiveForm;
+
+implementation
+
+uses productionPlanDataModule, BaseMasterDetail;
+
+{$R *.dfm}
+
+
+procedure TfrmFNGReceiveForm.setupDataSets;
+begin
+   dsDetail.DataSet :=ProductionDM.tbFNGReceiveDT;
+   dsMaster.DataSet :=ProductionDM.tbFNGReceiveHD;
+   dlgLookupMelt.LookupTable :=   ProductionDM.qryActiveMeltNo;
+   dlgLookupItem.LookupTable := productionDM.qryActiveSaleItem;
+   ActiveControl :=  cxDBTextEdit1;
+   wwDBGrid1.ColumnByName('QTY').ReadOnly:=TRUE;
+
+  // dlgLookupItem.Showing
+//  dlgLookupItem.sh
+
+end;
+
+end.

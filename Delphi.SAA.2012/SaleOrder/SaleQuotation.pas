@@ -1,0 +1,233 @@
+unit SaleQuotation;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseCXMasterDetail, ImgList, DB, Grids, Wwdbigrd, Wwdbgrid,
+  fcStatusBar, ComCtrls, ToolWin, ExtCtrls, StdCtrls,
+  cxLookAndFeelPainters, wwdblook, Wwdbdlg, cxTextEdit, cxDBEdit, DBCtrls,
+  cxControls, cxContainer, cxEdit, cxGroupBox, cxGraphics, cxDropDownEdit,
+  cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit, cxCalendar,dialogUtils,
+  cxMemo;
+
+type
+  TfrmCXSaleQuotation = class(TBaseCXUIMasterDetailForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label5: TLabel;
+    cxGroupBox1: TcxGroupBox;
+    cxGroupBox2: TcxGroupBox;
+    Label6: TLabel;
+    Label7: TLabel;
+    DBText1: TDBText;
+    DBText2: TDBText;
+    DBText3: TDBText;
+    cxDBTextEdit1: TcxDBTextEdit;
+    cxDBTextEdit2: TcxDBTextEdit;
+    edDocNo: TcxDBTextEdit;
+    edDocDate: TcxDBDateEdit;
+    edRefNo: TcxDBTextEdit;
+    edValid: TcxDBDateEdit;
+    cbFaxTo: TcxDBLookupComboBox;
+    cbCCTO: TcxDBLookupComboBox;
+    Label4: TLabel;
+    edRefDate: TcxDBDateEdit;
+    Label8: TLabel;
+    edPrepareBy: TcxDBTextEdit;
+    dlgCustomer: TwwDBLookupComboDlg;
+    dsFax: TDataSource;
+    dsAttend: TDataSource;
+    DBText4: TDBText;
+    dlgItemLookup: TwwDBLookupComboDlg;
+    wwMemoDialog1: TwwMemoDialog;
+    Bevel1: TBevel;
+    cxGroupBox3: TcxGroupBox;
+    cxDBMemo1: TcxDBMemo;
+    procedure wwDBGrid1UpdateFooter(Sender: TObject);
+    procedure wwDBGrid1ColEnter(Sender: TObject);
+    procedure wwDBGrid1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure plHeaderClick(Sender: TObject);
+    procedure cxGroupBox2DblClick(Sender: TObject);
+    procedure dsDetailDataChange(Sender: TObject; Field: TField);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  //  DataSets :TList;
+  public
+    { Public declarations }
+    procedure initComponents;
+    procedure SetupDataSets;override;
+    procedure OpenContractWindow;
+  end;
+
+var
+  frmCXSaleQuotation: TfrmCXSaleQuotation;
+
+implementation
+uses SaleOrderDataModule, BaseMasterDetail,SaleContractManage;
+
+{$R *.dfm}
+
+procedure TfrmCXSaleQuotation.wwDBGrid1UpdateFooter(Sender: TObject);
+var SpecDetail :string;
+begin
+  inherited;
+ if ( SaleOrderDataManager.tbComponentDetailLookup.RecordCount =0) then
+ begin
+   SpecDetail:=  'No Requirement has been setup';
+   statusBar1.Panels[2].Text :=SpecDetail
+
+ end
+ else begin
+ try
+    SaleOrderDataManager.UpdateComponentDetail(dtsDetail.FieldByName('cust_code').AsString,
+    dtsDetail.FieldByName('Item_Code').AsString);
+   except on e:exception do
+     errorex('update sale component detail'+e.Message);
+   end;
+    SpecDetail:=
+    SaleOrderDataManager.tbComponentDetailLookup.FieldByName('LINE1').AsString+
+    SaleOrderDataManager.tbComponentDetailLookup.FieldByName('LINE2').AsString+
+    SaleOrderDataManager.tbComponentDetailLookup.FieldByName('LINE3').AsString ;///
+ // wwDBGrid1.ColumnByName('ITEM_DESCS').FooterValue:=
+    statusBar1.Panels[2].Text :=  SpecDetail;
+    SaleOrderDataManager.updateQuotationSummary(
+    dtsDetail.FieldByName('cust_code').AsString,
+    dtsDetail.FieldByName('DOC_NO').AsString);
+    wwDBGrid1.ColumnByName('Item_descs').FooterValue:='Grand Total:';
+    wwDBGrid1.ColumnByName('BASE_AMT').FooterValue:= FormatFloat('#,00#,00',
+    SaleOrderDataManager.qryQuotSummary.FieldByName('BASE_AMT').aSfLOAT );
+    wwDBGrid1.ColumnByName('total_AMT').FooterValue:= FormatFloat('#,00#,00',
+    SaleOrderDataManager.qryQuotSummary.FieldByName('total_AMT').aSfLOAT );
+end;
+
+end;
+
+procedure TfrmCXSaleQuotation.initComponents;
+begin
+  //inherited;
+  // dataSets :=TList.Create;
+  wwDBGrid1.FooterHeight := 30*4; //ADD 4 lines;
+  activeControl:=edDocNo;
+  edDocNo.SetFocus;
+  Toolbar.Parent :=plHeader;
+  //
+end;
+procedure TfrmCXSaleQuotation.setupDataSets;
+begin
+   try
+    cursor :=crSQLWait;
+   dsMaster.dataset := SaleOrderDataManager.tbSaleQuoteHD;
+   dsDetail.dataset := SaleOrderDataManager.tbSaleQuoteDT;
+   SaleOrderDataManager.tbContract.MasterSource :=  SaleOrderDataManager.dsSaleQuoteHD;
+      SaleOrderDataManager.tbContract.IndexFieldNames :='CUST_CODE';
+   SaleOrderDataManager.tbContract.MasterFields:='CUST_CODE';
+
+   cbCCTO.Properties.ListSource.DataSet := SaleOrderDataManager.tbContract;
+   cbCCTO.Properties.ListSource.DataSet.Open;
+   cbFaxTo.Properties.ListSource.DataSet := SaleOrderDataManager.tbContract;
+   dlgItemLookup.LookupTable:=SaleOrderDataManager.tbSaleItemLookup;
+   dlgItemLookup.LookupTable.Open;
+   dlgCustomer.LookupTable := SaleOrderDataManager.tbCustomerLookup;
+   dlgCustomer.LookupTable.Open;
+   SaleOrderDataManager.tbComponentDetailLookup.close;
+   SaleOrderDataManager.tbComponentDetailLookup.MasterSource:=   SaleOrderDataManager.dsSaleQuoteDT;
+   SaleOrderDataManager.tbComponentDetailLookup.MasterFields:='CUST_CODE;ITEM_CODE';
+   SaleOrderDataManager.tbComponentDetailLookup.IndexFieldNames:='CUST_CODE;ITEM_CODE';
+   SaleOrderDataManager.tbComponentDetailLookup.open;
+   finally
+
+   cursor :=crDefault;
+   end;
+ {  dataSets.Add( dsMaster.dataset);
+   dataSets.Add( dsDetail.dataset);
+   dataSets.Add( cbCCTO.Properties.ListSource.DataSet);
+   dataSets.Add( cbFaxTo.Properties.ListSource.DataSet);
+   dataSets.Add( dlgItemLookup.DataSource.DataSet);
+   }
+//
+end;
+
+procedure TfrmCXSaleQuotation.wwDBGrid1ColEnter(Sender: TObject);
+begin
+  inherited;
+if (wwDBGrid1.GetActiveField.FieldName='REMARKS') then
+               wwMemoDialog1.Execute;
+if (wwDBGrid1.GetActiveField.FieldName='ITEM_CODE') then
+               dlgItemLookup.DropDown;
+end;
+
+procedure TfrmCXSaleQuotation.wwDBGrid1KeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  inherited;
+   if (wwDBGrid1.GetActiveField.FieldName='REMARKS') then
+           if KEY = VK_F11 then
+               wwMemoDialog1.Execute;
+end;
+
+procedure TfrmCXSaleQuotation.plHeaderClick(Sender: TObject);
+begin
+  inherited;
+    Toolbar.Parent :=plHeader;
+end;
+
+procedure TfrmCXSaleQuotation.OpenContractWindow;
+begin
+   inherited;
+   if (frmSaleContractDialog =nil) then
+   begin
+       frmSaleContractDialog :=TfrmSaleContractDialog.Create(self);
+      // frmSaleContractDialog.
+       frmSaleContractDialog.docNo :=dsMaster.DataSet.FieldByName('DOC_NO').AsString;
+       frmSaleContractDialog.docDate :=dsMaster.DataSet.FieldByName('DOC_DATE').AsDateTime;
+       frmSaleContractDialog.RefDataSet :=dsMaster.DataSet;
+       frmSaleContractDialog.ShowModal;
+       SaleOrderDataManager.refreshContract;
+   end
+   else
+   begin
+     frmSaleContractDialog.docNo :=dsMaster.DataSet.FieldByName('DOC_NO').AsString;
+     frmSaleContractDialog.docDate :=dsMaster.DataSet.FieldByName('DOC_DATE').AsDateTime;
+     frmSaleContractDialog.RefDataSet :=dsMaster.DataSet;
+     frmSaleContractDialog.ShowModal;
+     SaleOrderDataManager.refreshContract;
+   end;
+end;
+
+procedure TfrmCXSaleQuotation.cxGroupBox2DblClick(Sender: TObject);
+begin
+ OpenContractWindow;
+end;
+
+procedure TfrmCXSaleQuotation.dsDetailDataChange(Sender: TObject;
+  Field: TField);
+begin
+  inherited;
+  if (dlgItemLookup.LookupTable.Active) then
+  begin
+      statusBar1.Panels[1].Text:= dlgItemLookup.LookupTable.Filter;
+  end;
+end;
+
+procedure TfrmCXSaleQuotation.FormCreate(Sender: TObject);
+begin
+  inherited;
+  ActiveControl :=edDocNo;
+end;
+
+procedure TfrmCXSaleQuotation.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  
+  SaleDocumentType:=TYPE_QUOTATION;
+  SaleOrderDataManager.refreshNoneApproveSaleDocument(SaleDocumentType);
+  inherited;
+
+end;
+
+end.

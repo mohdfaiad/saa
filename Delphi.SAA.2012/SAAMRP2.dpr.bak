@@ -1,0 +1,35 @@
+program SAAMRP2;
+
+{%ToDo 'SAAMRP2.todo'}
+
+uses
+  Forms,
+  WINDOWS,
+  controls,
+  WarehouseDM in 'WarehouseDM.pas' {WarehouseDataManager: TDataModule},
+  MainForm in 'MainForm.pas' {formMain},
+  BaseForm in 'BaseForm.pas' {BaseUIForm},
+  AbstractDialog in 'AbstractDialog.pas' {BaseDialog},
+  Progress in 'Progress.pas' {ProgressDialog},
+  BaseMasterDetail in 'BaseMasterDetail.pas' {BaseUIMasterDetailForm},
+  MaterialRequest in 'MaterialRequest.pas' {MaterialRequestForm},
+  MaterialRequestBrowse in 'MaterialRequestBrowse.pas' {MaterialRequestBrowseForm},
+  DialogUtils in 'DialogUtils.pas',
+  StockReserved in 'StockReserved.pas' {StockReservedForm},
+  LoginDialog in 'LoginDialog.pas' {LoginDlg},
+  Unit1 in 'testProject\Unit1.pas' {Form1},
+  Splash in 'Splash.pas' {SplashForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TSplashForm, SplashForm
+  SplashForm.Show;
+  Application.CreateForm(TformMain, formMain);
+  Application.CreateForm(TWarehouseDataManager, WarehouseDataManager);
+  SplashForm.hide
+  SplashForm.free;
+  Application.Run;
+
+end.

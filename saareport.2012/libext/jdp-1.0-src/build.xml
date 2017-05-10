@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<project default="usage" basedir=".">
+  <property file="build.properties"/>
+  <property file=".ant.properties"/>
+  <property file="${user.home}/.ant.properties"/>
+  <property file="default.properties"/>
+  <target name="init">
+    <property name="build.name" value="javadatepicker"/>
+    <property name="build.shortname" value="jdp"/>
+    <property name="build.version" value="1.0"/>
+    <property name="src.root" value="./src"/>
+    <property name="src.samples" value="./samples"/>
+    <property name="src.lib" value="./lib"/>
+    <property name="build.root" value="./build"/>
+    <property name="build.src" value="${build.root}/src"/>
+    <property name="build.samples" value="${build.root}/samples"/>
+    <property name="build.lib" value="${build.root}/lib"/>
+    <property name="build.classes" value="${build.root}/classes"/>
+    <property name="build.docs" value="${build.root}/docs"/>
+    <property name="build.javadocs" value="${build.docs}/api"/>
+    <property name="src-dist" value="${build.shortname}-${build.version}-src"/>
+    <property name="bin-dist" value="${build.shortname}-${build.version}-bin"/>
+    <property name="jdp.jar" value="jdp.jar"/>
+    <property name="samples.jar" value="samples.jar"/>
+    <property name="copyright.year" value="2003"/>
+    <property name="copyright.notice" value="Copyright &#169; ${copyright.year} Brenda Bell. All Rights Reserved."/>
+    <property name="debug" value="off"/>
+    <property name="optimize" value="on"/>
+    <property name="deprecation" value="off"/>
+    <echo message="---------------- ${build.name} ${build.version} [${copyright.year}] ---------------"/>
+  </target>
+  <!-- =================================================================== -->
+  <!-- Help on usage                                                       -->
+  <!-- =================================================================== -->
+  <target name="usage">
+    <echo message=""/>
+    <echo message="${build.name} targets:"/>
+    <echo message=""/>
+    <echo message="       jar --> generates the javadatepicker.jar file"/>
+    <echo message=" samplejar --> generates the samples.jar file"/>
+    <echo message="      jars --> generates javadatepicker &amp; samples jars"/>
+    <echo message="      docs --> generates the API docs (needs Java 1.2 or higher)"/>
+    <echo message="   samples --> compiles the samples source code"/>
+    <echo message="   compile --> compiles the source code"/>
+    <echo message="  pack-src --> generates the source distributions (zip and tar.gz)"/>
+    <echo message="  pack-bin --> generates the binary distributions (zip and tar.gz)"/>
+    <echo message="       all --> generates the binary and source distributions"/>
+    <echo message="     clean --> cleans up all generated files and directories"/>
+    <echo message="     usage --> provides help on using the build tool (default)"/>
+    <echo message=""/>
+    <echo message=" See comments inside the build.xml file for more details."/>
+    <echo message=""/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Create build directories                                            -->
+  <!-- =================================================================== -->
+  <target name="init-dir" depends="init">
+    <mkdir dir="${build.root}"/>
+    <mkdir dir="${build.src}"/>
+    <mkdir dir="${build.lib}"/>
+    <mkdir dir="${build.samples}"/>
+    <mkdir dir="${build.classes}"/>
+    <mkdir dir="${build.docs}"/>
+    <mkdir dir="${build.javadocs}"/>
+    <mkdir dir="${build.root}/${src-dist}"/>
+    <mkdir dir="${build.root}/${src-dist}/src"/>
+    <mkdir dir="${build.root}/${src-dist}/samples"/>
+    <mkdir dir="${build.root}/${src-dist}/lib"/>
+    <mkdir dir="${build.root}/${src-dist}/docs"/>
+    <mkdir dir="${build.root}/${bin-dist}"/>
+    <mkdir dir="${build.root}/${bin-dist}/lib"/>
+    <mkdir dir="${build.root}/${bin-dist}/docs"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Initialize build directories                                        -->
+  <!-- =================================================================== -->
+  <target name="init-src" depends="init-dir">
+    <copy todir="${build.src}">
+      <fileset dir="${src.root}" includes="com/theotherbell/**" excludes="**/CVS*"/>
+    </copy>
+    <copy todir="${build.lib}">
+      <fileset dir="${src.lib}" includes="*.jar" excludes="**/CVS*"/>
+    </copy>
+    <copy todir="${build.samples}">
+      <fileset dir="${src.samples}" includes="com/theotherbell/**" excludes="**/CVS*"/>
+    </copy>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Compiles the source directory                                       -->
+  <!-- =================================================================== -->
+  <target name="compile" depends="init-src">
+    <javac srcdir="${build.src}" destdir="${build.classes}" classpath="${build.root}/lib/AbsoluteLayout.jar" debug="${debug}" deprecation="${deprecation}" optimize="${optimize}" includeAntRuntime="false" includeJavaRuntime="false" excludes="org/**"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Compiles the samples                                                -->
+  <!-- =================================================================== -->
+  <target name="samples" depends="compile">
+    <javac srcdir="${build.samples}" destdir="${build.classes}" classpath="${build.root}/classes:${build.root}/lib/AbsoluteLayout.jar" debug="${debug}" includeAntRuntime="false" includeJavaRuntime="true"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Creates the API documentation                                       -->
+  <!-- =================================================================== -->
+  <target name="docs" depends="init-src">
+    <copy todir="${build.docs}">
+      <fileset dir="." includes="*LICENSE, README, STATUS, TODO, ISSUES"/>
+    </copy>
+    <javadoc packagenames="com.theotherbell.ui.*" locale="en_US" sourcepath="${build.src}" classpath="${build.root}/lib/AbsoluteLayout.jar" destdir="${build.root}/docs/api" author="true" version="true" windowtitle="Java Date Picker ${version}" doctitle="Java Date Picker ${version}" bottom="${copyright.notice}"/>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Prepares the source distribution                                    -->
+  <!-- =================================================================== -->
+  <target name="pack-src" depends="init-src, docs">
+    <echo message="Building the source distribution files (zip,tar)"/>
+    <copy todir="${build.root}/${src-dist}/docs">
+      <fileset dir="${build.docs}" includes="*LICENSE, README, STATUS, TODO, ISSUES, api/**"/>
+    </copy>
+    <copy todir="${build.root}/${src-dist}/src">
+      <fileset dir="${src.root}" includes="com/theotherbell/**, org/**" excludes="**/CVS*, **/*.class"/>
+    </copy>
+    <copy todir="${build.root}/${src-dist}/samples">
+      <fileset dir="${src.samples}" excludes="**/CVS*, **/*.class"/>
+    </copy>
+    <copy file="${src.lib}/AbsoluteLayout.jar" tofile="${build.root}/${src-dist}/lib/AbsoluteLayout.jar"/>
+    <copy file="build.xml" tofile="${build.root}/${src-dist}/build.xml"/>
+    <zip zipfile="${build.root}/${build.name}-src.${build.version}.zip" basedir="${build.root}" includes="${src-dist}/**"/>
+    <tar tarfile="${build.root}/${build.name}-src.${build.version}.tar" basedir="${build.root}" includes="${src-dist}/**"/>
+    <gzip zipfile="${build.root}/${build.name}-src.${build.version}.tar.gz" src="${build.root}/${build.name}-src.${build.version}.tar"/>
+    <delete file="${build.root}/${build.name}-src.${build.version}.tar"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Creates the implementation class package -->
+  <!-- =================================================================== -->
+  <target name="jar" depends="compile">
+    <jar jarfile="${build.root}/${jdp.jar}" basedir="${build.classes}" compress="true" includes="com/theotherbell/**" excludes="**/*Sample.class"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Creates the samples package                                         -->
+  <!-- =================================================================== -->
+  <target name="samplejar" depends="samples">
+    <jar jarfile="${build.root}/${samples.jar}" basedir="${build.classes}" compress="true" includes="**/*Sample.class"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Prepares the binary distribution                                    -->
+  <!-- =================================================================== -->
+  <target name="pack-bin" depends="jar, samplejar, docs">
+    <copy todir="${build.root}/${bin-dist}/docs">
+      <fileset dir="${build.docs}" includes="*LICENSE, README, STATUS, TODO, ISSUES, api/**"/>
+    </copy>
+    <copy file="${build.root}/${jdp.jar}" tofile="${build.root}/${bin-dist}/lib/${jdp.jar}"/>
+    <copy file="${build.root}/${samples.jar}" tofile="${build.root}/${bin-dist}/lib/${samples.jar}"/>
+    <copy todir="${build.root}/${bin-dist}/lib">
+      <fileset dir="${build.root}/lib" includes="*.jar"/>
+    </copy>
+    <zip zipfile="${build.root}/${build.name}-bin.${build.version}.zip" basedir="${build.root}" includes="${bin-dist}/**"/>
+    <tar tarfile="${build.root}/${build.name}-bin.${build.version}.tar" basedir="${build.root}" includes="${bin-dist}/**"/>
+    <gzip zipfile="${build.root}/${build.name}-bin.${build.version}.tar.gz" src="${build.root}/${build.name}-bin.${build.version}.tar"/>
+    <delete file="${build.root}/${build.name}-bin.${build.version}.tar"/>
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Builds and packages tools, sources and binary distributions         -->
+  <!-- =================================================================== -->
+  <target name="all" depends="pack-bin, pack-src"/>
+  
+  <!-- =================================================================== -->
+  <!-- Cleans everything                                                   -->
+  <!-- =================================================================== -->
+  <target name="clean" depends="init">
+    <delete dir="${build.root}"/>
+  </target>
+  
+</project>

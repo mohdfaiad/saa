@@ -1,0 +1,152 @@
+unit AbstractDataModule;
+
+interface
+
+uses
+  SysUtils, Classes,DB,IBDatabase,IBCustomDataSet, IBQuery, IBTable,dialogutils;
+
+type
+  TAbstractDM = class(TDataModule)
+    procedure DataModuleDestroy(Sender: TObject);
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+
+  protected
+     transaction :TIBTransaction;
+     activeUser:String;
+   //  Query:TIBQuery;
+    procedure setDisplayFormat;
+    procedure setCurrenCyFormat(format:String);
+    procedure setTransaction(tr:TIBTransaction);
+    procedure initEvents;
+    procedure AfterDataSetClosed(dataSet:TDataSet);
+  public
+    procedure commit;
+    procedure rollback;
+    procedure updateModifiedRecord(dataset:tdataset);
+    function getNextLine(Query:TIBQuery;docNo,fieldName:String;tableName:String):integer;
+    { Public declarations }
+  end;
+
+var
+  AbstractDM: TAbstractDM;
+
+implementation
+
+{$R *.dfm}
+
+procedure TAbstractDM.initEvents;
+var i:integer;
+begin
+  for i:=0 to ComponentCount -1 do
+  begin
+    if (Components[i] is TIBQuery) or
+    (Components[i] is TIBTable) or
+    (Components[i] is TIBCustomDataSet) then
+    begin
+      TIBCustomDataSet(components[i]).AfterClose :=afterDataSetClosed;
+      TIBCustomDataSet(components[i]).AfterPost :=  afterDataSetClosed;
+    end;
+  end;
+
+end;
+procedure TAbstractDM.setCurrenCyFormat(format:String) ;
+var componentIndex:integer;
+begin
+  for componentIndex:=0 to ComponentCount -1 DO
+  BEGIN
+    if (Components[componentIndex] IS  TFloatField ) OR (Components[componentIndex] IS TIBBCDField) then
+    begin
+      TFloatField(Components[componentIndex]).DisplayFormat:=format;
+
+    end;
+  END;
+
+
+end;
+
+function TAbstractDM.getNextLine(Query:TIBQuery;docNo,fieldName:String;tableName:String):integer;
+var lineNo:integer;
+begin
+   lineNo:=0;
+    try
+    Query.Close;
+    Query.SQL.Text:='select max(line_no) from ' +tableName+' where '+ fieldName+'='+quotedStr(docNo);
+    Query.Open;
+    lineNo :=     Query.fields[0].AsInteger;
+    if (lineNo=0) then lineNo:=1
+    else lineNo:=lineNo+1;
+  except on e:exception do
+     errorEx(e.Message);
+  end;
+   result:=lineNo;
+end;
+
+procedure TAbstractDM.AfterDataSetClosed(dataSet:TDataSet);
+begin
+  commit;
+end;
+procedure   TAbstractDM.setDisplayFormat;
+var componentIndex:integer;
+begin
+  for componentIndex:=0 to ComponentCount -1 DO
+  BEGIN
+    if (Components[componentIndex] is TFloatField) then
+    begin
+      TFloatField(Components[componentIndex]).DisplayFormat:='#,##0.000';
+    end ELSE IF (Components[componentIndex] is TDateTimeField) then
+    begin
+      TDateTimeField(Components[componentIndex]).DisplayFormat:='dd/mm/yyyy';
+    end else if (Components[componentIndex] is TIBBCDField) then
+    begin
+       TIBBCDField(Components[componentIndex]).DisplayFormat:='#,##0.000';
+    end;
+  END;
+
+end;
+procedure TAbstractDM.commit;
+begin
+if (transaction=nil) then  errorEx('No default transaction defined')
+else   if  transaction.Active then transaction.CommitRetaining;
+end;
+procedure TAbstractDM.rollback;
+begin
+  transaction.RollbackRetaining;
+end;
+procedure TAbstractDM.setTransaction(tr:TIBTransaction);
+begin
+  if (tr <> nil) then
+  transaction :=tr
+  else   errorEx('TAbstractDM.Transaction has never been instanciate');
+
+ // query.Transaction:=tr;
+end;
+
+procedure TAbstractDM.updateModifiedRecord(dataset:tdataset);
+begin
+ IF NOT (activeUser='') THEN
+ BEGIN
+    dataset.fieldbyname('update_user').asstring:= activeUser;
+  dataset.FieldByName('update_date').AsDateTime:=now;
+ END ELSE
+ BEGIN
+   debug('Active user is blank');
+ END;
+end;
+
+procedure TAbstractDM.DataModuleDestroy(Sender: TObject);
+begin
+ inherited;
+   if (transaction =nil) then  errorEx('TAbstractDM.Transaction has never been instanciate')
+   else    if (transaction.InTransaction) then
+    commit; //commit retain transaction
+  end;
+
+procedure TAbstractDM.DataModuleCreate(Sender: TObject);
+begin
+ inherited;
+ transaction:= TIBTransaction.Create(self);
+end;
+
+end.

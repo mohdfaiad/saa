@@ -1,0 +1,15 @@
+inherited frmCurrency: TfrmCurrency
+  Caption = 'Currency Setup'
+  Font.Name = 'Arial'
+  PixelsPerInch = 96
+  TextHeight = 14
+  inherited mainPanel: TPanel
+    inherited cxPageControl1: TcxPageControl
+      inherited cxTabSheet1: TcxTabSheet
+        inherited dxDBGrid1: TdxDBGrid
+          Filter.Criteria = {00000000}
+        end
+      end
+    end
+  end
+end

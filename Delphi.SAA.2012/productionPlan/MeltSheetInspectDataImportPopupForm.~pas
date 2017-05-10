@@ -1,0 +1,102 @@
+unit MeltSheetInspectDataImportPopupForm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseForm, fcStatusBar, StdCtrls, ExtCtrls, DB, Grids, Wwdbigrd,
+  Wwdbgrid, DBGrids;
+
+type
+  TfrmMeltSheetInspectImportPOPUP = class(TBaseUIForm)
+    wwDBGrid1: TwwDBGrid;
+    DataSource: TDataSource;
+    Panel1: TPanel;
+    btImport: TButton;
+    Button1: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btImportClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+  private
+    { Private declarations }
+    filter:String;
+  public
+    { Public declarations }
+       constructor create(Aowner:TComponent;AFilter:String);overload;
+       function getInspectDataSet:TDataSet;
+  end;
+
+var
+  frmMeltSheetInspectImportPOPUP: TfrmMeltSheetInspectImportPOPUP;
+
+
+
+implementation
+  uses productionplandatamodule,meltSheetForm;
+{$R *.dfm}
+constructor TfrmMeltSheetInspectImportPOPUP.create(Aowner:TComponent;AFilter:String);
+begin
+   filter := afilter;
+   inherited create(Aowner)    ;
+
+end;
+
+procedure TfrmMeltSheetInspectImportPOPUP.FormCreate(Sender: TObject);
+begin
+  inherited;
+
+  // ProductionDM.tbQAElement.MasterSource:=NIL;
+  // ProductionDM.qryQAmELTInspect.Close;
+   //ProductionDM.qryQAmELTInspect.ParamByName('PLOT_CD').Value:= Filter;
+ //  ProductionDM.qryQAInspect.FiltERed :=true;
+  // ProductionDM.qryQAmELTInspect.Open;
+ //  datasource1.dataset.Open;
+   datasource.DataSet.Close;
+   caption:='Inspect data for '+filter;
+   datasource.DataSet :=  ProductionDM.tbQAMeltInspect;
+   datasource.DataSet.Filtered :=false;
+   datasource.DataSet.Filter :='LOT_CD='+QuotedStr(Filter)  ;
+   datasource.DataSet.Filtered :=true;
+   datasource.DataSet.Open;
+
+end;
+
+procedure TfrmMeltSheetInspectImportPOPUP.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  // ProductionDM.tbQAElement.FiltER := 'LOT_CD='+QuotedStr(filter);
+ // ProductionDM.qryQAInspect.FiltERed :=false;
+
+  inherited;
+
+end;
+
+function    TfrmMeltSheetInspectImportPOPUP.getInspectDataSet:TDataSet;
+begin
+   result:= datasource.DataSet;
+end;
+
+procedure TfrmMeltSheetInspectImportPOPUP.btImportClick(Sender: TObject);
+begin
+  frmMeltSheet.QADataSet:= datasource.DataSet;
+    frmMeltSheet.QADataSet.Open;
+ MODALRESULT:= MROK;
+end;
+
+procedure TfrmMeltSheetInspectImportPOPUP.FormKeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+   IF KEY = VK_F2 THEN
+   BEGIN
+      frmMeltSheet.QADataSet:= datasource.DataSet;
+       // frmMeltSheet.QADataSet.
+      frmMeltSheet.QADataSet.Open;
+      MODALRESULT:= MROK;
+   END;
+  //inherited;
+
+end;
+
+end.

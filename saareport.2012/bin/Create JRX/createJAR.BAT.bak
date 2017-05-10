@@ -1,0 +1,7 @@
+cd c:\dev\saareport\classes
+jar -cvfm "c:\dev\saareport\bin\Create JRX\saareport.jar"  "c:\dev\saareport\bin\Create JRX\MANIFEST.MF" ./com
+copy "c:\dev\saareport\bin\Create JRX\saareport.jar"   "c:\dev\saareport\bin" /y 
+xcopy "c:\dev\saareport\version" "c:\dev\saareport\bin\version" /y /s /i
+copy "c:\dev\saareport\report\templates\*.jasper" "c:\dev\saareport\bin\report\templates"  /y
+copy "c:\dev\saareport\report\templates\*.jrxml" "c:\dev\saareport\saareport\bin\report\templates"  /y
+cd "c:\Project\saa\src\saareport\bin\Create JRX"

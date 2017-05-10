@@ -1,0 +1,27 @@
+unit CurrencySetup;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseDBGridEditForm, dxExEdtr, wwrcdvw, wwDialog, wwidlg,
+  dxLayoutLookAndFeels, DB, ImgList, dxCntner, dxTL, dxDBCtrl, dxDBGrid,
+  cxPC, cxControls, StdCtrls, ExtCtrls, ComCtrls, ToolWin, fcStatusBar;
+
+type
+  TfrmCurrency = class(TfrmDBGridEntry)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCurrency: TfrmCurrency;
+
+implementation
+uses 
+
+{$R *.dfm}
+
+end.

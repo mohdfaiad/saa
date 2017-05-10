@@ -1,0 +1,24 @@
+unit SQLExecute;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, BaseForm, fcStatusBar;
+
+type
+  TBaseUIForm1 = class(TBaseUIForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  BaseUIForm1: TBaseUIForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

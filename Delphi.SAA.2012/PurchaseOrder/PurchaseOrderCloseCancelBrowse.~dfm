@@ -1,0 +1,78 @@
+inherited frmPurchaseOrderCloseCancelBrowse: TfrmPurchaseOrderCloseCancelBrowse
+  Left = 341
+  Top = 203
+  Caption = 'Purchase order Cancle /Close'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Grid: TwwDBGrid
+    Height = 169
+    Selected.Strings = (
+      'ORDER_NO'#9'15'#9'Order No'#9'F'#9
+      'ORDER_DATE'#9'18'#9'Order Date'#9'F'#9
+      'NAME'#9'60'#9'NAME'#9'F'#9
+      'DELIVERY_DATE'#9'18'#9'DELIVERY DATE'#9'F'#9)
+    Align = alTop
+  end
+  inherited Panel1: TPanel
+    inherited newButton: TBitBtn
+      Visible = False
+    end
+    inherited editButton: TBitBtn
+      Caption = 'Cancel PO'
+    end
+    inherited postButton: TBitBtn
+      Caption = 'Close PO'
+    end
+    inherited cancelButton: TBitBtn
+      Caption = 'Exit'
+    end
+  end
+  object wwDBGrid1: TwwDBGrid [3]
+    Left = 0
+    Top = 169
+    Width = 590
+    Height = 128
+    DisableThemes = False
+    Selected.Strings = (
+      'LINE_NO'#9'10'#9'#NO'#9'F'
+      'ITEM_CODE'#9'15'#9'ITEM CODE'#9'F'
+      'UOM'#9'4'#9'UOM'#9#9
+      'ITEM_DESCS'#9'60'#9'DESCS'#9'F'
+      'UNIT_COST'#9'10'#9'UNIT COST'#9'F'
+      'TOTAL_AMT'#9'10'#9'TOTAL AMT'#9'F')
+    IniAttributes.Delimiter = ';;'
+    TitleColor = clBtnFace
+    OnRowChanged = GridRowChanged
+    FixedCols = 0
+    ShowHorzScrollBar = True
+    Align = alClient
+    DataSource = dsDetail
+    Font.Charset = THAI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgWordWrap]
+    ParentFont = False
+    PopupMenu = PopupMenu1
+    TabOrder = 3
+    TitleAlignment = taLeftJustify
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    TitleLines = 1
+    TitleButtons = False
+    OnKeyPress = GridKeyPress
+  end
+  inherited datasource: TDataSource
+    DataSet = PurchaseOrderDM.qryApprovedPurchaseOrderHeader
+    Top = 40
+  end
+  object dsDetail: TDataSource
+    DataSet = PurchaseOrderDM.tbApprovedPurchaserOrderDetail
+    Left = 544
+    Top = 208
+  end
+end

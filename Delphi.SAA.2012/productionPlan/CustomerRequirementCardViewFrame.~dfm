@@ -1,0 +1,58 @@
+object frameCustomerRequirementCardView: TframeCustomerRequirementCardView
+  Left = 0
+  Top = 0
+  Width = 843
+  Height = 487
+  TabOrder = 0
+  object cxGrid: TcxGrid
+    Left = 0
+    Top = 0
+    Width = 843
+    Height = 465
+    Align = alTop
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    object cxGridDBCardView1: TcxGridDBCardView
+      NavigatorButtons.ConfirmDelete = False
+      DataController.DataSource = DataSource1
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.CardWidth = 488
+      Styles.Content = SystemMenuDM.cxStyle232
+      Styles.ContentEven = SystemMenuDM.cxStyle232
+      Styles.CaptionRow = SystemMenuDM.cxStyle232
+      object cxGridDBCardView1CUST_CODE: TcxGridDBCardViewRow
+        DataBinding.FieldName = 'CUST_CODE'
+        Position.BeginsLayer = True
+      end
+      object cxGridDBCardView1REQUIREMENTNOTE: TcxGridDBCardViewRow
+        DataBinding.FieldName = 'REQUIREMENTNOTE'
+        PropertiesClassName = 'TcxMemoProperties'
+        Properties.ScrollBars = ssBoth
+        Position.BeginsLayer = True
+      end
+      object cxGridDBCardView1UPDATE_USER: TcxGridDBCardViewRow
+        DataBinding.FieldName = 'UPDATE_USER'
+        Position.BeginsLayer = True
+      end
+      object cxGridDBCardView1UPDATE_DATE: TcxGridDBCardViewRow
+        DataBinding.FieldName = 'UPDATE_DATE'
+        Position.BeginsLayer = True
+      end
+    end
+    object cxGridLevel: TcxGridLevel
+      GridView = cxGridDBCardView1
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ProductionDM.qryCustRequirementView
+    Left = 264
+    Top = 128
+  end
+end

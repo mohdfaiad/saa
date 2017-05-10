@@ -1,0 +1,51 @@
+inherited frmFNGAdjustManager: TfrmFNGAdjustManager
+  Width = 748
+  Height = 412
+  Caption = 'Finshed Goods Stock Adjustment Manager'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited lbHeader: TLabel
+    Width = 732
+  end
+  inherited StatusBar1: TfcStatusBar
+    Top = 354
+    Width = 732
+  end
+  inherited Panel1: TPanel
+    Top = 313
+    Width = 732
+  end
+  inherited cxGrid: TcxGrid
+    Width = 732
+    Height = 299
+    inherited cxGridDBTableView: TcxGridDBTableView
+      Styles.ContentEven = SystemMenuDM.cxStyle232
+      object cxGridDBTableViewDOC_NO: TcxGridDBColumn
+        DataBinding.FieldName = 'DOC_NO'
+      end
+      object cxGridDBTableViewDOC_DATE: TcxGridDBColumn
+        DataBinding.FieldName = 'DOC_DATE'
+      end
+      object cxGridDBTableViewDESCS: TcxGridDBColumn
+        DataBinding.FieldName = 'DESCS'
+      end
+      object cxGridDBTableViewDESCS1: TcxGridDBColumn
+        DataBinding.FieldName = 'DESCS1'
+      end
+    end
+  end
+  inherited datasource: TDataSource
+    DataSet = ProductionDM.qryFNGAdjustUnpost
+  end
+  inherited dxBarManager1: TdxBarManager
+    Categories.ItemsVisibles = (
+      2)
+    Categories.Visibles = (
+      True)
+    DockControlHeights = (
+      0
+      0
+      0
+      0)
+  end
+end

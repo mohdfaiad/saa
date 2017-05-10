@@ -1,0 +1,146 @@
+Sep 18, 2008 2:54:25 PM com.saa.logger.AppLogger <init>
+INFO: Created log C:\project\saa\src\saareport\bin/logs/service.log
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Getting.. version information
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: #################################################
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:c:/PROJECT/SAA/database/saabkkrestore.gdb?sql_dialect=3
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: #################################################
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Loding db config
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Creating dbmgr.....
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Initilize connection..
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Created Connection to jdbc:firebirdsql:127.0.0.1/3050:c:/PROJECT/SAA/database/saabkkrestore.gdb?sql_dialect=3
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Created DBManager
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: dbping:send commandselect * from rdb$database
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: dbPing:Connection alive
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: Sending db command
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: created login windows
+Sep 18, 2008 2:54:26 PM com.saa.logger.AppLogger log
+INFO: setting... runtime controller
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: exec sql :select count(*) as rows from sys_users
+where user_id='admin'
+and current_password='1234'
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Warehouse System
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Monthly closing
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>บันทึกรายการเบิกวัตถุดิบ
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานใบควบคุมบัญชีวัตถุดิบ
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Monthly Stock Report
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานวัตถุดิบคงเหลือ
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานควบคุมการเบิกจ่ายวัตถุดิบ
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานจัดเตรียมและเบิกจ่ายวัตถุดิบ
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Material Stock Adjustment Edit Listing
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Goods Received Note
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Good received note history
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานวัตถุดิบคงเหลือ (Pre)
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Product Plan System
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงานใบส่งของ delivery order
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Melt Summary Sheet
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Melt Sheet Report
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>ใบสรุปสต็อกสินค้าสำเร็จรูปประจำเดือน Finished Goods Monthly
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Dross Audit Report
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Purchase System
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Purchase Order status report
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Purchase Order
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Purchase Contract
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Account Receivable System
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Print AR Invoice Tax
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Print AR Receipt Tax
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>Debtor Ledger
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>AR Invice Audit Listing
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>AR Receipt Audit Listing
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>AR Input Tax
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...Image ICon Node>>Sale System
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Sale order Status report
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Form AOR
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Building...subNode>>รายงาน Form Quotation
+Sep 18, 2008 2:54:30 PM com.saa.logger.AppLogger log
+INFO: Create main window
+Sep 18, 2008 2:54:33 PM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:Print AR Invoice Tax	Level:5	System:Account Receivable System	SubLevel:51	subname:Print AR Invoice Tax
+Sep 18, 2008 2:54:33 PM com.saa.logger.AppLogger log
+INFO: creating BaseView
+Sep 18, 2008 2:54:33 PM com.saa.logger.AppLogger log
+INFO: created DB Manager
+Sep 18, 2008 2:54:33 PM com.saa.logger.AppLogger log
+INFO: exec sql :select doc_no from ar_invoice_hd where status='N'
+Sep 18, 2008 2:54:36 PM com.saa.logger.AppLogger log
+INFO: Loading report..AR001.JRXML
+Sep 18, 2008 2:54:36 PM com.saa.logger.AppLogger log
+INFO: Report Adapter get Default Dir :C:\project\saa\src\saareport\bin\report\templates
+Sep 18, 2008 2:54:37 PM com.saa.logger.AppLogger log
+INFO: Setting params..AR001.JRXML
+Sep 18, 2008 2:55:08 PM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:Print AR Invoice Tax	Level:5	System:Account Receivable System	SubLevel:51	subname:Print AR Invoice Tax
+Sep 18, 2008 2:55:08 PM com.saa.logger.AppLogger log
+INFO: creating BaseView
+Sep 18, 2008 2:55:08 PM com.saa.logger.AppLogger log
+INFO: created DB Manager
+Sep 18, 2008 2:55:09 PM com.saa.logger.AppLogger log
+INFO: exec sql :select doc_no from ar_invoice_hd where status='N'
+Sep 18, 2008 2:57:03 PM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:Print AR Receipt Tax	Level:5	System:Account Receivable System	SubLevel:52	subname:Print AR Receipt Tax
+Sep 18, 2008 2:57:05 PM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:Print AR Receipt Tax	Level:5	System:Account Receivable System	SubLevel:52	subname:Print AR Receipt Tax
+Sep 18, 2008 3:32:18 PM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:Debtor Ledger	Level:5	System:Account Receivable System	SubLevel:53	subname:Debtor Ledger
+Sep 18, 2008 3:32:24 PM com.saa.logger.AppLogger log
+INFO: treeNodeActionPerformed:Debtor Ledger	Level:5	System:Account Receivable System	SubLevel:53	subname:Debtor Ledger
+Sep 18, 2008 3:32:27 PM com.saa.logger.AppLogger log
+INFO: Destroy abstract db manager

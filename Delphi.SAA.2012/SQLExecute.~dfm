@@ -1,0 +1,7 @@
+inherited BaseUIForm1: TBaseUIForm1
+  Left = 304
+  Top = 229
+  Caption = 'BaseUIForm1'
+  PixelsPerInch = 96
+  TextHeight = 13
+end

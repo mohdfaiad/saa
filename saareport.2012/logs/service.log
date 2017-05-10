@@ -1,0 +1,138 @@
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger <init>
+INFO: Created log C:\project\saa\src\saareport/logs/service.log
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerGetting.. version information
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLogger#################################################
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerREAD JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerREAD JDBC_URL:	jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saabkkrestore.gdb?sql_dialect=3
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLogger#################################################
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerLoding db config
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerCreating dbmgr.....
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerInitilize connection..
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerCreated Connection to jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saabkkrestore.gdb?sql_dialect=3
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerCreated DBManager
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerdbping:send commandselect * from rdb$database
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerdbPing:Connection alive
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerSending db command
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggercreated login windows
+Jan 24, 2010 10:23:55 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggersetting... runtime controller
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerexec sql :select count(*) as rows from sys_users
+where user_id='admin'
+and current_password='1234'
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerexec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...Image ICon Node>>Warehouse System
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Monthly closing
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>บันทึกรายการเบิกวัตถุดิบ
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงานใบควบคุมบัญชีวัตถุดิบ
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Monthly Stock Report
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงานวัตถุดิบคงเหลือ
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงานควบคุมการเบิกจ่ายวัตถุดิบ
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงานจัดเตรียมและเบิกจ่ายวัตถุดิบ
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Material Stock Adjustment Edit Listing
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงาน Goods Received Note
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Good received note history
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงานวัตถุดิบคงเหลือ (Pre)
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...Image ICon Node>>Product Plan System
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงานใบส่งของ delivery order
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงาน Melt Summary Sheet
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Melt Sheet Report
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Finished Goods Stock Adjustment
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>ใบสรุปสต็อกสินค้าสำเร็จรูปประจำเดือน Finished Goods Monthly
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Dross Audit Report
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...Image ICon Node>>Purchase System
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Purchase Order status report
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Purchase Order
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Purchase Contract
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...Image ICon Node>>Account Receivable System
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Print AR Invoice Tax
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Print AR Receipt Tax
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Debtor Ledger
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>AR Invice Audit Listing
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>AR Receipt Audit Listing
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>AR Input Tax
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...Image ICon Node>>Sale System
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงาน Sale order Status report
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงาน Form AOR
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>รายงาน Form Quotation
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerBuilding...subNode>>Monthly Sales & Payment Report
+Jan 24, 2010 10:24:01 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggerCreate main window
+Jan 24, 2010 10:24:05 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggertreeNodeActionPerformed:Finished Goods Stock Adjustment	Level:3	System:Product Plan System	SubLevel:10	subname:Finished Goods Stock Adjustment
+Jan 24, 2010 10:24:05 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggercreating BaseView
+Jan 24, 2010 10:24:05 AM com.saa.logger.AppLogger log
+INFO: com.saa.logger.AppLoggercreated DB Manager
+Jan 24, 2010 10:24:05 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameCreating...AbstractTextField
+Jan 24, 2010 10:24:26 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameLoading report..PN010.JRXML
+Jan 24, 2010 10:24:27 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameRegisted Param: pdocNo=FGADJ05O12
+Jan 24, 2010 10:24:27 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameSetting params..PN010.JRXML
+Jan 24, 2010 10:25:51 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameLoading report..PN010.JRXML
+Jan 24, 2010 10:25:51 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameRegisted Param: pdocNo=FGADJ05O12
+Jan 24, 2010 10:25:51 AM com.saa.logger.AppLogger log
+INFO: com.saa.ui.pn.PN010FrameSetting params..PN010.JRXML

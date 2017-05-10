@@ -1,0 +1,7 @@
+inherited ARLedgerInquiryForm: TARLedgerInquiryForm
+  Left = 1478
+  Top = 540
+  Caption = 'AR Ledger Inquiry'
+  PixelsPerInch = 96
+  TextHeight = 13
+end

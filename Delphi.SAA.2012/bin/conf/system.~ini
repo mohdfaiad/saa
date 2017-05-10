@@ -1,0 +1,10 @@
+[database]
+;databaseName=c:\project\saa\database\saabkkrestore.gdb
+databaseName=e:\brd\database\saa.gdb
+;databaseName=c:\project\saa\database\saabkkrestore.gdb
+;databaseHost=127.0.0.1
+databaseHost=192.168.1.3
+;databaseHost=127.0.0.1
+[default]
+transactionType=RT
+description=บันทึกเบิกจ่ายวัตถุดิบ

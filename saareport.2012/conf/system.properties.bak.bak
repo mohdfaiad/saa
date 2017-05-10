@@ -1,0 +1,5 @@
+# Sample ResourceBundle properties file
+JDBC_DRIVER=org.firebirdsql.jdbc.FBDriver
+JDBC_URL=jdbc:firebirdsql:localhost/3050:c:/project/saa/database/saaBB.gdb?sql_dialect=3
+#JDBC_URL=jdbc:firebirdsql:192.168.1.3/3050:e:/brd/database/saa.gdb?sql_dialect=3
+
