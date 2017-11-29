@@ -1,0 +1,32 @@
+﻿--select * from company_profile
+
+alter table    company_profile
+add MFG_ADDRESS1 VARCHAR(150);
+
+alter table    company_profile
+add MFG_ADDRESS2 VARCHAR(150);
+
+alter table    company_profile
+add MFG_ADDRESS3 VARCHAR(150);
+
+alter table    company_profile
+ADD MFG_PROVINCE VARCHAR(60);
+
+
+alter table    company_profile
+ADD MFG_TELEPHONE  VARCHAR(60);
+
+alter table    company_profile
+ADD MFG_FAX VARCHAR(60);
+
+UPDATE company_profile
+SET MFG_ADDRESS1 = '1/1 หมู่ 10 ถนนชลบรี-บ็านบึง'  ,
+MFG_ADDRESS2 ='ช่องมะเฟือง ต.หนองร๊',
+MFG_ADDRESS3 = 'อ.เมือง จ.ชลบุรี 20000'   ,
+MFG_POSTCODE ='20000',
+MFG_PROVINCE ='ชลบุรี',
+MFG_TELEPHONE = '0-38476 113-4',
+MFG_FAX ='0-38476 112'
+ /*
+โรงงาน    : 1/1 หมู่ 10 ถนนชลบุรี-บ้านบึง ซอยวัดช่องมะเฟือง ต.หนองรี อ.เมือง จ.ชลบุรี 20000
+                  โทร. 0-38379 044, 0-38476 113   แฟกซ์  0-38476 112   */
