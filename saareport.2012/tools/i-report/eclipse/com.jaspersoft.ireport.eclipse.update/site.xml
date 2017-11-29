@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://www.jasperforge.org/update/">
+      iReport plugin for Eclipse.
+   </description>
+   <feature url="features/com.jaspersoft.ireport.eclipse_1.0.0.jar" id="com.jaspersoft.ireport.eclipse" version="1.0.0">
+      <category name="JasperSoft"/>
+   </feature>
+   <category-def name="JasperSoft" label="JasperSoft"/>
+</site>
