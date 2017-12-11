@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.jrxml"
+            id="IRLauncher.contribution1">
+         <menu
+               label="JasperReports"
+               path="additions"
+               id="IRLauncher.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="com.jaspersoft.ireport.eclipse.popup.actions.EditAction"
+               enablesFor="1"
+               icon="icons/ireport_icon_mini.png"
+               id="IRLauncher.newAction"
+               label="Edit with iReport"
+               menubarPath="IRLauncher.menu1/group1">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.jaspersoft.ireport.eclipse.IREditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="jrxml"
+            icon="icons/mainreport.png"
+            id="com.jaspersoft.ireport.eclipse.IREditor"
+            launcher="com.jaspersoft.ireport.eclipse.IREditor"
+            name="iReport"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            canFinishEarly="false"
+            class="com.jaspersoft.ireport.eclipse.wizard.IRNewReport"
+            hasPages="true"
+            icon="icons/mainreport.png"
+            id="com.jaspersoft.ireport.eclipse.wizard.IRNewReport"
+            name="New JasperReport"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="IRLauncher.actionSet"
+            label="JasperReports"
+            visible="true">
+         <action
+               class="com.jaspersoft.ireport.eclipse.actions.RunAction"
+               icon="icons/ireport_icon_mini.png"
+               id="com.jaspersoft.ireport.eclipse.actions.RuniReport"
+               label="&amp;Run iReport"
+               menubarPath="window/additions"
+               toolbarPath="sampleGroup"
+               tooltip="Run iReport"/>
+      </actionSet>
+   </extension>
+
+</plugin>

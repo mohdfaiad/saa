@@ -33,6 +33,7 @@
 
 	<parameter name="pSDate" isForPrompting="true" class="java.util.Date">
 		<parameterDescription><![CDATA[from date]]></parameterDescription>
+		<defaultValueExpression ><![CDATA[null]]></defaultValueExpression>
 	</parameter>
 	<parameter name="pEDate" isForPrompting="true" class="java.util.Date">
 		<parameterDescription><![CDATA[End Date]]></parameterDescription>
@@ -41,7 +42,9 @@
 	<parameter name="pLotNo" isForPrompting="true" class="java.lang.String">
 		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
 	</parameter>
-	<queryString><![CDATA[SELECT current_time AS "CTIME" , IC_STOCK_ADJUST_HD.DOC_NO, IC_STOCK_ADJUST_HD.DOC_DATE, IC_STOCK_ADJUST_HD.DESCS, IC_STOCK_ADJUST_DT.ITEM_CODE, IC_STOCK_ADJUST_DT.UOM_CD, IC_STOCK_ADJUST_DT.GROUP_ID, IC_STOCK_ADJUST_DT.LOT_NO, IC_STOCK_ADJUST_DT.PURCHASE_DATE, IC_STOCK_ADJUST_DT.QTY, IC_STOCK_ADJUST_DT.UNIT_COST, IC_STOCK_ADJUST_DT.TOTAL_COST, IC_STOCK_ADJUST_DT.ONHAND_QTY, IC_STOCK_ADJUST_DT.STOCK_DESCS, IC_STOCK_ADJUST_DT.REF_NO, IC_STOCK_ADJUST_DT.REF_DATE, 
+	<queryString><![CDATA[SELECT current_time AS "CTIME" , IC_STOCK_ADJUST_HD.DOC_NO,
+ IC_STOCK_ADJUST_HD.melt_no,
+ IC_STOCK_ADJUST_HD.DOC_DATE, IC_STOCK_ADJUST_HD.DESCS, IC_STOCK_ADJUST_DT.ITEM_CODE, IC_STOCK_ADJUST_DT.UOM_CD, IC_STOCK_ADJUST_DT.GROUP_ID, IC_STOCK_ADJUST_DT.LOT_NO, IC_STOCK_ADJUST_DT.PURCHASE_DATE, IC_STOCK_ADJUST_DT.QTY, IC_STOCK_ADJUST_DT.UNIT_COST, IC_STOCK_ADJUST_DT.TOTAL_COST, IC_STOCK_ADJUST_DT.ONHAND_QTY, IC_STOCK_ADJUST_DT.STOCK_DESCS, IC_STOCK_ADJUST_DT.REF_NO, IC_STOCK_ADJUST_DT.REF_DATE, 
 IC_STOCK_ADJUST_DT.VQTY,
 ic_stock_adjust_hd.remarks
 FROM IC_STOCK_ADJUST_DT
@@ -75,6 +78,7 @@ and
 	<field name="REF_DATE" class="java.sql.Timestamp"/>
 	<field name="VQTY" class="java.lang.Double"/>
 	<field name="REMARKS" class="java.lang.String"/>
+	<field name="MELT_NO" class="java.lang.String"/>
 
 
 		<group  name="GDOC_NO" >
@@ -420,7 +424,7 @@ and
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="85"
+						x="76"
 						y="45"
 						width="65"
 						height="13"
@@ -435,7 +439,7 @@ and
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="166"
+						x="212"
 						y="45"
 						width="65"
 						height="13"
@@ -513,6 +517,21 @@ and
 						key="line-2"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="141"
+						y="46"
+						width="65"
+						height="13"
+						forecolor="#FFFFFF"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Melt No]]></text>
+				</staticText>
 			</band>
 		</columnHeader>
 		<detail>
@@ -548,7 +567,7 @@ and
 				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						style="Heading 1"
-						x="85"
+						x="76"
 						y="4"
 						width="62"
 						height="12"
@@ -576,7 +595,7 @@ and
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						style="Heading 1"
-						x="166"
+						x="210"
 						y="4"
 						width="247"
 						height="12"
@@ -628,6 +647,20 @@ and
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Double"><![CDATA[new java.lang.Double(  ($F{QTY}.doubleValue()) *($F{UNIT_COST}.doubleValue()) )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Heading 1"
+						x="142"
+						y="4"
+						width="71"
+						height="12"
+						key="textField-31"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MELT_NO}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

@@ -1,0 +1,443 @@
+﻿<?xml version="1.0"?>
+
+<!-- =============================================================== -->
+<!-- Ant own build file                                              -->
+<!-- =============================================================== -->
+
+<project name="iReport" default="compile" basedir=".">
+  <description>Builds, tests, and runs the project iReport.</description>
+
+  <property name="build.compiler" value="modern"/>
+  <property name="build.sysclasspath" value="ignore"/>
+
+  <property name="name" value="iReport"/>
+  <property name="version" value="2.0.0"/>
+    <property name="website" value="http://ireport.sourceforge.net"/>
+
+  <property name="src" value="${basedir}/src"/>
+  <property name="lib" value="${basedir}/lib"/>
+  <property name="target" value="${basedir}/target" />
+  <property name="classes" value="${basedir}/classes"/>
+  <property name="javadocs" value="${target}/javadocs"/>
+  <property name="dist" value="${target}/dist"/>
+
+  <property name="fonts" value="${basedir}/fonts"/>
+
+  <property name="packages" value="org.*, it.*"/>
+  
+
+
+  <!-- ============================================================= -->
+  <!-- Classpath with libraries needed to compile this application   -->
+  <!-- ============================================================= -->
+  <path id="compile.classpath">
+    <fileset dir="${lib}">
+      <include name="**/*.jar"/>
+      <include name="**/*.zip"/>
+    </fileset>
+  </path>
+
+
+     
+  <!-- ============================================================= -->
+  <!-- Prepares the project                                          -->
+  <!-- ============================================================= -->
+  <target name="prepare">
+    <defaultexcludes echo="false" add="**/*.nbattrs"/>
+  
+    <mkdir dir="${classes}"/>
+    <mkdir dir="${lib}"/>
+    <mkdir dir="${dist}"/>
+
+    <!-- Copy all images to the classes directory -->
+    <copy todir="${classes}">
+      <fileset dir="${src}">
+        <include name="**/*.jpg"/>
+        <include name="**/*.gif"/>
+        <include name="**/*.dtd"/>
+        <include name="**/*.jav"/>
+        <include name="**/*.png"/>
+        <include name="**/*.xml"/>
+        <include name="it/**/*.jrxml"/>
+        <include name="it/**/*.jasper"/>
+	<include name="it/**/*.html"/>
+      </fileset>
+    </copy>
+    <copy file="${src}/it/businesslogic/ireport/locale/Ireport.properties"
+          tofile="${classes}/it/businesslogic/ireport/locale/Ireport_en.properties"/>
+  </target>
+
+  <!-- ============================================================= -->
+  <!-- Compiles the source code                                      -->
+  <!-- ============================================================= -->
+  <target name="compile" depends="prepare">
+
+    <javac srcdir="${src}"
+           destdir="${classes}"
+           debug="on"
+	   excludes="**/bak/**"
+           optimize="on"
+           target="1.4"
+           source="1.4">
+      <classpath refid="compile.classpath"/>
+    </javac>
+
+    <!-- copy over the language and other properties files. -->      
+    <copy todir="${classes}">
+      <fileset dir="${src}">
+        <include name="**/*.properties"/>
+      </fileset>
+    </copy>
+    
+    
+  </target>
+
+  <!-- ============================================================= -->
+  <!-- Clean up all files that are generated.                        -->
+  <!-- ============================================================= -->
+  <target name="clean">
+    <delete quiet="true" dir="${classes}"/>
+    <delete dir="${dist}" />
+    <delete file="${target}/${name}-${version}.jar"/>
+    <delete file="${target}/${name}-utils-${version}.jar"/>
+  </target>
+
+  <!-- ============================================================= -->
+  <!-- Clean and then compile the project                            -->
+  <!-- ============================================================= -->
+  <target name="rebuild">
+    <antcall target="clean"/>
+    <antcall target="compile"/>
+  </target>
+
+  <!-- ============================================================= -->
+  <!-- Create the jar file                                           -->
+  <!-- ============================================================= -->
+  <target name="jar" depends="compile">
+    <jar jarfile="${target}/${name}-${version}.jar">
+    	<manifest>
+		<attribute name="Built-By" value="${user.name}"/>
+		<section name="it/businesslogic/ireport">
+			<attribute name="Specification-Title" value="${name}"/>
+			<attribute name="Specification-Version" value="${version}"/>
+			<attribute name="Specification-Vendor" value="JasperSoft Corp. (http://www.jaspersoft.com)"/>
+			<attribute name="Implementation-Title" value="${name}"/>
+			<attribute name="Implementation-Version" value="${version}"/> 
+			<attribute name="Implementation-Vendor" value="JasperSoft Corp. (http://www.jaspersoft.com)"/>
+		</section>
+	</manifest>
+      <fileset dir="${classes}"/>
+    </jar>
+    <jar jarfile="${target}/${name}-utils-${version}.jar">
+      <fileset dir="${classes}">
+      	<include name="it/businesslogic/ireport/util/Misc.class"/>
+        <include name="it/businesslogic/ireport/IReportScriptlet.class"/>
+        <include name="it/businesslogic/ireport/util/ReportUtils.class"/>
+        <include name="it/businesslogic/ireport/chart/ChartFactory.class"/>
+        <include name="it/businesslogic/ireport/chart/DefaultChartFactory.class"/>
+        <include name="it/businesslogic/ireport/barcode/BcImage.class"/>
+        <include name="it/businesslogic/ireport/export/**/*"/>
+      </fileset>
+      <fileset dir=".">
+        <include name="utils_license.txt"/>
+      </fileset>
+    </jar>
+    <jar jarfile="${target}/${name}-rmistubs-${version}.jar">
+      <fileset dir="${classes}">
+        <include name="it/businesslogic/ireport/rmi/IReportServer.class"/>
+      </fileset>
+
+    </jar>
+  </target>
+  
+  <!-- ============================================================= -->
+  <!-- Create iReport.exe using jsmoothgen                           -->
+  <!-- ============================================================= -->  
+<target name="exe" depends="prepare" description="Create an .exe wrapper for a iReport using jsmoothgen-ant"> 
+ 
+	<!-- create the .exe wrapper using jsmoothgen-ant and the .jsmooth project file created with the JSmooth GUI application--> 
+	  <taskdef name="jsmoothgen"
+		classname="net.charabia.jsmoothgen.ant.JSmoothGen"
+		classpath="${lib}/jsmoothgen-ant-0.9.7.jar"/>
+	<jsmoothgen project="${basedir}/etc/ireport.jsmooth" skeletonroot="${basedir}/etc/skeletons"/> 
+	<copy tofile="${target}/${name}.exe" file="${basedir}/etc/iReport.exe"/>
+	<delete file="${basedir}/etc/iReport.exe"/>
+</target> 
+
+
+  <!-- ============================================================= -->
+  <!-- Create the dist_bin_zip                                               -->
+  <!-- ============================================================= -->
+  <target name="dist_bin_zip" depends="jar,exe">
+    <!-- Full includes a bunch of JDBC drivers so, the user has nothing todo -->
+    <!-- It just works out of the box                                        -->
+    <zip destfile="${dist}/${name}-${version}.zip">
+      <zipfileset dir="lib" includes="*.jar" excludes="**/no_ireport_*" prefix="${name}-${version}/lib"/>
+      <zipfileset dir="lib" includes="*.txt" prefix="${name}-${version}/lib"/>
+      <!--<zipfileset dir="db_drivers" prefix="${name}_${version}/lib"/>-->
+      <zipfileset dir="${target}" includes="${name}-${version}.jar" fullpath="${name}-${version}/lib/${name}.jar"/>
+      <!--<zipfileset dir="etc" prefix="${name}-${version}/"/>-->
+      <zipfileset dir="docs" prefix="${name}-${version}/docs"/>
+      <zipfileset dir="docs" prefix="${name}-${version}/eclipse"/>
+      <zipfileset dir="fonts" prefix="${name}-${version}/fonts"/>
+      <zipfileset dir="plugins" prefix="${name}-${version}/plugins"/>
+      <zipfileset dir="templates" prefix="${name}-${version}/templates"/>
+      <zipfileset dir="bin" prefix="${name}-${version}/bin"/>
+      <zipfileset dir="." includes="Changelog.txt" fullpath="${name}-${version}/Changelog.txt"/>
+      <zipfileset dir="." includes="policy.all" fullpath="${name}-${version}/policy.all"/>
+      <zipfileset dir="." includes="notice.txt" fullpath="${name}-${version}/notice.txt"/>
+      <zipfileset dir="." includes="iReport.bat" fullpath="${name}-${version}/${name}.bat"/>
+      <zipfileset dir="." includes="iReport.sh" fullpath="${name}-${version}/${name}.sh"/>
+      <zipfileset dir="." includes="license.txt" fullpath="${name}-${version}/license.txt"/>
+      <zipfileset dir="." includes="relnotes${version}.html" fullpath="${name}-${version}/relnotes${version}.html"/>
+      <zipfileset dir="${target}" includes="${name}.exe" fullpath="${name}-${version}/${name}.exe"/>
+    </zip>  
+  </target>
+  
+      
+  <!-- ============================================================= -->
+  <!-- Create the dist_src_zip                                               -->
+  <!-- ============================================================= -->
+  <target name="dist_src_zip">
+    <!-- Full includes a bunch of JDBC drivers so, the user has nothing todo -->
+    <!-- It just works out of the box                                        -->
+    <zip destfile="${dist}/${name}-${version}-src.zip">
+      <zipfileset dir="src" excludes="**/*.class" prefix="${name}-${version}-src/src"/>      
+      <zipfileset dir="lib" includes="*.jar" excludes="**/no_ireport*.jar" prefix="${name}-${version}-src/lib"/>
+      <zipfileset dir="lib" includes="*.txt" prefix="${name}-${version}-src/lib"/>
+      <!--<zipfileset dir="db_drivers" prefix="iReport_${version}/lib"/>-->
+      <!--<zipfileset dir="${target}" includes="${name}.jar" fullpath="${name}-${version}/lib/${name}.jar"/>-->
+      <!--<zipfileset dir="etc" prefix="${name}-${version}/"/>-->
+      <zipfileset dir="plugins" prefix="${name}-${version}-src/plugins"/>
+      <zipfileset dir="docs" prefix="${name}-${version}-src/docs"/>
+      <zipfileset dir="docs" prefix="${name}-${version}-src/eclipse"/>
+      <zipfileset dir="fonts" prefix="${name}-${version}-src/fonts"/>
+      <zipfileset dir="templates" prefix="${name}-${version}-src/templates"/>
+      <zipfileset dir="bin" prefix="${name}-${version}-src/bin"/>
+      <zipfileset dir="etc/skeletons" prefix="${name}-${version}-src/etc/skeletons"/>
+      <zipfileset dir="etc" includes="ireport.jsmooth" fullpath="${name}-${version}-src/etc/ireport.jsmooth"/>
+      <zipfileset dir="." includes="iReport.bat" fullpath="${name}-${version}-src/${name}.bat"/>
+      <zipfileset dir="." includes="iReport.sh" fullpath="${name}-${version}-src/${name}.sh"/>
+      <zipfileset dir="." includes="Changelog.txt" fullpath="${name}-${version}-src/Changelog.txt"/>
+      <zipfileset dir="." includes="policy.all" fullpath="${name}-${version}-src/policy.all"/>
+      <zipfileset dir="." includes="notice.txt" fullpath="${name}-${version}-src/notice.txt"/>
+      <zipfileset dir="." includes="build.xml" fullpath="${name}-${version}-src/build.xml"/>      
+      <zipfileset dir="." includes="license.txt" fullpath="${name}-${version}-src/license.txt"/>
+      <zipfileset dir="." includes="relnotes${version}.html" fullpath="${name}-${version}-src/relnotes${version}.html"/>
+      <!-- <zipfileset dir="nbproject" includes="build-impl.xml" prefix="${name}-${version}-src/nbproject"/> -->
+    </zip>  
+  </target>
+
+  <!-- ============================================================= -->
+  <!-- Create the dist_bin_zip                                               -->
+  <!-- ============================================================= -->
+  <target name="dist_bin_tar" depends="jar,exe">
+    <!-- Full includes a bunch of JDBC drivers so, the user has nothing todo -->
+    <!-- It just works out of the box                                        -->
+    <tar destfile="${dist}/${name}-${version}.tar">
+      <tarfileset dir="lib" includes="*.jar" excludes="**/no_ireport_*" prefix="${name}-${version}/lib"/>
+      <tarfileset dir="lib" includes="*.txt" prefix="${name}-${version}/lib"/>
+      <!--<zipfileset dir="db_drivers" prefix="iReport_${version}/lib"/>-->
+      <tarfileset dir="${target}" includes="${name}-${version}.jar" fullpath="${name}-${version}/lib/${name}.jar"/>
+      <!--<zipfileset dir="etc" prefix="${name}-${version}/"/>-->
+      <tarfileset dir="docs" prefix="${name}-${version}/docs"/>
+      <tarfileset dir="docs" prefix="${name}-${version}/eclipse"/>
+      <tarfileset dir="fonts" prefix="${name}-${version}/fonts"/>
+      <tarfileset dir="plugins" prefix="${name}-${version}/plugins"/>
+      <tarfileset dir="templates" prefix="${name}-${version}/templates"/>
+      <tarfileset dir="bin" excludes="startup.sh" prefix="${name}-${version}/bin"/>
+      <tarfileset dir="bin"  prefix="${name}-${version}/bin/" mode="755" >
+            <include name="startup.sh"/>
+      </tarfileset>      
+      <tarfileset dir="." includes="Changelog.txt" fullpath="${name}-${version}/Changelog.txt"/>
+      <tarfileset dir="." includes="policy.all" fullpath="${name}-${version}/policy.all"/>
+      <tarfileset dir="." includes="notice.txt" fullpath="${name}-${version}/notice.txt"/>
+      <tarfileset dir="." includes="relnotes${version}.html" fullpath="${name}-${version}/relnotes${version}.html"/>
+      <tarfileset dir="." includes="iReport.bat" fullpath="${name}-${version}/${name}.bat"/>
+      <tarfileset dir="${target}" includes="${name}.exe" fullpath="${name}-${version}/${name}.exe"/>
+      <tarfileset dir="."  prefix="${name}-${version}/" mode="755" >
+            <include name="${name}.sh"/>
+      </tarfileset>            
+      <tarfileset dir="." includes="license.txt" fullpath="${name}-${version}/license.txt"/>
+    </tar>
+    <gzip src="${dist}/${name}-${version}.tar" destfile="${dist}/${name}-${version}.tar.gz"/>
+    <delete file="${dist}/${name}-${version}.tar"/>      
+  </target>
+  
+  
+  <!-- ============================================================= -->
+  <!-- Create the dist_bin_zip                                               -->
+  <!-- ============================================================= -->
+  <target name="installer" depends="jar,exe">
+    <!-- Full includes a bunch of JDBC drivers so, the user has nothing todo -->
+    <!-- It just works out of the box -->    
+    <mkdir dir="${dist}/${name}-${version}-windows-installer"/>             
+    <copy todir="${dist}/${name}-${version}-windows-installer/">
+     <fileset dir=".">
+      <include name="lib/*.jar"/>
+      <exclude name="lib/no_ireport_*"/>
+      <include name="lib/*.txt"/>
+      <include name="docs/**"/>
+      <include name="eclipse/**"/>
+      <include name="fonts/**"/>
+      <include name="plugins/**"/>
+      <include name="templates/**"/>
+      <include name="bin/**"/>
+      <include name="src/**"/>
+      <include name="Changelog.txt"/>
+      <include name="policy.all"/>
+      <include name="notice.txt"/>
+      <include name="${name}.bat"/>
+      <include name="${name}.sh"/>
+      <include name="license.txt"/>
+      <include name="build.xml"/>
+      <include name="relnotes${version}.html"/>
+      <include name="etc/skeletons"/>
+      <include name="etc/iReportInstaller.nsi"/>
+      <include name="etc/ireport.jsmooth"/>
+      </fileset>
+      <fileset dir="${target}" includes="${name}.exe"/>
+    </copy>
+    <copy tofile="${dist}/${name}-${version}-windows-installer/lib/${name}.jar">
+    	<fileset dir="${target}" includes="${name}-${version}.jar"/> 
+    </copy>
+    
+    <taskdef name="nsisant"
+		classname="net.sf.nsisant.Task"
+		classpath="${lib}/nsisant-1.1.jar"/>
+	<nsisant script="${basedir}/etc/iReportInstaller.nsi">
+		<define name="PRODUCT_VERSION" value="${version}"/>
+		<define name="PRODUCT_NAME" value="${name}"/>
+		<define name="PRODUCT_WEB_SITE" value="${website}"/>
+	</nsisant> 
+	
+    </target>
+  
+  <!-- ============================================================= -->
+  <!-- Create the dist                                               -->
+  <!-- ============================================================= -->
+  <target name="dist" depends="dist_bin_zip, dist_bin_tar, dist_src_zip">
+    <!-- Full includes a bunch of JDBC drivers so, the user has nothing todo -->
+    <!-- It just works out of the box                                        -->
+    
+                
+  </target>
+   
+  <!-- ============================================================= -->
+  <!-- Execute iReport2                                   	     -->
+  <!-- ============================================================= -->
+  <target name="iReport" depends="compile">
+    <java classname="it.businesslogic.ireport.gui.MainFrame" fork="true">
+    <sysproperty key="ireport.home" value="."/> 
+    <sysproperty key="java.security.policy" value="policy.all"/>
+    <sysproperty key="axis.socketSecureFactory" value="org.apache.axis.components.net.SunFakeTrustSocketFactory"/>
+    <jvmarg value="-Xms48m"/> 
+    <jvmarg value="-Xmx512m"/> 
+    <!-- <jvmarg value="-Xruntracer"/> -->
+		<classpath>
+			<pathelement location="./"/>
+			<pathelement location="${fonts}"/>
+			<pathelement location="${classes}"/>
+			<fileset dir="${lib}">
+				<include name="**/*.jar"/>
+				<include name="**/*.zip"/>
+			</fileset>
+		</classpath>
+     </java>
+  </target>
+  
+  <!-- ============================================================= -->
+  <!-- Execute iReport2 from jar                               	     -->
+  <!-- ============================================================= -->
+  <target name="start_jar" depends="jar">
+    <java classname="it.businesslogic.ireport.gui.MainFrame" fork="true">
+		<classpath>
+			<pathelement location="./"/>
+			<pathelement location="${fonts}"/>
+			<fileset dir="${lib}">
+				<include name="**/*.jar"/>
+			</fileset>
+                        <fileset dir="${target}">
+                                <include name="${name}-${version}.jar"/>
+                        </fileset>
+		</classpath>
+     </java>
+  </target>
+
+  <!-- ============================================================= -->
+  <!-- Creates the API documentation                                 -->
+  <!-- ============================================================= -->
+  <target name="javadocs" depends="compile">
+    <mkdir dir="${javadocs}"/>
+    <javadoc packagenames="${packages}"
+             sourcepath="${src}"
+             destdir="${javadocs}"
+             author="true"
+             version="true"
+             windowtitle="iReport API"
+             doctitle="iReport"
+             use="true"
+             bottom="Copyright &#169; 2006 by JasperSoft Corp. All Rights Reserved."
+    />
+  </target>
+  
+  <!-- ============================================================= -->
+  <!-- Update default Locale keys on JasperBabylon                   -->
+  <!-- ============================================================= -->
+  <target name="declare">
+    <taskdef name="jasperBabylon" classname="com.jaspersoft.babylon.JasperBabylonTask">
+        <classpath refid="compile.classpath"/>
+    </taskdef>
+  </target>
+  
+  
+  <target name="updateLocale" depends="declare" description="Update default locale keys">
+    <jasperBabylon appId="1" 
+    		   operation="upload"
+    		   languageId="default"
+    		   username="giulio@jaspersoft.com"
+    		   password="9q72rgtjb"
+    		   url="http://www.jasperforge.org/jasperbabylon"
+    		   inputFile="${src}/it/businesslogic/ireport/locale/Ireport.properties"/>
+  </target>
+  
+  <!--
+  url="http://www.jasperforge.org/jasperbabylon"
+  -->
+  <target name="updateLocaleIt" depends="declare" description="Update Italian translation (mantainer Giulio Toffoli)">
+    <jasperBabylon appId="1" 
+    		   operation="upload"
+    		   languageId="it"
+    		   username="giulio@jaspersoft.com"
+    		   password="9q72rgtjb"
+    		   url="http://www.jasperforge.org/jasperbabylon"
+    		   
+    		   inputFile="${src}/it/businesslogic/ireport/locale/Ireport_it.properties"/>
+  </target>
+  
+  
+  <target name="signall" depends="jar">
+    <delete quiet="true" dir="slib"/>
+    <mkdir dir="slib"/>
+    <copy todir="slib">
+      <fileset dir="lib/">
+        <include name="**/*.jar"/>
+      </fileset>
+    </copy>
+    <copy file="${target}/${name}-${version}.jar" toFile="slib/ireport.jar"/>
+    <signjar keystore="mykeystore" alias="myself" storepass="password">
+	    <fileset dir="slib" includes="slib/*.jar" />
+    </signjar>
+    <signjar keystore="mykeystore" alias="myself" storepass="password">
+	    <fileset dir="slib" includes="slib/ireport.jar" />
+    </signjar>
+  </target>
+  
+    <target name="signone" depends="jar">
+
+    <signjar keystore="mykeystore" alias="myself" storepass="password" keypass="password">
+	    <fileset dir="slib" includes="slib/ireport.jar" />
+    </signjar>
+  </target>
+
+</project>

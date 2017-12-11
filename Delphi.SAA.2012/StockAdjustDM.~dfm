@@ -1,7 +1,7 @@
 inherited StockAdjustDataModule: TStockAdjustDataModule
   OldCreateOrder = True
   Left = 421
-  Top = 126
+  Top = 114
   Height = 581
   Width = 771
   object qryUnPostedStockAdjust: TIBQuery
@@ -60,6 +60,7 @@ inherited StockAdjustDataModule: TStockAdjustDataModule
       Size = 2
     end
     object qryUnPostedStockAdjustMODE: TIBStringField
+      DisplayWidth = 1
       FieldName = 'MODE'
       Origin = 'IC_STOCK_ADJUST_HD.MODE'
       Required = True

@@ -29,7 +29,17 @@
 	<parameter name="pSysDate" isForPrompting="false" class="java.sql.Timestamp"/>
 	<parameter name="pLogo1" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="pLogo2" isForPrompting="false" class="java.lang.String"/>
-	<queryString><![CDATA[SELECT CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+	<queryString><![CDATA[SELECT
+CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,
+CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,
+CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+cp.mfg_address1,
+cp.mfg_address2,
+cp.mfg_address3,
+cp.mfg_postcode,
+cp.mfg_province,
+cp.mfg_fax,
+cp.mfg_telephone,
 AR_CREDIT_NOTE_HD.DOC_NO, AR_CREDIT_NOTE_HD.DOC_DATE, AR_CREDIT_NOTE_HD.DEBTOR_ACCT,
  AR_CREDIT_NOTE_HD.TRX_TYPE, AR_CREDIT_NOTE_HD.DESCS, AR_CREDIT_NOTE_HD.DEBT_NAME,
  AR_CREDIT_NOTE_HD.REMARK, AR_CREDIT_NOTE_HD.NO_OF_PRINT, AR_CREDIT_NOTE_HD.BATHTEXT,
@@ -67,6 +77,13 @@ FROM AR_DEBTOR  ,AR_CREDIT_NOTE_HD,AR_CREDIT_NOTE_DT,COMPANY_PROFILE CP
 	<field name="ADDRESS3" class="java.lang.String"/>
 	<field name="TELEPHONE" class="java.lang.String"/>
 	<field name="FAX" class="java.lang.String"/>
+	<field name="MFG_ADDRESS1" class="java.lang.String"/>
+	<field name="MFG_ADDRESS2" class="java.lang.String"/>
+	<field name="MFG_ADDRESS3" class="java.lang.String"/>
+	<field name="MFG_POSTCODE" class="java.lang.String"/>
+	<field name="MFG_PROVINCE" class="java.lang.String"/>
+	<field name="MFG_FAX" class="java.lang.String"/>
+	<field name="MFG_TELEPHONE" class="java.lang.String"/>
 	<field name="DOC_NO" class="java.lang.String"/>
 	<field name="DOC_DATE" class="java.sql.Timestamp"/>
 	<field name="DEBTOR_ACCT" class="java.lang.String"/>
@@ -408,6 +425,8 @@ Siam Anglo Alloy Co, Ltd.
 						y="96"
 						width="449"
 						height="27"
+						forecolor="#FF6633"
+						backcolor="#FF9900"
 						key="staticText-34"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
@@ -423,7 +442,9 @@ Siam Anglo Alloy Co, Ltd.
 						y="83"
 						width="429"
 						height="17"
-						key="textField-29"/>
+						key="textField-29">
+							<printWhenExpression><![CDATA[new Boolean(false)]]></printWhenExpression>
+						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" size="8" isBold="false"/>
@@ -455,6 +476,21 @@ Siam Anglo Alloy Co, Ltd.
 						<font fontName="SansSerif" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{TH_ADDRESS3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="84"
+						y="99"
+						width="465"
+						height="31"
+						key="textField-32"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}
++" " +$F{MFG_ADDRESS3} 
++"\nโทร:"+$F{MFG_TELEPHONE} + " แฟกซ์: "+$F{MFG_FAX} ]]></textFieldExpression>
 				</textField>
 			</band>
 		</title>

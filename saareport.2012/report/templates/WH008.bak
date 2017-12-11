@@ -39,8 +39,17 @@
 	</parameter>
 	<parameter name="pUID" isForPrompting="false" class="java.lang.String"/>
 	<parameter name="pSysDate" isForPrompting="false" class="java.sql.Timestamp"/>
-	<queryString><![CDATA[SELECT 
-CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.TELEPHONE,CP.FAX,
+	<queryString><![CDATA[SELECT
+CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,
+CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,
+CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+cp.mfg_address1,
+cp.mfg_address2,
+cp.mfg_address3,
+cp.mfg_postcode,
+cp.mfg_province,
+cp.mfg_fax,
+cp.mfg_telephone,
 PO_GRN_HD.GRN_NO,
 PO_GRN_HD.GRN_DATE,
 PO_GRN_HD.SUPP_CODE,
@@ -58,12 +67,13 @@ PO_GRN_DT.GRN_DATE,
 PO_GRN_DT.GRN_NO,
 PO_GRN_DT.UOM,
 PO_GRN_DT.ITEM_DESCS,
-round(PO_GRN_DT.UNIT_COST,2) as UNIT_COST,
+PO_GRN_DT.UNIT_COST as UNIT_COST,
 PO_GRN_DT.TOTAL_AMT, 
 PO_GRN_DT.ORDER_DATE,
 PO_GRN_DT.ORDER_NO,
 PO_GRN_DT.ORDER_QTY,
 PO_GRN_DT.GRN_QTY, 
+PO_GRN_DT.GRN_QTY*PO_GRN_DT.UNIT_COST AS TOTAL_COST,
 PO_SUPPLIER.SUPPLIER_CD,
 PO_SUPPLIER.NAME,
 PO_SUPPLIER.ADDRESS1 AS SADDRESS1,
@@ -91,8 +101,18 @@ WHERE
 	<field name="TH_ADDRESS1" class="java.lang.String"/>
 	<field name="TH_ADDRESS2" class="java.lang.String"/>
 	<field name="TH_ADDRESS3" class="java.lang.String"/>
+	<field name="ADDRESS1" class="java.lang.String"/>
+	<field name="ADDRESS2" class="java.lang.String"/>
+	<field name="ADDRESS3" class="java.lang.String"/>
 	<field name="TELEPHONE" class="java.lang.String"/>
 	<field name="FAX" class="java.lang.String"/>
+	<field name="MFG_ADDRESS1" class="java.lang.String"/>
+	<field name="MFG_ADDRESS2" class="java.lang.String"/>
+	<field name="MFG_ADDRESS3" class="java.lang.String"/>
+	<field name="MFG_POSTCODE" class="java.lang.String"/>
+	<field name="MFG_PROVINCE" class="java.lang.String"/>
+	<field name="MFG_FAX" class="java.lang.String"/>
+	<field name="MFG_TELEPHONE" class="java.lang.String"/>
 	<field name="GRN_NO" class="java.lang.String"/>
 	<field name="GRN_DATE" class="java.sql.Timestamp"/>
 	<field name="SUPP_CODE" class="java.lang.String"/>
@@ -113,6 +133,7 @@ WHERE
 	<field name="ORDER_NO" class="java.lang.String"/>
 	<field name="ORDER_QTY" class="java.lang.Double"/>
 	<field name="GRN_QTY" class="java.lang.Double"/>
+	<field name="TOTAL_COST" class="java.lang.Double"/>
 	<field name="SUPPLIER_CD" class="java.lang.String"/>
 	<field name="NAME" class="java.lang.String"/>
 	<field name="SADDRESS1" class="java.lang.String"/>
@@ -172,7 +193,9 @@ WHERE
 						y="107"
 						width="519"
 						height="17"
-						key="staticText-6"/>
+						key="staticText-6">
+							<printWhenExpression><![CDATA[new Boolean(false)]]></printWhenExpression>
+						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
@@ -186,7 +209,9 @@ WHERE
 						y="128"
 						width="519"
 						height="17"
-						key="staticText-7"/>
+						key="staticText-7">
+							<printWhenExpression><![CDATA[new Boolean(false)]]></printWhenExpression>
+						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
@@ -519,6 +544,21 @@ WHERE
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["โทร. "+$F{TELEPHONE}+"  โทรสาร "+$F{FAX}]]></textFieldExpression>
 				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="11"
+						y="105"
+						width="523"
+						height="31"
+						key="textField-25"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}
++" " +$F{MFG_ADDRESS3} 
++"\nโทร:"+$F{MFG_TELEPHONE} + " แฟกซ์: "+$F{MFG_FAX} ]]></textFieldExpression>
+				</textField>
 			</band>
 		</pageHeader>
 		<columnHeader>
@@ -749,7 +789,7 @@ WHERE
 					<textElement textAlignment="Center">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[new java.lang.Double(  ($F{UNIT_COST}.doubleValue()) *($F{GRN_QTY}.doubleValue()) )]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{TOTAL_COST}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

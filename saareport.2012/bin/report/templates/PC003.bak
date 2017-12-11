@@ -647,47 +647,47 @@ AND h.STATUS ='A']]></queryString>
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="460"
+						x="415"
 						y="126"
-						width="67"
+						width="112"
 						height="18"
 						key="staticText-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
 					</textElement>
-				<text><![CDATA[Code.FM-PC-01]]></text>
+				<text><![CDATA[Rev:01,01.12.2017]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="270"
+						x="261"
 						y="129"
-						width="138"
+						width="161"
 						height="21"
 						key="staticText-12"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" pdfFontName="Helvetica-BoldOblique" size="14" isBold="true" isItalic="true"/>
 					</textElement>
-				<text><![CDATA[PURCHASE ORDER]]></text>
+				<text><![CDATA[PURCHASE CONTRACT]]></text>
 				</staticText>
 				<line direction="TopDown">
 					<reportElement
 						style="Heading 1"
 						x="8"
 						y="142"
-						width="256"
-						height="0"
+						width="251"
+						height="2"
 						key="line-1"/>
 					<graphicElement stretchType="NoStretch" pen="4Point"/>
 				</line>
 				<line direction="TopDown">
 					<reportElement
 						style="Heading 1"
-						x="408"
+						x="425"
 						y="141"
-						width="117"
+						width="100"
 						height="0"
 						key="line-2"/>
 					<graphicElement stretchType="NoStretch" pen="4Point"/>

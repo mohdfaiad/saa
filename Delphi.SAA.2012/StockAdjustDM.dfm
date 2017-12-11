@@ -60,6 +60,7 @@ inherited StockAdjustDataModule: TStockAdjustDataModule
       Size = 2
     end
     object qryUnPostedStockAdjustMODE: TIBStringField
+      DisplayWidth = 1
       FieldName = 'MODE'
       Origin = 'IC_STOCK_ADJUST_HD.MODE'
       Required = True

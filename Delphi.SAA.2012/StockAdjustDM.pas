@@ -1,5 +1,15 @@
 unit StockAdjustDM;
 
+{
+Date  :11-Dec-2017
+Author:Tinnarat.A
+Change : Add validate condiation before post if melt_no <> null check aginst if stock
+had issued before.
+Example : melt_no '09W11' has selected ensure trx request for 09W11 in ic_stockcard must have existed
+       : Added isMeltNohasEverIssued
+}
+
+
 interface
 
 uses
@@ -132,6 +142,8 @@ type
     procedure doFilterOnhandQueryDetail(dataSet:TDataSet);
     function deleteStockAdjust(docNo:String):String;
     function postStockAdjust(docNo:String;docDate:TDateTime;mode:String;module:String;userid:string):boolean;
+    {11-12-2017:tinnarat}
+    function isMeltNohasEverIssued(meltNo:String):boolean;
   end;
 
 const ADJUST_TRX_TYPE:String ='SA';
@@ -144,7 +156,6 @@ implementation
 uses WareHouseDM,SystemConfig;
 
 {$R *.dfm}
-
 
 function TStockAdjustPostManager.execute(docNo:String;docDate:TDateTime;mode:String;module:String;userid:string):boolean;
 procedure fail(e:Exception);
@@ -168,6 +179,25 @@ begin
   on e:Exception do  fail(e);
 
   end;
+
+end;
+
+function TStockAdjustDataModule.isMeltNohasEverIssued(meltNo:String):boolean;
+procedure fail(e:Exception);
+begin
+      errorex('Failed: isMeltNohasEverIssued'+e.Message);
+      result:=false;
+end;
+begin
+   try
+   qryAdhoc.Active := false;
+   qryAdhoc.SQL.Text :='select count(*) from ic_stockcard where TRX_TYPE='+QuotedStr('RT')+' and melt_no='+quotedStr(meltNo);
+   qryAdhoc.Open;
+   result :=  (qryAdhoc.Fields[0].Value > 0)
+   except
+    on e:exception   do
+      fail(e)
+   end
 
 end;
 
@@ -231,9 +261,20 @@ end;
 
 procedure TStockAdjustDataModule.tbStockAdjustHeaderBeforePost(
   DataSet: TDataSet);
+var meltno:string;
 begin
   inherited;
-  DataSet.FieldByName('UPDATE_DATE').AsDateTime:=now;
+  {Tinnarat.A
+  }
+  meltno:=dataset.FieldByName('MELT_NO').AsString   ;
+  if (meltno <> '') then
+  begin
+     if not (isMeltNohasEverIssued(meltno) ) then
+     begin
+         errorEx('Cound Not find Stock issue transaction for '+meltNo+'. Check Again stock card report!')  ;
+         dataSet.Cancel;
+     end ELSE DataSet.FieldByName('UPDATE_DATE').AsDateTime:=now;
+  end else DataSet.FieldByName('UPDATE_DATE').AsDateTime:=now;
 end;
 
 procedure TStockAdjustDataModule.tbStockAdjustDetailAfterScroll(

@@ -37,9 +37,18 @@
 	</parameter>
 	<parameter name="pSysDate" isForPrompting="true" class="java.sql.Timestamp"/>
 	<parameter name="pUID" isForPrompting="false" class="java.lang.String"/>
-	<queryString><![CDATA[SELECT SO_DET_DT.ITEM_CODE,
-CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
-SO_DET_DT.DELIVERY_NO,
+	<queryString><![CDATA[SELECT
+CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,
+CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,
+CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+cp.mfg_address1,
+cp.mfg_address2,
+cp.mfg_address3,
+cp.mfg_postcode,
+cp.mfg_province,
+cp.mfg_fax,
+cp.mfg_telephone,SO_DET_DT.DELIVERY_NO,
+SO_DET_DT.ITEM_CODE,
 SO_DET_DT.DELIVERY_DATE,
 SO_DET_DT.ORDER_NO, 
 SO_DET_DT.ORDER_DATE,
@@ -68,7 +77,6 @@ and (so_det_hd.status ='N')
 AND (SO_DET_HD.DELIVERY_NO =UPPER($P{pDelivery_No}))
 ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 
-	<field name="ITEM_CODE" class="java.lang.String"/>
 	<field name="ENG_NAME" class="java.lang.String"/>
 	<field name="THAI_NAME" class="java.lang.String"/>
 	<field name="TH_ADDRESS1" class="java.lang.String"/>
@@ -79,7 +87,15 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 	<field name="ADDRESS3" class="java.lang.String"/>
 	<field name="TELEPHONE" class="java.lang.String"/>
 	<field name="FAX" class="java.lang.String"/>
+	<field name="MFG_ADDRESS1" class="java.lang.String"/>
+	<field name="MFG_ADDRESS2" class="java.lang.String"/>
+	<field name="MFG_ADDRESS3" class="java.lang.String"/>
+	<field name="MFG_POSTCODE" class="java.lang.String"/>
+	<field name="MFG_PROVINCE" class="java.lang.String"/>
+	<field name="MFG_FAX" class="java.lang.String"/>
+	<field name="MFG_TELEPHONE" class="java.lang.String"/>
 	<field name="DELIVERY_NO" class="java.lang.String"/>
+	<field name="ITEM_CODE" class="java.lang.String"/>
 	<field name="DELIVERY_DATE" class="java.sql.Timestamp"/>
 	<field name="ORDER_NO" class="java.lang.String"/>
 	<field name="ORDER_DATE" class="java.sql.Timestamp"/>
@@ -423,14 +439,14 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 						style="Heading 1"
 						x="445"
 						y="29"
-						width="67"
+						width="88"
 						height="14"
 						key="staticText-15"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Rev. :00,01.04.07]]></text>
+				<text><![CDATA[Rev. :01,01.12.17]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -458,7 +474,7 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<text><![CDATA[Tel (66-38) 379-044, 476-113; Fax (66-38)476-112]]></text>
+				<text><![CDATA[Tel (66-38)476 113-4; Fax (66-38)476-112]]></text>
 				</staticText>
 				<line direction="BottomUp">
 					<reportElement
@@ -1059,7 +1075,7 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 						style="Heading 1"
 						mode="Opaque"
 						x="6"
-						y="74"
+						y="49"
 						width="179"
 						height="28"
 						forecolor="#000000"
@@ -1072,6 +1088,20 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 						<font size="10"/>
 					</textElement>
 				<text><![CDATA[12 Jan, 2014 add company profile]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="6"
+						y="88"
+						width="76"
+						height="20"
+						key="staticText-37"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[PN011.2014.3.1]]></text>
 				</staticText>
 			</band>
 		</lastPageFooter>

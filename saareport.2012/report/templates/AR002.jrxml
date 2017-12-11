@@ -33,7 +33,16 @@
 	</parameter>
 	<parameter name="pLogo1" isForPrompting="false" class="java.lang.String"/>
 	<queryString><![CDATA[SELECT
-CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,
+CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,
+CP.ADDRESS2,CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+cp.mfg_address1,
+cp.mfg_address2,
+cp.mfg_address3,
+cp.mfg_postcode,
+cp.mfg_province,
+cp.mfg_fax,
+cp.mfg_telephone,
 AR_RECEIPT_DT.DOC_NO,
 AR_RECEIPT_DT.DOC_DATE,
 AR_INVOICE_HD.REMARK, 
@@ -111,6 +120,13 @@ WHERE
 	<field name="ADDRESS3" class="java.lang.String"/>
 	<field name="TELEPHONE" class="java.lang.String"/>
 	<field name="FAX" class="java.lang.String"/>
+	<field name="MFG_ADDRESS1" class="java.lang.String"/>
+	<field name="MFG_ADDRESS2" class="java.lang.String"/>
+	<field name="MFG_ADDRESS3" class="java.lang.String"/>
+	<field name="MFG_POSTCODE" class="java.lang.String"/>
+	<field name="MFG_PROVINCE" class="java.lang.String"/>
+	<field name="MFG_FAX" class="java.lang.String"/>
+	<field name="MFG_TELEPHONE" class="java.lang.String"/>
 	<field name="DOC_NO" class="java.lang.String"/>
 	<field name="DOC_DATE" class="java.sql.Date"/>
 	<field name="REMARK" class="java.lang.String"/>
@@ -812,11 +828,15 @@ WHERE
 				</textField>
 				<staticText>
 					<reportElement
-						x="67"
-						y="87"
+						x="26"
+						y="88"
 						width="388"
 						height="23"
-						key="staticText-88"/>
+						forecolor="#FF9966"
+						backcolor="#FFCC00"
+						key="staticText-88">
+							<printWhenExpression><![CDATA[new Boolean(false)]]></printWhenExpression>
+						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
@@ -825,6 +845,21 @@ WHERE
                   โทร. 0-38379 044, 0-38476 113   แฟกซ์  0-38476 112 
 ]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="67"
+						y="84"
+						width="465"
+						height="31"
+						key="textField-37"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}
++" " +$F{MFG_ADDRESS3} 
++"\nโทร:"+$F{MFG_TELEPHONE} + " แฟกซ์: "+$F{MFG_FAX} ]]></textFieldExpression>
+				</textField>
 			</band>
 		</title>
 		<pageHeader>

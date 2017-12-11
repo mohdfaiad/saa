@@ -1461,3 +1461,1134 @@ order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
 2016-02-10 16:32:09,954 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
 2016-02-10 16:32:09,954 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
 2016-02-10 16:32:09,954 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2560-11-29 12:16:59,107 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/saa/SAABKK.fdb?sql_dialect=3
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2560-11-29 12:16:59,327 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2560-11-29 12:16:59,342 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-11-29 12:16:59,342 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2560-11-29 12:17:04,171 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2560-12-02 10:28:19,930 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:28:20,185 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2560-12-02 10:28:20,185 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:28:20,185 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2560-12-02 10:28:20,186 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/saa/SAABKK.fdb?sql_dialect=3
+2560-12-02 10:28:20,186 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:28:20,186 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2560-12-02 10:28:20,186 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2560-12-02 10:28:20,189 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:28:20,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2560-12-02 10:28:26,702 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2560-12-02 10:29:15,887 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/saa/SAABKK.fdb?sql_dialect=3
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:29:16,043 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2560-12-02 10:29:22,908 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2560-12-02 10:30:02,084 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/saa/SAA.fdb?sql_dialect=3
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:30:02,240 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2560-12-02 10:30:08,480 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2560-12-02 10:31:15,768 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:31:15,924 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2560-12-02 10:31:16,049 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2560-12-02 10:31:16,049 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2560-12-02 10:31:16,049 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2560-12-02 10:31:16,127 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2560-12-02 10:31:16,127 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2560-12-02 10:31:16,252 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2560-12-02 10:31:16,252 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2560-12-02 10:31:24,149 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2560-12-02 10:31:24,165 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2560-12-02 10:31:24,181 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2560-12-02 10:31:24,196 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2560-12-02 10:31:24,212 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2560-12-02 10:31:24,337 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2560-12-02 10:31:45,510 [AWT-EventQueue-0] INFO  com.saa.control.DBController - treeNodeActionPerformed:Purchase Order	Level:2	System:Purchase System	SubLevel:2	subname:Purchase Order
+2560-12-02 10:31:45,525 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2560-12-02 10:31:45,525 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2560-12-02 10:31:46,430 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2560-12-02 10:31:49,113 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2560-12-02 10:31:49,129 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2560-12-02 10:32:04,756 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2560-12-02 10:32:04,756 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2560-12-02 10:32:04,756 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2560-12-02 10:38:19,397 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:38:19,553 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2560-12-02 10:38:19,553 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:38:19,553 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2560-12-02 10:38:19,553 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2560-12-02 10:38:19,569 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2560-12-02 10:38:19,569 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2560-12-02 10:38:19,569 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2560-12-02 10:38:19,569 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2560-12-02 10:38:19,569 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2560-12-02 10:38:19,662 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2560-12-02 10:38:19,662 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2560-12-02 10:38:19,662 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2560-12-02 10:38:19,756 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2560-12-02 10:38:19,756 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2560-12-02 10:38:19,865 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2560-12-02 10:38:19,865 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2560-12-02 10:38:25,840 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2560-12-02 10:38:25,840 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2560-12-02 10:38:25,856 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2560-12-02 10:38:25,871 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2560-12-02 10:38:25,918 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2560-12-02 10:38:34,927 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:ï¿½ï¿½Â§Ò¹ Form AOR	Level:4	System:Sale System	SubLevel:2	subname:ï¿½ï¿½Â§Ò¹ Form AOR
+2560-12-02 10:38:34,959 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2560-12-02 10:38:34,959 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2560-12-02 10:38:35,692 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select order_no from so_order_hd where status ='A' order by order_date
+2560-12-02 10:38:43,004 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2560-12-02 10:38:43,004 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2560-12-02 10:38:43,020 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-02 10:41:51,255 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 10:41:51,411 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-02 10:41:51,489 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 10:41:51,489 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-02 10:41:51,489 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-02 10:41:51,567 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-02 10:41:51,567 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-02 10:41:51,660 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-02 10:41:51,660 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-02 10:41:58,542 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-02 10:41:58,558 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-02 10:41:58,573 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-02 10:41:58,573 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-02 10:41:58,620 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-02 10:42:14,664 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order	Level:3	System:Product Plan System	SubLevel:1	subname:ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2017-12-02 10:42:14,695 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-02 10:42:14,695 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-02 10:42:15,491 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT DISTINCT delivery_no
+FROM so_det_hd
+WHERE STATUS <>'X'
+
+2017-12-02 10:42:20,563 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PN001.JRXML
+2017-12-02 10:42:20,563 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PN001.JRXML
+2017-12-02 10:42:45,622 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-02 10:42:45,622 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-02 10:42:45,622 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-02 10:44:43,383 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-02 10:44:43,539 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-02 10:44:43,555 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 10:44:43,555 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-02 10:44:43,633 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 10:44:43,633 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-02 10:44:43,633 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-02 10:44:43,711 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-02 10:44:43,711 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-02 10:44:43,820 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-02 10:44:43,820 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-02 10:44:48,673 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-02 10:44:48,673 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-02 10:44:48,689 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-02 10:44:48,736 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-02 10:44:55,147 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Print AR Invoice Tax	Level:5	System:Account Receivable System	SubLevel:51	subname:Print AR Invoice Tax
+2017-12-02 10:44:55,179 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-02 10:44:55,179 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-02 10:44:55,912 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select doc_no from ar_invoice_hd where status='N' order by doc_date
+2017-12-02 10:44:58,802 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..AR001.JRXML
+2017-12-02 10:44:58,802 [AWT-EventQueue-0] INFO  com.saa.control.DBController - D:\development\saa\saareport.2012\bin\report\templates\image\
+2017-12-02 10:44:58,802 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..AR001.JRXML
+2017-12-02 10:45:12,680 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-02 10:45:12,680 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-02 10:45:12,680 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-02 10:46:40,834 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-02 10:46:40,974 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-02 10:46:40,990 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 10:46:40,990 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-02 10:46:41,052 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 10:46:41,052 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-02 10:46:41,052 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-02 10:46:41,130 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-02 10:46:41,130 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-02 10:46:41,224 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-02 10:46:41,224 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-02 10:46:45,685 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2017-12-02 10:46:45,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-02 10:46:45,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-02 10:46:45,763 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-02 10:47:14,617 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-02 10:47:14,617 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-02 10:47:14,617 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-02 14:22:58,830 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 14:22:59,024 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-02 14:22:59,025 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 14:22:59,025 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-02 14:22:59,025 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 14:22:59,025 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-02 14:22:59,025 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-02 14:22:59,025 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-02 14:22:59,027 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-02 14:22:59,028 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-02 14:22:59,115 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-02 14:22:59,115 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-02 14:22:59,119 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-02 14:22:59,197 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-02 14:22:59,198 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-02 14:22:59,302 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-02 14:22:59,302 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-02 14:24:20,675 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-02 14:24:20,675 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2017-12-02 14:24:20,690 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-02 14:24:20,706 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-02 14:24:20,768 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-02 14:43:53,934 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-02 14:43:53,934 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-02 14:43:53,934 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-10 09:28:26,635 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-10 09:28:26,838 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-10 09:28:26,853 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:28:26,853 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-10 09:28:27,384 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:28:27,384 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-10 09:28:27,384 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-10 09:28:27,586 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-10 09:28:27,586 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-10 09:28:28,320 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-10 09:28:28,320 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-10 09:28:33,858 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-10 09:28:33,904 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½Â¡ï¿½ï¿½ï¿½Ô¡ï¿½Ñµï¿½Ø´Ôº
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ãº¤Çºï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½Ø´Ôº
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Goods Received Note
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½Ñµï¿½Ø´Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Pre)
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ï¿½ï¿½è§¢Í§ delivery order
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Melt Summary Sheet
+2017-12-10 09:28:33,982 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½ï¿½Ø»Êµï¿½Í¡ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½Ð¨ï¿½ï¿½ï¿½Í¹ Finished Goods Monthly
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-10 09:28:33,998 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Sale order Status report
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form AOR
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ï¿½ï¿½Â§Ò¹ Form Quotation
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-10 09:28:34,014 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-10 09:28:34,232 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-10 09:28:42,765 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-10 09:28:42,765 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-10 09:28:42,890 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-10 09:30:50,674 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-10 09:30:51,173 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-10 09:30:51,204 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:30:51,204 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-10 09:30:51,298 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:30:51,298 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-10 09:30:51,298 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-10 09:30:51,376 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-10 09:30:51,376 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-10 09:30:51,828 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-10 09:30:51,828 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-10 09:30:57,337 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-10 09:30:57,337 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Sale order Status report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form AOR
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form Quotation
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ºÑ¹·Ö¡ÃÒÂ¡ÒÃàºÔ¡ÇÑµ¶Ø´Ôº
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãº¤Çº¤ØÁºÑ­ªÕÇÑµ¶Ø´Ôº
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¤Çº¤ØÁ¡ÒÃàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¨Ñ´àµÃÕÂÁáÅÐàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Goods Received Note
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í (Pre)
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Melt Summary Sheet
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ãºÊÃØ»ÊµçÍ¡ÊÔ¹¤éÒÊÓàÃç¨ÃÙ»»ÃÐ¨Óà´×Í¹ Finished Goods Monthly
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-10 09:30:57,368 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-10 09:30:57,431 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-10 09:31:09,770 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-10 09:31:09,770 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-10 09:31:09,786 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-10 09:49:41,288 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-10 09:49:42,473 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-10 09:49:42,505 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:49:42,536 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-10 09:49:43,207 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:49:43,207 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-10 09:49:43,222 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-10 09:49:43,300 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-10 09:49:43,300 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-10 09:49:44,299 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-10 09:49:44,299 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-10 09:49:49,525 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-10 09:49:49,540 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Sale order Status report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form AOR
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form Quotation
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ºÑ¹·Ö¡ÃÒÂ¡ÒÃàºÔ¡ÇÑµ¶Ø´Ôº
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãº¤Çº¤ØÁºÑ­ªÕÇÑµ¶Ø´Ôº
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¤Çº¤ØÁ¡ÒÃàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¨Ñ´àµÃÕÂÁáÅÐàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Goods Received Note
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í (Pre)
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Melt Summary Sheet
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ãºÊÃØ»ÊµçÍ¡ÊÔ¹¤éÒÊÓàÃç¨ÃÙ»»ÃÐ¨Óà´×Í¹ Finished Goods Monthly
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-10 09:49:49,571 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-10 09:49:49,883 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-10 09:50:00,694 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Purchase Order	Level:2	System:Purchase System	SubLevel:2	subname:Purchase Order
+2017-12-10 09:50:00,866 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:50:00,866 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:50:02,348 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2017-12-10 09:50:05,405 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:50:05,437 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:50:21,165 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:50:21,165 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:50:31,728 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:50:31,728 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:50:36,347 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:50:36,347 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:51:06,113 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Purchase Contract	Level:2	System:Purchase System	SubLevel:3	subname:Purchase Contract
+2017-12-10 09:51:06,129 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:51:06,129 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:51:06,788 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2017-12-10 09:51:09,268 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC003.JRXML
+2017-12-10 09:51:09,284 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC003.JRXML
+2017-12-10 09:51:26,460 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Purchase Order	Level:2	System:Purchase System	SubLevel:2	subname:Purchase Order
+2017-12-10 09:51:26,475 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:51:26,475 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:51:26,506 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2017-12-10 09:51:31,701 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:51:31,717 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:51:36,646 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:51:36,646 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:51:37,335 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:51:37,335 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:52:08,911 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:52:08,911 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:52:09,956 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:52:09,972 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:52:10,752 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:52:10,752 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:52:19,394 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Purchase Contract	Level:2	System:Purchase System	SubLevel:3	subname:Purchase Contract
+2017-12-10 09:52:19,394 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:52:19,394 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:52:19,597 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2017-12-10 09:52:24,402 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC003.JRXML
+2017-12-10 09:52:24,418 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC003.JRXML
+2017-12-10 09:52:52,764 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-10 09:52:52,764 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-10 09:52:52,780 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-10 09:55:02,541 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-10 09:55:04,101 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-10 09:55:04,117 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:55:04,132 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-10 09:55:04,616 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:55:04,616 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-10 09:55:04,632 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-10 09:55:04,710 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-10 09:55:04,710 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-10 09:55:05,739 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-10 09:55:05,739 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-10 09:55:12,663 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-10 09:55:12,694 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Sale order Status report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form AOR
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form Quotation
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ºÑ¹·Ö¡ÃÒÂ¡ÒÃàºÔ¡ÇÑµ¶Ø´Ôº
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãº¤Çº¤ØÁºÑ­ªÕÇÑµ¶Ø´Ôº
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¤Çº¤ØÁ¡ÒÃàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¨Ñ´àµÃÕÂÁáÅÐàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Goods Received Note
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í (Pre)
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Melt Summary Sheet
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ãºÊÃØ»ÊµçÍ¡ÊÔ¹¤éÒÊÓàÃç¨ÃÙ»»ÃÐ¨Óà´×Í¹ Finished Goods Monthly
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-10 09:55:12,726 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-10 09:55:13,209 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-10 09:55:19,044 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Purchase Order	Level:2	System:Purchase System	SubLevel:2	subname:Purchase Order
+2017-12-10 09:55:19,059 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:55:19,059 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:55:20,510 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2017-12-10 09:55:22,070 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC002.JRXML
+2017-12-10 09:55:22,070 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC002.JRXML
+2017-12-10 09:55:29,901 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Purchase Contract	Level:2	System:Purchase System	SubLevel:3	subname:Purchase Contract
+2017-12-10 09:55:29,901 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:55:29,901 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:55:30,073 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select ORDER_NO from po_order_hd
+where status ='A'
+2017-12-10 09:55:33,130 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PC003.JRXML
+2017-12-10 09:55:33,130 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PC003.JRXML
+2017-12-10 09:55:45,597 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order	Level:3	System:Product Plan System	SubLevel:1	subname:ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order
+2017-12-10 09:55:45,612 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:55:45,612 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:55:45,768 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT DISTINCT delivery_no
+FROM so_det_hd
+WHERE STATUS <>'X'
+
+2017-12-10 09:55:47,906 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..PN001.JRXML
+2017-12-10 09:55:47,906 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..PN001.JRXML
+2017-12-10 09:55:59,200 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Print AR Invoice Tax	Level:5	System:Account Receivable System	SubLevel:51	subname:Print AR Invoice Tax
+2017-12-10 09:55:59,231 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:55:59,231 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:55:59,434 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select doc_no from ar_invoice_hd where status='N' order by doc_date
+2017-12-10 09:56:01,805 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..AR001.JRXML
+2017-12-10 09:56:01,821 [AWT-EventQueue-0] INFO  com.saa.control.DBController - D:\development\saa\saareport.2012\bin\report\templates\image\
+2017-12-10 09:56:01,821 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..AR001.JRXML
+2017-12-10 09:57:29,006 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-10 09:57:29,006 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-10 09:57:29,006 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-10 09:57:38,681 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-10 09:57:38,852 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-10 09:57:38,930 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-10 09:57:38,930 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-10 09:57:38,930 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-10 09:57:39,055 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-10 09:57:39,305 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-10 09:57:39,414 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-10 09:57:39,414 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-10 09:57:44,158 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-10 09:57:44,158 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Sale order Status report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form AOR
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form Quotation
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ºÑ¹·Ö¡ÃÒÂ¡ÒÃàºÔ¡ÇÑµ¶Ø´Ôº
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãº¤Çº¤ØÁºÑ­ªÕÇÑµ¶Ø´Ôº
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¤Çº¤ØÁ¡ÒÃàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¨Ñ´àµÃÕÂÁáÅÐàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Goods Received Note
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í (Pre)
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Melt Summary Sheet
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ãºÊÃØ»ÊµçÍ¡ÊÔ¹¤éÒÊÓàÃç¨ÃÙ»»ÃÐ¨Óà´×Í¹ Finished Goods Monthly
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-10 09:57:44,174 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-10 09:57:44,221 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-10 09:57:51,069 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Print AR Invoice Tax	Level:5	System:Account Receivable System	SubLevel:51	subname:Print AR Invoice Tax
+2017-12-10 09:57:51,085 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:57:51,085 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:57:51,927 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select doc_no from ar_invoice_hd where status='N' order by doc_date
+2017-12-10 09:58:10,288 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..AR001.JRXML
+2017-12-10 09:58:10,304 [AWT-EventQueue-0] INFO  com.saa.control.DBController - D:\development\saa\saareport.2012\bin\report\templates\image\
+2017-12-10 09:58:10,304 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..AR001.JRXML
+2017-12-10 09:58:29,634 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..AR001.JRXML
+2017-12-10 09:58:29,634 [AWT-EventQueue-0] INFO  com.saa.control.DBController - D:\development\saa\saareport.2012\bin\report\templates\image\
+2017-12-10 09:58:29,634 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..AR001.JRXML
+2017-12-10 09:58:46,889 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Print AR Receipt Tax	Level:5	System:Account Receivable System	SubLevel:52	subname:Print AR Receipt Tax
+2017-12-10 09:58:46,889 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-10 09:58:46,889 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-10 09:58:47,248 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select doc_no from ar_receipt_hd where status='N' order by doc_date
+2017-12-10 09:58:52,365 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..AR002.JRXML
+2017-12-10 09:58:52,365 [AWT-EventQueue-0] INFO  com.saa.control.DBController - D:\development\saa\saareport.2012\bin\report\templates\image\
+2017-12-10 09:58:52,365 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..AR002.JRXML
+2017-12-10 10:00:11,023 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-10 10:00:11,023 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-10 10:00:11,023 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection
+2017-12-11 09:53:08,653 [main] INFO  com.saa.main.StartupManager - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Getting.. version information
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_DRIVER:	org.firebirdsql.jdbc.FBDriver
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - READ JDBC_URL:	jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - #################################################
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Loding db config
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.main.StartupManager - Creating dbmgr.....
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created log D:\development\saa\saareport.2012\bin/logs/service.log
+2017-12-11 09:53:08,824 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Initilize connection..
+2017-12-11 09:53:08,902 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created Connection to jdbc:firebirdsql:127.0.0.1/3050:D:/Development/database/SAA.fdb?sql_dialect=3
+2017-12-11 09:53:08,902 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Created DBManager
+2017-12-11 09:53:08,902 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbping:send commandselect * from rdb$database
+2017-12-11 09:53:08,986 [AWT-EventQueue-0] INFO  com.saa.control.DBController - dbPing:Connection alive
+2017-12-11 09:53:08,987 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Sending db command
+2017-12-11 09:53:09,092 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created login windows
+2017-12-11 09:53:09,092 [AWT-EventQueue-0] INFO  com.saa.control.DBController - setting... runtime controller
+2017-12-11 09:53:18,973 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :select count(*) as nROW from sys_users
+where user_id='admin'
+and current_password='1234'
+2017-12-11 09:53:19,005 [AWT-EventQueue-0] INFO  com.saa.control.DBController - exec sql :SELECT FORM_caption as ChildName,
+MENU_INDEX as Node,
+FORM_NAME  as NodeAction,
+MENU_ITEM_INDEX as ChildNode,
+MAIN_MENU_NAME as RootName,
+history_caption as ResourceName
+from sys_menus where MODULE_ID = 'JRX'
+AND ENABLED = 'Y'
+order by MAIN_MENU_NAME,MENU_INDEX,FORM_NAME,MENU_ITEM_INDEX
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Sale System
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Sale order Status report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form AOR
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Form Quotation
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Sales & Payment Report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Order summary (revisoin)
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Quotation Status report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Warehouse System
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Dross Audit Report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly closing
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ºÑ¹·Ö¡ÃÒÂ¡ÒÃàºÔ¡ÇÑµ¶Ø´Ôº
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãº¤Çº¤ØÁºÑ­ªÕÇÑµ¶Ø´Ôº
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Monthly Stock Report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¤Çº¤ØÁ¡ÒÃàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹¨Ñ´àµÃÕÂÁáÅÐàºÔ¡¨èÒÂÇÑµ¶Ø´Ôº
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Material Stock Adjustment Edit Listing
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Goods Received Note
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Good received note history
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ÇÑµ¶Ø´Ôº¤§àËÅ×Í (Pre)
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Product Plan System
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ãºÊè§¢Í§ delivery order
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ÃÒÂ§Ò¹ Melt Summary Sheet
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Blend)
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check Plate Result
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Return
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Adjustment
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>ãºÊÃØ»ÊµçÍ¡ÊÔ¹¤éÒÊÓàÃç¨ÃÙ»»ÃÐ¨Óà´×Í¹ Finished Goods Monthly
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Finished Goods Stock Card Report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>INGOT  RELEASE
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet (Test-New)
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Check plate result(Test-New)
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Melt Sheet Blend (Test-New)
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Purchase System
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order status report
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Order
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Purchase Contract
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...Image ICon Node>>Account Receivable System
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Invoice Tax
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Print AR Receipt Tax
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>Debtor Ledger
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Invice Audit Listing
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Receipt Audit Listing
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Input Tax
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Credit Note
+2017-12-11 09:53:19,067 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Building...subNode>>AR Debit Note
+2017-12-11 09:53:19,239 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Create main window
+2017-12-11 09:53:33,318 [AWT-EventQueue-0] INFO  com.saa.control.DBController - [admin]treeNodeActionPerformed:Material Stock Adjustment Edit Listing	Level:1	System:Warehouse System	SubLevel:7	subname:Material Stock Adjustment Edit Listing
+2017-12-11 09:53:33,333 [AWT-EventQueue-0] INFO  com.saa.control.DBController - creating BaseView
+2017-12-11 09:53:33,333 [AWT-EventQueue-0] INFO  com.saa.control.DBController - created DB Manager
+2017-12-11 09:53:55,131 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..WH007.JRXML
+2017-12-11 09:53:55,147 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..WH007.JRXML
+2017-12-11 09:54:35,210 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..WH007.JRXML
+2017-12-11 09:54:35,210 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..WH007.JRXML
+2017-12-11 09:55:18,256 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Loading report..WH007.JRXML
+2017-12-11 09:55:18,256 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Setting params..WH007.JRXML
+2017-12-11 09:58:50,229 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed Controller connection
+2017-12-11 09:58:50,229 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroy abstract db manager
+2017-12-11 09:58:50,275 [AWT-EventQueue-0] INFO  com.saa.control.DBController - Destroyed datamanager connection

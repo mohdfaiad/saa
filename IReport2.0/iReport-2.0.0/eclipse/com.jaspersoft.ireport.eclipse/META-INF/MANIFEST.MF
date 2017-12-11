@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-Name: iReport Plug-in
+Bundle-SymbolicName: com.jaspersoft.ireport.eclipse; singleton=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: IRLauncher.jar,
+ lib/iReport-rmistubs-1.2.5.jar
+Bundle-Activator: com.jaspersoft.ireport.eclipse.IRLauncherPlugin
+Bundle-Vendor: JasperSoft Corp.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.workbench.texteditor,
+ org.eclipse.ui.ide
+Eclipse-AutoStart: true

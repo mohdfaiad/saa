@@ -56,7 +56,8 @@ public class TreeViewActionsController extends AbstractTreeViewActionsController
         if (object instanceof SubTreeObject){
             SubTreeObject node = (SubTreeObject)object;
             viewManager = ViewsManager.getViewManager((JFrame)parrentUI);
-            logger.info("treeNodeActionPerformed:"+node.getSubName()+"\tLevel:"
+            String user = com.saa.main.RunTimeController.getLoggedUser();
+            logger.info("["+user+"]"+"treeNodeActionPerformed:"+node.getSubName()+"\tLevel:"
                     +node.getLevel()+"\tSystem:"+node.getName()+
                     "\tSubLevel:"+node.getSubLevel()+"\tsubname:"+node.getSubName());
             switch(node.getLevel()){
