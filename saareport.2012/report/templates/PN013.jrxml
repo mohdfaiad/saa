@@ -199,7 +199,7 @@ order by MELT_NO]]></queryString>
 			</groupHeader>
 			<groupFooter>
 			<band height="34"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" pattern="###0.00;(###0.00)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="387"
 						y="7"

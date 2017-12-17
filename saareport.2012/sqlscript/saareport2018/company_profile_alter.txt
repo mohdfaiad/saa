@@ -19,14 +19,32 @@ ADD MFG_TELEPHONE  VARCHAR(60);
 alter table    company_profile
 ADD MFG_FAX VARCHAR(60);
 
-UPDATE company_profile
-SET MFG_ADDRESS1 = '1/1 ‡∏´‡∏°‡∏π‡πà 10 ‡∏ñ‡∏ô‡∏ô‡∏ä‡∏•‡∏ö‡∏£‡∏µ-‡∏ö‡πá‡∏≤‡∏ô‡∏ö‡∏∂‡∏á'  ,
-MFG_ADDRESS2 ='‡∏ä‡πà‡∏≠‡∏á‡∏°‡∏∞‡πÄ‡∏ü‡∏∑‡∏≠‡∏á ‡∏ï.‡∏´‡∏ô‡∏≠‡∏á‡∏£‡πä',
-MFG_ADDRESS3 = '‡∏≠.‡πÄ‡∏°‡∏∑‡∏≠‡∏á ‡∏à.‡∏ä‡∏•‡∏ö‡∏∏‡∏£‡∏µ 20000'   ,
-MFG_POSTCODE ='20000',
-MFG_PROVINCE ='‡∏ä‡∏•‡∏ö‡∏∏‡∏£‡∏µ',
-MFG_TELEPHONE = '0-38476 113-4',
-MFG_FAX ='0-38476 112'
+
+UPDATE COMPANY_PROFILE
+SET THAI_NAME = '∫√‘…—∑  ¬“¡·Õß‚°≈Õ—≈≈Õ¬ ®”°—¥',
+    ADDRESS1 = '283/71 Home Place Office Building,14th Floor',
+    ADDRESS2 = ' Soi Sukhumvit 55, Sukhumvit Rd.,',
+    ADDRESS3 = ' Klongton-Nua, Wattana, Bangkok 10110',
+    TH_ADDRESS1 = '283/71 Õ“§“√‚Œ¡‡æ≈ ÕÕøø‘»∫‘≈¥‘Èß ™—Èπ 14',
+    TH_ADDRESS2 = '´Õ¬ ÿ¢ÿ¡«‘∑ 55 (∑ÕßÀ≈ËÕ) ∂ππ ÿ¢ÿ¡«‘∑',
+    TH_ADDRESS3 = '·¢«ß§≈Õßµ—π‡Àπ◊Õ ‡¢µ«—≤π“ °√ÿß‡∑æœ 10110 (ÕÕ°‚¥¬ ”π—°ß“π„À≠Ë)',
+    POSTCODE = '10110',
+    PROVINCE = '°√ÿß‡∑æ',
+    TELEPHONE = '+66(0)2712-6500-1, 02185-3125',
+    FAX = '+66(0)2712-6502',
+    EMAIL = 'admin@saasiam.com',
+    WEBSITE = 'www.ssaasiam.com',
+    TAXREGISTERED_ID = '0105538011207',
+    BRANCH_CODE = '00000',
+    MFG_ADDRESS1 = '1/1 À¡ŸË 10 ∂ππ™≈∫√’-∫È“π∫÷ß',
+    MFG_ADDRESS2 = '™ËÕß¡–‡ø◊Õß µ.ÀπÕß√Í',
+    MFG_ADDRESS3 = 'Õ.‡¡◊Õß ®.™≈∫ÿ√’ 20000',
+    MFG_POSTCODE = '20000',
+    MFG_PROVINCE = '™≈∫ÿ√’',
+    MFG_TELEPHONE = '0-38476 113-4',
+    MFG_FAX = '0-38476 112'
+WHERE (ENG_NAME = 'Siam Anglo Alloy Co., Ltd.');
+
  /*
 ‡πÇ‡∏£‡∏á‡∏á‡∏≤‡∏ô    : 1/1 ‡∏´‡∏°‡∏π‡πà 10 ‡∏ñ‡∏ô‡∏ô‡∏ä‡∏•‡∏ö‡∏∏‡∏£‡∏µ-‡∏ö‡πâ‡∏≤‡∏ô‡∏ö‡∏∂‡∏á ‡∏ã‡∏≠‡∏¢‡∏ß‡∏±‡∏î‡∏ä‡πà‡∏≠‡∏á‡∏°‡∏∞‡πÄ‡∏ü‡∏∑‡∏≠‡∏á ‡∏ï.‡∏´‡∏ô‡∏≠‡∏á‡∏£‡∏µ ‡∏≠.‡πÄ‡∏°‡∏∑‡∏≠‡∏á ‡∏à.‡∏ä‡∏•‡∏ö‡∏∏‡∏£‡∏µ 20000
                   ‡πÇ‡∏ó‡∏£. 0-38379 044, 0-38476 113   ‡πÅ‡∏ü‡∏Å‡∏ã‡πå  0-38476 112   */

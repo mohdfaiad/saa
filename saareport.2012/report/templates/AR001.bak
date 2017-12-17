@@ -343,9 +343,9 @@ WHERE
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="276"
+						x="299"
 						y="4"
-						width="252"
+						width="229"
 						height="42"
 						key="textField-12"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -854,7 +854,7 @@ WHERE
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}
 +" " +$F{MFG_ADDRESS3} 
-+"\nโทร:"+$F{MFG_TELEPHONE} + " แฟกซ์: "+$F{MFG_FAX} ]]></textFieldExpression>
++"\nโทร:"+$F{MFG_TELEPHONE} + " แฟกซ์: "+$F{MFG_FAX}]]></textFieldExpression>
 				</textField>
 			</band>
 		</title>

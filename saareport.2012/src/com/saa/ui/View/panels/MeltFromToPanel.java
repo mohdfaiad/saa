@@ -42,6 +42,8 @@ public class MeltFromToPanel extends BasePanel{
         add(p1,BorderLayout.NORTH);
         add(p2,BorderLayout.SOUTH);
         repaint();
+        
     }
+    
     
 }

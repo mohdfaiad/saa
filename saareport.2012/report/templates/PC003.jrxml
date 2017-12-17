@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="PC003"
+		 name="PC002"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -346,7 +346,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-13"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[VENDOR NO:]]></text>
 				</staticText>
@@ -360,7 +360,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-14"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[DATE:]]></text>
 				</staticText>
@@ -374,7 +374,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-15"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[PURCHASE ORDER NO.:]]></text>
 				</staticText>
@@ -388,7 +388,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-16"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[VENDER NAME:]]></text>
 				</staticText>
@@ -402,7 +402,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-17"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[ADDRESS:]]></text>
 				</staticText>
@@ -416,7 +416,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-18"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[TELEPHONE:]]></text>
 				</staticText>
@@ -430,7 +430,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-19"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[ATTENTION :]]></text>
 				</staticText>
@@ -444,7 +444,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-20"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[CC :]]></text>
 				</staticText>
@@ -458,7 +458,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-21"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[TERMS OF PAYMENTS :]]></text>
 				</staticText>
@@ -472,7 +472,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" size="9"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{SUPP_CODE}]]></textFieldExpression>
 				</textField>
@@ -486,7 +486,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-2"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" size="9"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ORDER_NO}]]></textFieldExpression>
 				</textField>
@@ -500,7 +500,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-3"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" size="9"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{ORDER_DATE}]]></textFieldExpression>
 				</textField>
@@ -514,7 +514,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-4"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{NAME}]]></textFieldExpression>
 				</textField>
@@ -528,7 +528,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-5"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ADDRESS1} +" "+$F{ADDRESS2}]]></textFieldExpression>
 				</textField>
@@ -542,7 +542,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-6"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ADDRESS3}]]></textFieldExpression>
 				</textField>
@@ -556,7 +556,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-7"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" size="9"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{TELEPHONE}]]></textFieldExpression>
 				</textField>
@@ -570,7 +570,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-8"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{FAX_TO}]]></textFieldExpression>
 				</textField>
@@ -584,7 +584,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-9"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{CC_TO}]]></textFieldExpression>
 				</textField>
@@ -598,7 +598,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-10"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font fontName="SansSerif" size="9"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{CREDIT_TERM}]]></textFieldExpression>
 				</textField>
@@ -612,7 +612,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-41"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[Days]]></text>
 				</staticText>
@@ -626,7 +626,7 @@ AND h.STATUS ='A']]></queryString>
 						key="staticText-45"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[FAX NO:]]></text>
 				</staticText>
@@ -640,35 +640,35 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-27"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="SansSerif" size="9"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{FAX_NO}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="460"
+						x="415"
 						y="126"
-						width="67"
+						width="112"
 						height="18"
 						key="staticText-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
 					</textElement>
-				<text><![CDATA[Code.FM-PC-01]]></text>
+				<text><![CDATA[Rev:01,01.12.2017]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="270"
+						x="261"
 						y="129"
-						width="138"
+						width="161"
 						height="21"
 						key="staticText-12"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="Browallia New" pdfFontName="Helvetica-BoldOblique" size="18" isBold="true" isItalic="true"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica-BoldOblique" size="14" isBold="true" isItalic="true"/>
 					</textElement>
 				<text><![CDATA[PURCHASE CONTRACT]]></text>
 				</staticText>
@@ -677,17 +677,17 @@ AND h.STATUS ='A']]></queryString>
 						style="Heading 1"
 						x="8"
 						y="142"
-						width="256"
-						height="0"
+						width="251"
+						height="2"
 						key="line-1"/>
 					<graphicElement stretchType="NoStretch" pen="4Point"/>
 				</line>
 				<line direction="TopDown">
 					<reportElement
 						style="Heading 1"
-						x="408"
+						x="425"
 						y="141"
-						width="117"
+						width="100"
 						height="0"
 						key="line-2"/>
 					<graphicElement stretchType="NoStretch" pen="4Point"/>

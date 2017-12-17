@@ -57,6 +57,16 @@ type
     wwDBEdit15: TwwDBEdit;
     wwDBEdit16: TwwDBEdit;
     Label12: TLabel;
+    Label13: TLabel;
+    wwDBEdit17: TwwDBEdit;
+    wwDBEdit18: TwwDBEdit;
+    wwDBEdit19: TwwDBEdit;
+    Label14: TLabel;
+    Label15: TLabel;
+    wwDBEdit20: TwwDBEdit;
+    wwDBEdit21: TwwDBEdit;
+    Label16: TLabel;
+    Label17: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private

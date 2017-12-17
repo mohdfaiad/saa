@@ -54,6 +54,8 @@ import com.saa.ui.wh.WH007Frame;
 import com.saa.ui.wh.WH008Frame;
 import com.saa.ui.wh.WH009Frame;
 import com.saa.ui.wh.WH010Frame;
+import com.saa.ui.wh.WH011Frame;
+import com.saa.ui.wh.WH012Frame;
 import javax.swing.JFrame;
 
 import com.saa.util.MessageDlg;
@@ -204,6 +206,24 @@ public class ViewsManager {
 					public void run() {
 
 						currentFrame = new WH010Frame(node, 500, 500);
+						currentFrame.setParrent(parrentFrame);
+					}
+				});
+				break;
+                        case 11:
+				SwingUtilities.invokeLater(new Runnable() {
+					public void run() {
+
+						currentFrame = new WH011Frame(node, 500, 500);
+						currentFrame.setParrent(parrentFrame);
+					}
+				});
+				break;
+                        case 12:
+				SwingUtilities.invokeLater(new Runnable() {
+					public void run() {
+
+						currentFrame = new WH012Frame(node, 500, 500);
 						currentFrame.setParrent(parrentFrame);
 					}
 				});

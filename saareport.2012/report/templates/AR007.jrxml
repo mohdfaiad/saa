@@ -483,7 +483,9 @@ Siam Anglo Alloy Co, Ltd.
 						y="99"
 						width="465"
 						height="31"
-						key="textField-32"/>
+						key="textField-32">
+							<printWhenExpression><![CDATA[new Boolean(false)]]></printWhenExpression>
+						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>

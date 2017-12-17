@@ -54,7 +54,8 @@ case when (bf.qty <0) then bf.qty
 end as OUTQTY,
 BF.QTY,
 ROUND(BF.unit_cost,2) AS UNIT_COST,
-BF.ONHAND_QTY
+BF.ONHAND_QTY,
+bf.melt_no
 FROM ic_STOCKCARD BF , ic_mat_stk_hd ST   
 WHERE BF.stock_cd = ST.STOCK_CD
 AND BF.GROUP_ID = ST.GROUP_ID
@@ -81,6 +82,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 	<field name="OUTQTY" class="java.lang.Double"/>
 	<field name="QTY" class="java.lang.Double"/>
 	<field name="UNIT_COST" class="java.lang.Double"/>
+	<field name="MELT_NO" class="java.lang.String"/>
 
 	<sortField name="LOT_CD" />
 	<sortField name="REF_NO" />
@@ -582,7 +584,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="437"
+						x="485"
 						y="70"
 						width="65"
 						height="15"
@@ -595,13 +597,13 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="508"
+						x="542"
 						y="70"
 						width="71"
 						height="15"
 						key="staticText-10"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
+					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[จำนวนเงิน(บาท)]]></text>
@@ -621,13 +623,13 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="582"
+						x="607"
 						y="70"
 						width="81"
 						height="15"
 						key="staticText-13"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
+					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[ปริมาณคงเหลือ (กก.)]]></text>
@@ -647,39 +649,39 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="297"
+						x="358"
 						y="70"
 						width="56"
 						height="15"
 						key="staticText-18"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
+					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[รับปริมาณ (กก.)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="362"
+						x="410"
 						y="70"
 						width="69"
 						height="15"
 						key="staticText-19"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
+					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[จ่ายปริมาณ(กก.)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="672"
+						x="680"
 						y="70"
 						width="96"
 						height="15"
 						key="staticText-24"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
+					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="10" isBold="false"/>
 					</textElement>
 				<text><![CDATA[จำนวนเงินคงเหลือ(บาท)]]></text>
@@ -716,7 +718,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="300"
+						x="352"
 						y="2"
 						width="53"
 						height="17"
@@ -731,8 +733,8 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="441"
-						y="2"
+						x="483"
+						y="1"
 						width="62"
 						height="17"
 						key="textField-8"/>
@@ -757,7 +759,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="508"
+						x="541"
 						y="2"
 						width="67"
 						height="17"
@@ -770,7 +772,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="583"
+						x="606"
 						y="2"
 						width="81"
 						height="17"
@@ -783,7 +785,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="###0.00;(###0.00)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="363"
+						x="412"
 						y="2"
 						width="69"
 						height="17"
@@ -798,7 +800,7 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="673"
+						x="685"
 						y="2"
 						width="96"
 						height="17"
@@ -808,6 +810,19 @@ order by BF.DOC_DATE,  BF.update_date]]></queryString>
 						<font fontName="SansSerif" size="10"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{UNIT_COST} * $V{onhandQty}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="306"
+						y="3"
+						width="42"
+						height="16"
+						key="textField-35"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MELT_NO}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

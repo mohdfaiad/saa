@@ -1,0 +1,53 @@
+๏ปฟ--select * from company_profile
+
+alter table    company_profile
+add MFG_ADDRESS1 VARCHAR(150);
+
+alter table    company_profile
+add MFG_ADDRESS2 VARCHAR(150);
+
+alter table    company_profile
+add MFG_ADDRESS3 VARCHAR(150);
+
+alter table    company_profile
+ADD MFG_PROVINCE VARCHAR(60);
+
+
+alter table    company_profile
+ADD MFG_TELEPHONE  VARCHAR(60);
+
+alter table    company_profile
+ADD MFG_FAX VARCHAR(60);
+
+
+alter table    company_profile
+ADD MFG_POSTCODE VARCHAR(10);
+
+UPDATE COMPANY_PROFILE
+SET THAI_NAME = 'บริษัท สยามแองโกลอัลลอย จำกัด',
+    ADDRESS1 = '283/71 Home Place Office Building,14th Floor',
+    ADDRESS2 = ' Soi Sukhumvit 55, Sukhumvit Rd.,',
+    ADDRESS3 = ' Klongton-Nua, Wattana, Bangkok 10110',
+    TH_ADDRESS1 = '283/71 อาคารโฮมเพลสออฟฟิศบิลดิ้ง ชั้น 14',
+    TH_ADDRESS2 = 'ซอยสุขุมวิท 55 (ทองหล่อ) ถนนสุขุมวิท',
+    TH_ADDRESS3 = 'แขวงคลองตันเหนือ เขตวัฒนา กรุงเทพฯ 10110 (ออกโดยสำนักงานใหญ่)',
+    POSTCODE = '10110',
+    PROVINCE = 'กรุงเทพ',
+    TELEPHONE = '+66(0)2712-6500-1, 02185-3125',
+    FAX = '+66(0)2712-6502',
+    EMAIL = 'admin@saasiam.com',
+    WEBSITE = 'www.ssaasiam.com',
+    TAXREGISTERED_ID = '0105538011207',
+    BRANCH_CODE = '00000',
+    MFG_ADDRESS1 = '1/1 หมู่ 10 ถนนชลบรี-บ้านบึง',
+    MFG_ADDRESS2 = 'ช่องมะเฟือง ต.หนองร๊',
+    MFG_ADDRESS3 = 'อ.เมือง จ.ชลบุรี 20000',
+    MFG_POSTCODE = '20000',
+    MFG_PROVINCE = 'ชลบุรี',
+    MFG_TELEPHONE = '0-38476 113-4',
+    MFG_FAX = '0-38476 112'
+WHERE (ENG_NAME = 'Siam Anglo Alloy Co., Ltd.');
+
+ /*
+เนเธฃเธเธเธฒเธ    : 1/1 เธซเธกเธนเน 10 เธ–เธเธเธเธฅเธเธธเธฃเธต-เธเนเธฒเธเธเธถเธ เธเธญเธขเธงเธฑเธ”เธเนเธญเธเธกเธฐเน€เธเธทเธญเธ เธ•.เธซเธเธญเธเธฃเธต เธญ.เน€เธกเธทเธญเธ เธ.เธเธฅเธเธธเธฃเธต 20000
+                  เนเธ—เธฃ. 0-38379 044, 0-38476 113   เนเธเธเธเน  0-38476 112   */

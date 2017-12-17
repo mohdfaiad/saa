@@ -293,6 +293,13 @@ public class SQLBuilder {
 		 return sb.toString();
 		 
 	 }
+        public static String getUnpostStockAdjust(){
+         StringBuffer sb = new StringBuffer();
+        sb.append("SELECT  doc_no\n");
+        sb.append("FROM ic_stock_adjust_hd\n");
+        sb.append("WHERE STATUS <>'X'\n");
+        return sb.toString();
+    }
 	   
 	   
 

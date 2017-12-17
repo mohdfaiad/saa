@@ -238,7 +238,7 @@ GROUP BY  IC_BALANCE_FORWARD.GROUP_ID]]></queryString>
 				</staticText>
 				<staticText>
 					<reportElement
-						x="427"
+						x="432"
 						y="3"
 						width="97"
 						height="21"
@@ -268,7 +268,7 @@ GROUP BY  IC_BALANCE_FORWARD.GROUP_ID]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.000" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="419"
+						x="424"
 						y="10"
 						width="105"
 						height="20"
@@ -375,7 +375,7 @@ GROUP BY  IC_BALANCE_FORWARD.GROUP_ID]]></queryString>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.000" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="419"
+						x="426"
 						y="8"
 						width="103"
 						height="19"

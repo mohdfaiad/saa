@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="PC003"
+		 name="PC002"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -647,16 +647,16 @@ AND h.STATUS ='A']]></queryString>
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="460"
+						x="415"
 						y="126"
-						width="67"
+						width="112"
 						height="18"
 						key="staticText-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
 					</textElement>
-				<text><![CDATA[Code.FM-PC-01]]></text>
+				<text><![CDATA[Rev:01,01.12.2017]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -842,7 +842,7 @@ AND h.STATUS ='A']]></queryString>
 						key="textField-36"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Justified">
-						<font fontName="SansSerif" size="14"/>
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="14" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{THAI_NAME}]]></textFieldExpression>
 				</textField>

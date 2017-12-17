@@ -44,7 +44,7 @@
 FROM SO_LEDGER
 WHERE so_ledger.doc_date <=$P{pEndDate}
 GROUP BY ITEM_CODE,MELT_NO 
-HAVING round(sum(SO_LEDGER.QTY) ,1) > 0]]></queryString>
+HAVING sum(SO_LEDGER.QTY)  > 0]]></queryString>
 
 	<field name="ITEM_CODE" class="java.lang.String"/>
 	<field name="MELT_NO" class="java.lang.String"/>

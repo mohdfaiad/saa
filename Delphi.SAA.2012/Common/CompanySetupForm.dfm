@@ -1,14 +1,28 @@
 inherited frmCompanySetup: TfrmCompanySetup
   Left = 380
   Top = 238
-  Width = 754
-  Height = 417
+  Width = 741
+  Height = 506
   Caption = 'Company Setup'
   PixelsPerInch = 96
   TextHeight = 13
+  object Label14: TLabel [0]
+    Left = 7
+    Top = 254
+    Width = 51
+    Height = 13
+    Caption = 'Telephone'
+  end
+  object Label15: TLabel [1]
+    Left = 290
+    Top = 254
+    Width = 17
+    Height = 13
+    Caption = 'Fax'
+  end
   inherited StatusBar1: TfcStatusBar
-    Top = 359
-    Width = 738
+    Top = 448
+    Width = 725
   end
   object wwDBNavigator1: TwwDBNavigator
     Left = 0
@@ -261,8 +275,8 @@ inherited frmCompanySetup: TfrmCompanySetup
   object Panel1: TPanel
     Left = 0
     Top = 20
-    Width = 738
-    Height = 339
+    Width = 725
+    Height = 428
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -566,6 +580,27 @@ inherited frmCompanySetup: TfrmCompanySetup
       Height = 14
       Caption = '/'
     end
+    object Label13: TLabel
+      Left = 9
+      Top = 326
+      Width = 87
+      Height = 14
+      Caption = 'Factory Address'
+    end
+    object Label16: TLabel
+      Left = 22
+      Top = 397
+      Width = 59
+      Height = 14
+      Caption = 'Telephone'
+    end
+    object Label17: TLabel
+      Left = 378
+      Top = 400
+      Width = 18
+      Height = 14
+      Caption = 'Fax'
+    end
     object wwDBEdit1: TwwDBEdit
       Left = 104
       Top = 20
@@ -652,6 +687,42 @@ inherited frmCompanySetup: TfrmCompanySetup
       DataField = 'BRANCH_CODE'
       DataSource = datasource
       TabOrder = 6
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object wwDBEdit17: TwwDBEdit
+      Left = 104
+      Top = 322
+      Width = 489
+      Height = 22
+      DataField = 'MFG_ADDRESS1'
+      DataSource = datasource
+      TabOrder = 7
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object wwDBEdit18: TwwDBEdit
+      Left = 104
+      Top = 345
+      Width = 489
+      Height = 22
+      DataField = 'MFG_ADDRESS2'
+      DataSource = datasource
+      TabOrder = 8
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object wwDBEdit19: TwwDBEdit
+      Left = 103
+      Top = 370
+      Width = 489
+      Height = 22
+      DataField = 'MFG_ADDRESS3'
+      DataSource = datasource
+      TabOrder = 9
       UnboundDataType = wwDefault
       WantReturns = False
       WordWrap = False
@@ -815,6 +886,42 @@ inherited frmCompanySetup: TfrmCompanySetup
     Font.Style = []
     ParentFont = False
     TabOrder = 11
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object wwDBEdit20: TwwDBEdit
+    Left = 102
+    Top = 413
+    Width = 170
+    Height = 22
+    DataField = 'MFG_TELEPHONE'
+    DataSource = datasource
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 12
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object wwDBEdit21: TwwDBEdit
+    Left = 418
+    Top = 413
+    Width = 170
+    Height = 22
+    DataField = 'MFG_FAX'
+    DataSource = datasource
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 13
     UnboundDataType = wwDefault
     WantReturns = False
     WordWrap = False

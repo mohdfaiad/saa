@@ -474,7 +474,7 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<text><![CDATA[Tel (66-38)476 113-4; Fax (66-38)476-112]]></text>
+				<text><![CDATA[Tel 66(0)38476 113-4; Fax 66(0)38476-112]]></text>
 				</staticText>
 				<line direction="BottomUp">
 					<reportElement
