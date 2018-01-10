@@ -425,14 +425,14 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 						style="Heading 1"
 						x="445"
 						y="14"
-						width="65"
+						width="88"
 						height="13"
 						key="staticText-14"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Code:  FM-PN-10]]></text>
+				<text><![CDATA[Code:  FM-DP-12]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -446,7 +446,7 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 					<textElement textAlignment="Left">
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Rev. :01,01.12.17]]></text>
+				<text><![CDATA[Rev. :02,01.10.2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

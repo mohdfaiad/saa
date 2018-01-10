@@ -328,7 +328,7 @@ WHERE
 					<textElement>
 						<font fontName="BrowalliaUPC" size="8"/>
 					</textElement>
-				<text><![CDATA[REV :00,01.04.07]]></text>
+				<text><![CDATA[REV :03,01.10.2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement

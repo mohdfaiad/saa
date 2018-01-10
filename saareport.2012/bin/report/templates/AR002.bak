@@ -33,7 +33,16 @@
 	</parameter>
 	<parameter name="pLogo1" isForPrompting="false" class="java.lang.String"/>
 	<queryString><![CDATA[SELECT
-CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,CP.ADDRESS2,CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+CP.ENG_NAME,CP.THAI_NAME,CP.TH_ADDRESS1,
+CP.TH_ADDRESS2,CP.TH_ADDRESS3,CP.ADDRESS1,
+CP.ADDRESS2,CP.ADDRESS3,CP.TELEPHONE,CP.FAX,
+cp.mfg_address1,
+cp.mfg_address2,
+cp.mfg_address3,
+cp.mfg_postcode,
+cp.mfg_province,
+cp.mfg_fax,
+cp.mfg_telephone,
 AR_RECEIPT_DT.DOC_NO,
 AR_RECEIPT_DT.DOC_DATE,
 AR_INVOICE_HD.REMARK, 
@@ -111,6 +120,13 @@ WHERE
 	<field name="ADDRESS3" class="java.lang.String"/>
 	<field name="TELEPHONE" class="java.lang.String"/>
 	<field name="FAX" class="java.lang.String"/>
+	<field name="MFG_ADDRESS1" class="java.lang.String"/>
+	<field name="MFG_ADDRESS2" class="java.lang.String"/>
+	<field name="MFG_ADDRESS3" class="java.lang.String"/>
+	<field name="MFG_POSTCODE" class="java.lang.String"/>
+	<field name="MFG_PROVINCE" class="java.lang.String"/>
+	<field name="MFG_FAX" class="java.lang.String"/>
+	<field name="MFG_TELEPHONE" class="java.lang.String"/>
 	<field name="DOC_NO" class="java.lang.String"/>
 	<field name="DOC_DATE" class="java.sql.Date"/>
 	<field name="REMARK" class="java.lang.String"/>
@@ -203,7 +219,7 @@ WHERE
 					<reportElement
 						mode="Opaque"
 						x="412"
-						y="27"
+						y="44"
 						width="119"
 						height="18"
 						backcolor="#FFFFFF"
@@ -590,7 +606,7 @@ WHERE
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="277"
+						x="279"
 						y="6"
 						width="252"
 						height="35"
@@ -686,17 +702,6 @@ WHERE
 						key="line-26"/>
 					<graphicElement stretchType="NoStretch"/>
 				</line>
-				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="6"
-						y="3"
-						width="56"
-						height="77"
-						key="image-1"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.lang.String"><![CDATA[$P{pLogo1}]]></imageExpression>
-				</image>
 				<staticText>
 					<reportElement
 						mode="Opaque"
@@ -810,21 +815,44 @@ WHERE
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["โทร. "+$F{TELEPHONE}+"   แฟกซ์   "+$F{FAX}]]></textFieldExpression>
 				</textField>
-				<staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="67"
-						y="87"
-						width="388"
-						height="23"
-						key="staticText-88"/>
+						y="84"
+						width="465"
+						height="15"
+						key="textField-37"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement>
+					<textElement textAlignment="Left">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
 					</textElement>
-				<text><![CDATA[โรงงาน    : 1/1 หมู่ 10 ถนนชลบุรี-บ้านบึง ซอยวัดช่องมะเฟือง ต.หนองรี อ.เมือง จ.ชลบุรี 20000
-                  โทร. 0-38379 044, 0-38476 113   แฟกซ์  0-38476 112 
-]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3} 
+]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="105"
+						y="95"
+						width="200"
+						height="17"
+						key="textField-38"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["โทร:"+$F{MFG_TELEPHONE} + " แฟกซ์: "+$F{MFG_FAX}]]></textFieldExpression>
+				</textField>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="3"
+						y="1"
+						width="70"
+						height="70"
+						key="image-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["D:\\development\\saa\\saareport.2012\\bin\\report\\templates\\image\\SAA.jpg"]]></imageExpression>
+				</image>
 			</band>
 		</title>
 		<pageHeader>

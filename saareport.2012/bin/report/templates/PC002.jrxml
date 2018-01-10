@@ -656,7 +656,7 @@ AND h.STATUS ='A']]></queryString>
 					<textElement textAlignment="Right">
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
 					</textElement>
-				<text><![CDATA[Rev:01,01.12.2017]]></text>
+				<text><![CDATA[Rev:01,01.10.2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -943,6 +943,20 @@ AND h.STATUS ='A']]></queryString>
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
 				<text><![CDATA[โทรศัพท์.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Heading 1"
+						x="415"
+						y="106"
+						width="108"
+						height="18"
+						key="staticText-50"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Code:FM-PC-02]]></text>
 				</staticText>
 			</band>
 		</pageHeader>
