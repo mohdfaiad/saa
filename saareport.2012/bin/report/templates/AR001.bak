@@ -330,7 +330,7 @@ WHERE
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="113"
+						x="110"
 						y="74"
 						width="286"
 						height="17"
@@ -729,7 +729,7 @@ WHERE
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="3"
-						y="6"
+						y="4"
 						width="70"
 						height="70"
 						key="image-1"/>
@@ -811,7 +811,7 @@ WHERE
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="113"
+						x="110"
 						y="60"
 						width="285"
 						height="17"
@@ -833,8 +833,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3} 
-]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement

@@ -148,18 +148,18 @@ FROM AR_DEBTOR  ,AR_CREDIT_NOTE_HD,AR_CREDIT_NOTE_DT,COMPANY_PROFILE CP
 				<rectangle>
 					<reportElement
 						x="309"
-						y="146"
+						y="150"
 						width="254"
-						height="115"
+						height="112"
 						key="rectangle-17"/>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
 				<rectangle>
 					<reportElement
 						x="6"
-						y="146"
+						y="150"
 						width="250"
-						height="116"
+						height="112"
 						key="rectangle-16"/>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
@@ -422,27 +422,27 @@ Siam Anglo Alloy Co, Ltd.
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="103"
+						x="119"
 						y="83"
 						width="429"
 						height="17"
 						key="textField-29"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" size="8" isBold="false"/>
+						<font fontName="SansSerif" size="9" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["โทร. "+$F{TELEPHONE}+"   แฟกซ์   "+$F{FAX}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="103"
+						x="119"
 						y="68"
 						width="433"
 						height="17"
 						key="textField-30"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" size="8" isBold="false"/>
+						<font fontName="SansSerif" size="9" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{TH_ADDRESS3}]]></textFieldExpression>
 				</textField>
@@ -455,7 +455,7 @@ Siam Anglo Alloy Co, Ltd.
 						key="textField-31"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif" size="8" isBold="false"/>
+						<font fontName="SansSerif" size="9" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["สำนักงาน:"+$F{TH_ADDRESS1}+" "+$F{TH_ADDRESS2}]]></textFieldExpression>
 				</textField>
@@ -474,7 +474,7 @@ Siam Anglo Alloy Co, Ltd.
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="74"
+						x="79"
 						y="96"
 						width="49"
 						height="17"

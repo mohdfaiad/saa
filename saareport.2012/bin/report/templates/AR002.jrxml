@@ -826,8 +826,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3} 
-]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["โรงงาน: "+$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -851,7 +850,7 @@ WHERE
 						key="image-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.lang.String"><![CDATA["D:\\development\\saa\\saareport.2012\\bin\\report\\templates\\image\\SAA.jpg"]]></imageExpression>
+					<imageExpression class="java.lang.String"><![CDATA[$P{pLogo1}]]></imageExpression>
 				</image>
 			</band>
 		</title>

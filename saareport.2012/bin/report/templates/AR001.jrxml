@@ -330,7 +330,7 @@ WHERE
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="113"
+						x="103"
 						y="74"
 						width="286"
 						height="17"
@@ -735,7 +735,7 @@ WHERE
 						key="image-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.lang.String"><![CDATA["D:\\development\\saa\\saareport.2012\\bin\\report\\templates\\image\\SAA.jpg"]]></imageExpression>
+					<imageExpression class="java.lang.String"><![CDATA[$P{pLogo1}]]></imageExpression>
 				</image>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -811,7 +811,7 @@ WHERE
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="113"
+						x="103"
 						y="60"
 						width="285"
 						height="17"
@@ -833,8 +833,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="9" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3} 
-]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MFG_ADDRESS1}+" "+$F{MFG_ADDRESS2}+" " +$F{MFG_ADDRESS3}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement

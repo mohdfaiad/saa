@@ -446,7 +446,7 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 					<textElement textAlignment="Left">
 						<font pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[Rev. :02,01.10.2018]]></text>
+				<text><![CDATA[Rev. :02,10.01.2018]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
