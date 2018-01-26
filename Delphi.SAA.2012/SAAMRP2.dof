@@ -115,7 +115,7 @@ AutoIncBuild=1
 MajorVer=3
 MinorVer=9
 Release=9
-Build=1
+Build=2
 Debug=1
 PreRelease=1
 Special=0
@@ -126,7 +126,7 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=Janixys Software Development
 FileDescription=SAAMRP 3 version 2013 Final.Build
-FileVersion=3.9.9.1
+FileVersion=3.9.9.2
 InternalName=
 LegalCopyright=
 LegalTrademarks=

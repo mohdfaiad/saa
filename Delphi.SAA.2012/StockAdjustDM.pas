@@ -267,7 +267,7 @@ begin
   {Tinnarat.A
   }
   meltno:=dataset.FieldByName('MELT_NO').AsString   ;
-  if (meltno <> '') then
+  if (meltno <> '') and (meltno <> 'melt_no')then
   begin
      if not (isMeltNohasEverIssued(meltno) ) then
      begin

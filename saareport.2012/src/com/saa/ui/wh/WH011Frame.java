@@ -29,6 +29,7 @@ public class WH011Frame  extends BaseReportFrame {
   }
      public void processParameters(){
         params.put("pMeltNo",meltPanel.fromMelt.getText());
+        
         //params.put("pSysDate", new Timestamp(System.currentTimeMillis()));
     }
 

@@ -59,7 +59,7 @@
 
 FROM PL_REQ_DT
    INNER JOIN PL_REQ_HD ON (PL_REQ_DT.DOC_NO = PL_REQ_HD.DOC_NO) AND (PL_REQ_DT.DOC_DATE = PL_REQ_HD.DOC_DATE)
-WHERE PL_REQ_HD.melt_no =  '08W11'
+WHERE PL_REQ_HD.melt_no =  $P{pMeltNo}
 union
 SELECT  current_timestamp AS "CTIME",
  IC_STOCK_ADJUST_HD.update_user AS "ISSUE_BY"  ,
@@ -76,7 +76,7 @@ SELECT  current_timestamp AS "CTIME",
  IC_STOCK_ADJUST_DT.GROUP_ID,
  IC_STOCK_ADJUST_DT.LOT_NO,
  IC_STOCK_ADJUST_DT.PURCHASE_DATE,
-case WHEN IC_STOCK_ADJUST_HD.mode ='O' THEN  IC_STOCK_ADJUST_DT.QTY ELSE
+case WHEN IC_STOCK_ADJUST_HD.mode ='I' THEN  IC_STOCK_ADJUST_DT.QTY ELSE
 IC_STOCK_ADJUST_DT.QTY*-1 END AS QTY,
  IC_STOCK_ADJUST_DT.UNIT_COST,
  IC_STOCK_ADJUST_DT.TOTAL_COST,
@@ -87,7 +87,7 @@ IC_STOCK_ADJUST_DT.QTY*-1 END AS QTY,
 FROM IC_STOCK_ADJUST_DT
    INNER JOIN IC_STOCK_ADJUST_HD ON (IC_STOCK_ADJUST_DT.DOC_NO = IC_STOCK_ADJUST_HD.DOC_NO) AND (IC_STOCK_ADJUST_DT.DOC_DATE = IC_STOCK_ADJUST_HD.DOC_DATE)
 WHERE 
-   ic_stock_adjust_hd.melt_no =    '08W11']]></queryString>
+   ic_stock_adjust_hd.melt_no = $P{pMeltNo}]]></queryString>
 
 	<field name="CTIME" class="java.sql.Timestamp"/>
 	<field name="ISSUE_BY" class="java.lang.String"/>
@@ -526,7 +526,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["CODE:FM-WH-11"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["CODE:FM-WH-36"]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
