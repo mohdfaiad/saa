@@ -470,7 +470,7 @@ WHERE
 					<textElement textAlignment="Center">
 						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
-				<text><![CDATA[รายงานงานเบิกจ่ายเพื่อการผลิต (Melt No)]]></text>
+				<text><![CDATA[รายงานเบิกจ่ายเพื่อการผลิต (Melt No)]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
