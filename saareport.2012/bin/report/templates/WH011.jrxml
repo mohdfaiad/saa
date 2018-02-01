@@ -76,11 +76,11 @@ SELECT  current_timestamp AS "CTIME",
  IC_STOCK_ADJUST_DT.GROUP_ID,
  IC_STOCK_ADJUST_DT.LOT_NO,
  IC_STOCK_ADJUST_DT.PURCHASE_DATE,
-case WHEN IC_STOCK_ADJUST_HD.mode ='I' THEN  IC_STOCK_ADJUST_DT.QTY ELSE
-IC_STOCK_ADJUST_DT.QTY*-1 END AS QTY,
+ IC_STOCK_ADJUST_DT.QTY ,
  IC_STOCK_ADJUST_DT.UNIT_COST,
  IC_STOCK_ADJUST_DT.TOTAL_COST,
- IC_STOCK_ADJUST_DT.ONHAND_QTY,
+case WHEN IC_STOCK_ADJUST_HD.mode ='I' THEN  IC_STOCK_ADJUST_DT.QTY ELSE
+IC_STOCK_ADJUST_DT.QTY*-1 END AS QTY,
  IC_STOCK_ADJUST_DT.STOCK_DESCS,
  IC_STOCK_ADJUST_DT.REF_NO,
  IC_STOCK_ADJUST_DT.REF_DATE
@@ -724,7 +724,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["จัดทำโดย "+$F{ISSUE_BY}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Issued By "+$F{ISSUE_BY}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -738,7 +738,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["อนุมัติโดย_______________________ "]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Approved By_______________________ "]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

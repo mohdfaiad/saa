@@ -528,7 +528,7 @@ AND
 						key="textField-5"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font fontName="Angsana New" size="10"/>
+						<font fontName="SansSerif" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{SCHEDULE_REMARK}]]></textFieldExpression>
 				</textField>

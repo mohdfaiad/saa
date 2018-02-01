@@ -1093,15 +1093,15 @@ ORDER BY SO_DET_DT.BUNDLE_NO]]></queryString>
 					<reportElement
 						style="Heading 1"
 						x="6"
-						y="88"
-						width="76"
-						height="20"
+						y="96"
+						width="50"
+						height="12"
 						key="staticText-37"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<text><![CDATA[PN011.2014.3.1]]></text>
+				<text><![CDATA[RID:PN001]]></text>
 				</staticText>
 			</band>
 		</lastPageFooter>
