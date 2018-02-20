@@ -525,85 +525,12 @@ inherited StockAdjustDataModule: TStockAdjustDataModule
       Origin = 'IC_MAT_STK_DT.PURCHASE_DATE'
       Required = True
     end
-    object qryOnhandDetailUNIT_COST: TFloatField
-      DisplayLabel = 'UNIT COST'
-      DisplayWidth = 10
-      FieldName = 'UNIT_COST'
-      Origin = 'IC_MAT_STK_DT.UNIT_COST'
-      Required = True
-    end
     object qryOnhandDetailONHAND_QTY: TFloatField
       DisplayLabel = 'ONHAND QTY'
       DisplayWidth = 10
       FieldName = 'ONHAND_QTY'
       Origin = 'IC_MAT_STK_DT.ONHAND_QTY'
       Required = True
-    end
-    object qryOnhandDetailRESERVED_QTY: TFloatField
-      DisplayLabel = 'RESERVED QTY'
-      DisplayWidth = 10
-      FieldName = 'RESERVED_QTY'
-      Origin = 'IC_MAT_STK_DT.RESERVED_QTY'
-      Required = True
-    end
-    object qryOnhandDetailSTOCK_CD: TIBStringField
-      DisplayWidth = 15
-      FieldName = 'STOCK_CD'
-      Origin = 'IC_MAT_STK_DT.STOCK_CD'
-      Required = True
-      Visible = False
-      Size = 15
-    end
-    object qryOnhandDetailGROUP_ID: TIBStringField
-      DisplayWidth = 10
-      FieldName = 'GROUP_ID'
-      Origin = 'IC_MAT_STK_DT.GROUP_ID'
-      Required = True
-      Visible = False
-      Size = 10
-    end
-    object qryOnhandDetailUOM_CD: TIBStringField
-      DisplayWidth = 4
-      FieldName = 'UOM_CD'
-      Origin = 'IC_MAT_STK_DT.UOM_CD'
-      Required = True
-      Visible = False
-      Size = 4
-    end
-    object qryOnhandDetailLAST_PURCHASE_PRICE: TFloatField
-      DisplayLabel = 'LAST PURCHASE PRICE'
-      DisplayWidth = 10
-      FieldName = 'LAST_PURCHASE_PRICE'
-      Origin = 'IC_MAT_STK_DT.LAST_PURCHASE_PRICE'
-      Required = True
-      Visible = False
-    end
-    object qryOnhandDetailSTOCK_VALUE: TFloatField
-      DisplayWidth = 10
-      FieldName = 'STOCK_VALUE'
-      Origin = 'IC_MAT_STK_DT.STOCK_VALUE'
-      Visible = False
-    end
-    object qryOnhandDetailTOTAL_COST: TFloatField
-      DisplayWidth = 10
-      FieldName = 'TOTAL_COST'
-      Origin = 'IC_MAT_STK_DT.TOTAL_COST'
-      Visible = False
-    end
-    object qryOnhandDetailACCT_CODE: TIBStringField
-      DisplayWidth = 10
-      FieldName = 'ACCT_CODE'
-      Origin = 'IC_MAT_STK_DT.ACCT_CODE'
-      Required = True
-      Visible = False
-      Size = 10
-    end
-    object qryOnhandDetailORDER_LINE: TSmallintField
-      DisplayWidth = 10
-      FieldName = 'ORDER_LINE'
-      Origin = 'IC_MAT_STK_DT.ORDER_LINE'
-      Required = True
-      Visible = False
     end
   end
   object qryOnhandLink: TIBQuery

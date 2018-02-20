@@ -53,8 +53,7 @@
  IC_STOCK_ADJUST_DT.GROUP_ID,
  IC_STOCK_ADJUST_DT.LOT_NO,
  IC_STOCK_ADJUST_DT.PURCHASE_DATE,
-case WHEN IC_STOCK_ADJUST_HD.mode ='O' THEN  IC_STOCK_ADJUST_DT.QTY ELSE
-IC_STOCK_ADJUST_DT.QTY*-1 END AS QTY,
+ IC_STOCK_ADJUST_DT.QTY ,
  IC_STOCK_ADJUST_DT.UNIT_COST,
  IC_STOCK_ADJUST_DT.TOTAL_COST,
  IC_STOCK_ADJUST_DT.ONHAND_QTY,
@@ -190,7 +189,7 @@ WHERE
 					<textElement textAlignment="Left">
 						<font fontName="SansSerif" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["CODE:FM-WH-12"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["CODE:FM-WH-35"]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -618,7 +617,7 @@ WHERE
 					</textElement>
 				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{REF_DATE}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="###0.00;-###0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						style="Heading 1"
 						x="574"

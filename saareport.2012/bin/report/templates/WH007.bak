@@ -42,23 +42,36 @@
 	<parameter name="pLotNo" isForPrompting="true" class="java.lang.String">
 		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
 	</parameter>
-	<queryString><![CDATA[SELECT current_time AS "CTIME" , IC_STOCK_ADJUST_HD.DOC_NO,
- IC_STOCK_ADJUST_HD.melt_no,
- IC_STOCK_ADJUST_HD.DOC_DATE, IC_STOCK_ADJUST_HD.DESCS, IC_STOCK_ADJUST_DT.ITEM_CODE, IC_STOCK_ADJUST_DT.UOM_CD, IC_STOCK_ADJUST_DT.GROUP_ID, IC_STOCK_ADJUST_DT.LOT_NO, IC_STOCK_ADJUST_DT.PURCHASE_DATE, IC_STOCK_ADJUST_DT.QTY, IC_STOCK_ADJUST_DT.UNIT_COST, IC_STOCK_ADJUST_DT.TOTAL_COST, IC_STOCK_ADJUST_DT.ONHAND_QTY, IC_STOCK_ADJUST_DT.STOCK_DESCS, IC_STOCK_ADJUST_DT.REF_NO, IC_STOCK_ADJUST_DT.REF_DATE, 
-IC_STOCK_ADJUST_DT.VQTY,
-ic_stock_adjust_hd.remarks
-FROM IC_STOCK_ADJUST_DT
-   INNER JOIN IC_STOCK_ADJUST_HD ON (IC_STOCK_ADJUST_DT.DOC_NO = IC_STOCK_ADJUST_HD.DOC_NO) AND (IC_STOCK_ADJUST_DT.DOC_DATE = IC_STOCK_ADJUST_HD.DOC_DATE)
-WHERE 
-   (
-      (IC_STOCK_ADJUST_HD.status = 'X')
+	<queryString><![CDATA[ SELECT current_time AS "CTIME" ,
+   IC_STOCKcard.DOC_NO,
+  IC_STOCKcard.melt_no,
+ (SELECT MAX(REMARKS) FROM ic_stock_adjust_hd WHERE  IC_STOCKcard.doc_no =ic_stock_adjust_hd.DOC_NO) AS "REMARKS",
+  IC_STOCKcard.DOC_DATE,
+  IC_STOCKcard.DESCS,
+ IC_STOCKcard.stock_cd as "ITEM_CODE",
+  IC_STOCKcard.UOM_CD,
+ IC_STOCKcard.GROUP_ID,
+ ic_stockcard.LOT_CD AS "LOT_NO",
+ ic_stockcard.PURCHASE_DATE,
+ ic_stockcard.QTY,
+ ic_stockcard.UNIT_COST,
+  ic_stockcard.TOTAL_COST,
+  ic_stockcard.ONHAND_QTY,
+  IC_MAT_STK_HD.en_descs AS "STOCK_DESCS",
+  ic_stockcard.REF_NO,
+  ic_stockcard.REF_DATE,
+ic_stockcard.QTY AS "VQTY"
+
+FROM ic_stockcard , ic_mat_stk_hd
+WHERE
+ (IC_STOCKCARD.stock_cd = ic_mat_stk_hd.stock_cd)
+ AND (IC_STOCKCARD.trx_type IN ('SA','MA') )
+and (IC_STOCKCARD.doc_date >=$P{pSDate})
 and
-(IC_STOCK_ADJUST_HD.doc_date >=$P{pSDate})
+(IC_STOCKCARD.doc_date <=$P{pEDate})
 and
-(IC_STOCK_ADJUST_HD.doc_date <=$P{pEDate})
-and
-(IC_STOCK_ADJUST_DT.LOT_NO =$P{pLotNo})
- )]]></queryString>
+(IC_STOCKCARD.LOT_CD =$P{pLotNo})
+ ]]></queryString>
 
 	<field name="CTIME" class="java.sql.Time"/>
 	<field name="DOC_NO" class="java.lang.String"/>
@@ -439,7 +452,7 @@ and
 				<staticText>
 					<reportElement
 						style="Heading 1"
-						x="197"
+						x="212"
 						y="45"
 						width="65"
 						height="13"
@@ -595,7 +608,7 @@ and
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						style="Heading 1"
-						x="197"
+						x="210"
 						y="4"
 						width="247"
 						height="12"
@@ -660,7 +673,7 @@ and
 					<textElement>
 						<font fontName="SansSerif" pdfFontName="Helvetica" size="8" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{DOC_NO}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{MELT_NO}]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>

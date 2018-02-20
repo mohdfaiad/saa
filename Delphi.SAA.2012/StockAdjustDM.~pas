@@ -291,11 +291,33 @@ end;
 procedure   TStockAdjustDataModule.doFilterOnhandQueryDetail(dataSet:TDataSet);
 var query:String;
 begin
-   query:='select * from ic_mat_stk_dt '+
-' where  purchase_date >= current_date - '+IntToStr(SystemConfigure.readIntRegistry('LastPurchaseDays')) +
+
+{
+ 19-Feb-2018: Add new filter logic  : instead of checking value in windows registry
+select LOT_CD,PURCHASE_DATE,SUM(onhand_qty) AS ONHAND_QTY from ic_mat_stk_dt_LINK
+WHERE group_id not in ('SG008','SG009')
+ and stock_cd = 'A001'
+  AND( (purchase_date >= CURRENT_DATE - 365)
+ or (ic_mat_stk_dt_LINK.onhand_qty > 0.9)    )
+GROUP BY LOT_CD,purchase_date
+order by purchase_date
+}
+
+{
+
+ query:='select * from ic_mat_stk_dt '+
+' where  purchase_date >= current_date - 365'+IntToStr(SystemConfigure.readIntRegistry('LastPurchaseDays')) +
 ' and group_id not in (''SG008'',''SG009'') '+
 ' and stock_cd = '+quotedStr(dataset.fieldbyname('item_code').AsString)+
 ' order by purchase_date' ;       {** 7 July,2010 add order by .Aon**}
+
+     query :='select LOT_CD,PURCHASE_DATE,SUM(onhand_qty) AS ONHAND_QTY from ic_mat_stk_dt_LINK'+
+            ' where ( (purchase_date >= current_date - 365) or (ic_mat_stk_dt_LINK.onhand_qty > 0.9) ) '+
+            ' and group_id not in (''SG008'',''SG009'') '+
+            ' and stock_cd = '+quotedStr(dataset.fieldbyname('item_code').AsString)+
+            ' GROUP BY LOT_CD,purchase_date '+
+            ' order by purchase_date' ;
+
      qryOnhandDetail.Close;
      qryOnhandDetail.SQL.Text:=query;
 
