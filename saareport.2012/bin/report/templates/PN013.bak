@@ -26,7 +26,7 @@
 	<parameter name="pMeltNo" isForPrompting="true" class="java.lang.String"/>
 	<queryString><![CDATA[SELECT * FROM SO_LEDGER
 WHERE MELT_NO LIKE $P{pMeltNo}
-order by MELT_NO, DOC_DATE]]></queryString>
+order by MELT_NO]]></queryString>
 
 	<field name="CUST_CODE" class="java.lang.String"/>
 	<field name="CUST_NAME" class="java.lang.String"/>
